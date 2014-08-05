@@ -1,0 +1,12 @@
+# Site settings
+title: pfernandom
+email: pfernandom@hotmail.com
+description: "A blog about software architecture and development, and everything around that."
+baseurl: ""
+url: "http://pfernandom.github.io/"
+twitter_username: pfernandom
+github_username:  pfernandom
+
+# Build settings
+markdown: kramdown
+permalink: pretty
