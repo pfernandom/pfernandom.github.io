@@ -2,14 +2,12 @@
         <li>
 		<span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
 		<div class="post-row">
-		<div>
+		<div style="display:inline">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 		<br/>
 		{{post.short}}
 		</div>
-		<div>
-		<img src="{{ site.url }}images/icons/post-default.jpg" alt="icon" style="width: 150px;"/>
-		</div>
+		<img style="display:inline" src="{{ site.url }}images/tumb-post-default.jpg" alt="icon" style="width: 150px;"/>
 		</div>
 		<br/>
 		<div class="post-row-categories">
