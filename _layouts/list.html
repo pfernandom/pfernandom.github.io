@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<div class="post">
+
+	{% for category in site.categories %}
+	<div class="category-element" id="category-{{category | first}}">
+    <h2>Category: {{ category | first }}</h2>
+    <ul class="posts">	
+    {% for posts in category %}
+      {% for post in posts %}
+	   {% if post.url %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ul>
+	</div>
+{% endfor %}
+  
+  <article class="post-content">
+  {{ content }}
+  </article>
+<script>
+function parseGetParams(val) {
+    var result = "Not found",
+        tmp = [];
+    var items = location.search.substr(1).split("&");
+    for (var index = 0; index < items.length; index++) {
+        tmp = items[index].split("=");
+        if (tmp[0] === val) result = decodeURIComponent(tmp[1]);
+    }
+    return result;
+}
+
+var catElements = document.getElementsByClassName("category-element");
+for(var i = 0; i < catElements.length; i++)
+{
+   if(catElements[i].id!='category-'+parseGetParams("category")){
+	catElements[i].style.display = 'none'; 
+	catElements[i].style.visibility = 'hidden';
+   }
+}
+
+
+</script>
+
+</div>

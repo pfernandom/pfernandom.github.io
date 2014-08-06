@@ -6,6 +6,7 @@ baseurl: ""
 url: "http://pfernandom.github.io/"
 twitter_username: pfernandom
 github_username:  pfernandom
+stackoverflow_username: pfernandom
 
 # Build settings
 markdown: kramdown
