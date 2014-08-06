@@ -1,0 +1,21 @@
+{% if post.url %}
+        <li>
+		<span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+		<div class="post-row">
+		<div>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		<br/>
+		{{post.short}}
+		</div>
+		<div>
+		<img src="{{ site.url }}images/icons/post-default.jpg" alt="icon" style="width: 150px;"/>
+		</div>
+		</div>
+		<br/>
+		<div class="post-row-categories">
+		{% for category in post.categories %}
+		<a class ="category" href="/categories?category={{category}}">{{category}}</a>
+		{% endfor %}
+		</div>
+		</li>
+{% endif %}

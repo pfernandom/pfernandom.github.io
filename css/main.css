@@ -19,7 +19,7 @@ body {
 h1, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
 
 a         { color: #2a7ae2; text-decoration: none; }
-a:hover   { color: #000; text-decoration: underline; }
+a:hover   { color: #000; text-decoration: none; }
 a:visited { color: #205caa; }
 
 /* Utility */
@@ -50,27 +50,35 @@ a:visited { color: #205caa; }
 .site-title,
 .site-title:hover,
 .site-title:visited {
-  display: block;
   color: #333;
   font-size: 26px;
   letter-spacing: -1px;
   float: left;
   line-height: 56px;
-  position: relative;
-  z-index: 1;
-}
-
-.site-nav {
-  float: right;
-  line-height: 56px;
+  position:relative;
+  display:inline;
+  width:150px;
 }
 
 .site-nav .menu-icon { display: none; }
 
 .site-nav .page-link {
-  margin-left: 20px;
-  color: #727272;
+  color: #828282;
   letter-spacing: -.5px;
+  float: right;
+  line-height: 56px;
+  position:relative;
+  padding: 0px 7px 0px 7px;
+  margin-left:0px; 
+  margin-right:0px;
+  min-width:110px;
+  text-align:center;
+}
+
+.site-nav .page-link:hover {
+  background-color:#8C998C;
+  text-decoration:none;
+  color:white;
 }
 
 /* Site footer */
@@ -157,12 +165,27 @@ a:visited { color: #205caa; }
   line-height: 1;
 }
 
+a.post-link:hover{
+  height:500px;	
+  color:#6AA2EB;
+}
+
 .posts .post-date {
   display: block;
   font-size: 15px;
   color: #818181;
 }
 
+.post-row{
+	height:40px;
+}
+
+.post-row-categories{
+	border-bottom-style: solid;
+	border-bottom-width:1px;
+	border-bottom-color:#C0C0C0;
+	padding-bottom:7px;
+}
 
 /* Post styles */
 /* ----------------------------------------------------------*/
@@ -422,3 +445,4 @@ a.category:hover   {
 	background-color:#D9D9D9; 
 	text-decoration:none;
 }
+

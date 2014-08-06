@@ -8,14 +8,7 @@ layout: default
 
   <ul class="posts">
     {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-		<br/>
-		{% for category in post.categories %}
-		<a class ="category" href="/categories?category={{category}}">{{category}}</a>
-		{% endfor %}
-      </li>
+      {% include post-row.html %}
     {% endfor %}
   </ul>
 

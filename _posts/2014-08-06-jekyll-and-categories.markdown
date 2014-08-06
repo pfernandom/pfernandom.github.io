@@ -4,6 +4,7 @@ title:  "Jekyll and categories"
 date:   2014-08-06 20:05:14
 categories: [jekyll, categories, GET parameter]
 comments: true
+short: This is the short description
 ---
 
 Halfway of creating this blog's template, I thought "wouldn't it be easier to just user Blogger or similar? It would be a lot faster". 
@@ -51,7 +52,7 @@ layout: default
 {% endhighlight %}
 
 And this is the result:  
-![Unfiltered listing of posts by category]({{ site.url }}_images/image1.jpeg?raw=true "Unfiltered listing of posts by category")
+<img src="{{ site.url }}images/image1.jpg" alt="unfiltered by category" style="width: 900px;"/>
 
 But the problem still was filtering the categories to just get the one the user clicked on. If we worked with a common web application, a web form or AJAX call would be enough,
 but remember, no server code. So we use the next best thing: **JavaScript**.With it we simulate the behaviour of a common HTTP GET request.
@@ -104,4 +105,4 @@ for(var i = 0; i < catElements.length; i++)
 If the value in the URL parameter is empty or doesn't exist, it will hide all the lists.
 And there you go. You use the value of a GET request to filter the list of posts by category.
 
-![Filtered listing of posts by category]({{ site.url }}_images/image2.jpeg?raw=true "Filtered listing of posts by category")
+<img src="{{ site.url }}images/image2.jpg" alt="filtered by category" style="width: 900px;"/>

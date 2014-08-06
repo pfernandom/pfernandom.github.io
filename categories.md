@@ -1,6 +1,6 @@
 ---
 layout: list
-title: List by category
+title: Posts by category
 ---
 
 List of categories
