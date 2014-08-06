@@ -180,6 +180,11 @@ a.post-link:hover{
 	height:40px;
 }
 
+.post-thumb{
+	display:inline;
+	margin-right: 0;
+}
+
 .post-row-categories{
 	border-bottom-style: solid;
 	border-bottom-width:1px;
