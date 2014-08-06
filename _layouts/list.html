@@ -5,7 +5,8 @@ layout: default
 
 	{% for category in site.categories %}
 	<div class="category-element" id="category-{{category | first}}">
-    <h2>Category: {{ category | first }}</h2>
+    Category: <div class ="category">{{ category | first }}</div>
+	<br/><br/>
     <ul class="posts">	
     {% for posts in category %}
       {% for post in posts %}

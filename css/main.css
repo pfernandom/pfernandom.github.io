@@ -176,20 +176,33 @@ a.post-link:hover{
   color: #818181;
 }
 
-.post-row{
-	height:40px;
-}
-
-.post-thumb{
-	display:inline;
-	margin-right: 0;
-}
-
-.post-row-categories{
+.post-full-row{
 	border-bottom-style: solid;
 	border-bottom-width:1px;
 	border-bottom-color:#C0C0C0;
 	padding-bottom:7px;
+	min-height:150px;	
+	background-color:#F2F2F2;
+	padding: 5px 2px 5px 10px;
+}
+
+.post-row{
+	height:60%;
+	min-height:100px;
+	min-width:60%;
+}
+
+.post-thumb{	
+	width:20%;
+	float:right;
+}
+
+
+
+.post-data-part{
+	height:100%;
+	width:80%;
+	float:left;
 }
 
 /* Post styles */
@@ -451,3 +464,9 @@ a.category:hover   {
 	text-decoration:none;
 }
 
+.category{
+	display:inline;
+	background-color:#A1A1A1;
+	color:white;
+	padding:5px 5px 5px 5px
+}
