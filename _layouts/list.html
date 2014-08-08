@@ -2,7 +2,9 @@
 layout: default
 ---
 <div class="post">
-
+ <article class="post-content">
+  {{ content }}
+  </article>
 	{% for category in site.categories %}
 	<div class="category-element" id="category-{{category | first}}">
     Category: <div class ="category">{{ category | first }}</div>
@@ -16,10 +18,6 @@ layout: default
     </ul>
 	</div>
 {% endfor %}
-  
-  <article class="post-content">
-  {{ content }}
-  </article>
 <script>
 function parseGetParams(val) {
     var result = "Not found",

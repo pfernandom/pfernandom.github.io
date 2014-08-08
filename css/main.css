@@ -195,6 +195,9 @@ a.post-link:hover{
 .post-thumb{	
 	width:20%;
 	float:right;
+	max-width:150px;
+	height:150px;
+	vertical-align:middle;
 }
 
 

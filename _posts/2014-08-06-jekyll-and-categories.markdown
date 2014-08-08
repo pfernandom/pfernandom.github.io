@@ -5,6 +5,7 @@ date:   2014-08-06 20:05:14
 categories: [jekyll, categories, GET parameter]
 comments: true
 short: How to filter the posts in Jekyll by Category retrieving the GET parameter using JavaScript.
+thumbnail: jekyll_logo_white.png
 ---
 
 Halfway of creating this blog's template, I thought "wouldn't it be easier to just user Blogger or similar? It would be a lot faster". 
