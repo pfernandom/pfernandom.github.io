@@ -2,6 +2,7 @@
 layout: post
 title:  "Jekyll and categories"
 date:   2014-08-06 20:05:14
+author: Pedro Marquez
 categories: [jekyll, categories, GET parameter]
 comments: true
 short: How to filter the posts in Jekyll by Category retrieving the GET parameter using JavaScript.

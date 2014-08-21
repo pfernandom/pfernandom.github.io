@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to the blog!"
 date:   2014-08-05 16:07:14
+author: Pedro Marquez
 categories: [intro, thoughts]
 comments: true
 short: Introduction to the blog

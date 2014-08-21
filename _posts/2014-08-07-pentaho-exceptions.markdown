@@ -2,6 +2,7 @@
 layout: post
 title:  "Pentaho BI Exceptions"
 date:   2014-08-07 17:55:00
+author: Pedro Marquez
 categories: [java, pentaho, business intelligence, exception, reporting]
 comments: true
 short: Some exceptions using the Pentaho BI Java API and their solutions.
