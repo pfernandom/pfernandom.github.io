@@ -6,7 +6,7 @@ categories: [intro, thoughts]
 comments: true
 short: Introduction to the blog
 thumbnail: thumb-me.png
-permalink: /posts/welcome/
+permalink: posts/welcome/
 ---
 
 Software design and development is almost an art. Just as a musician takes a set of already existing musical notes, with properties like rhythm and and duration, 

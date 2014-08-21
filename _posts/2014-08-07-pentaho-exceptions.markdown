@@ -6,7 +6,7 @@ categories: [java, pentaho, business intelligence, exception, reporting]
 comments: true
 short: Some exceptions using the Pentaho BI Java API and their solutions.
 thumbnail: thumb-pentaho.png
-permalink: /posts/pentaho-exceptions/
+permalink: posts/pentaho-exceptions/
 ---
 [Pentaho Business Intelligence](http://www.pentaho.com/) or Pentaho BI is a suite of tools for data management, from data mining to reporting scheduling and generation.
 
