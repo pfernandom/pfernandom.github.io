@@ -4,7 +4,7 @@ title: About Pedro
 permalink: /about/
 ---
 
-![First interface]({{ site.url }}_images/pedro-marquez.jpg?raw=true "First Interface")
+![First interface]({{ site.url }}images/pedro-marquez.jpg?raw=true "First Interface")
 
 Pedro Marquez is a Java Architect and Ethical Hacker looking to learn (and remember what has already learnt) new cool software development stuff.
 

@@ -7,7 +7,7 @@ comments: true
 short: Some exceptions using the Pentaho BI Java API and their solutions.
 thumbnail: thumb-pentaho.png
 ---
-Pentaho Business Intelligence or Pentaho BI is a suite of tools for data management, from data mining to reporting scheduling and generation.
+[Pentaho Business Intelligence](http://www.pentaho.com/) or Pentaho BI is a suite of tools for data management, from data mining to reporting scheduling and generation.
 
 I've been working with the Pentaho BI Java API, to mainly use the report capabilities of the product. The problem is that, even when their 
 documentation is pretty good (compared with other products out there), there are some simple errors that are not very informative. And the 
