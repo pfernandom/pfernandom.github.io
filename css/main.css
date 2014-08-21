@@ -183,6 +183,7 @@ a.post-link:hover{
 	min-height:150px;	
 	background-color:#F2F2F2;
 	padding: 5px 10px 5px 10px;
+	position: relative;
 }
 
 .post-row{
@@ -193,19 +194,19 @@ a.post-link:hover{
 
 .post-thumb{	
 	width:20%;
-	float:right;
 	max-width:150px;
 	height:150px;
-	vertical-align:middle;
 	padding-right:5px;
+	position: absolute;
+	right:10px;
+
 }
-
-
 
 .post-data-part{
 	height:100%;
-	width:80%;
-	float:left;
+	width:77%;
+	position: absolute;
+	display:block;
 }
 
 /* Post styles */

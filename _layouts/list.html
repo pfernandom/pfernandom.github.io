@@ -5,6 +5,11 @@ layout: default
  <article class="post-content">
   {{ content }}
   </article>
+  <span id="category-list">
+  {% for category in site.categories %}
+		<a class ="category" href="/categories?category={{category | first}}">{{category | first}}</a>
+	{% endfor %}
+	</span>
 	{% for category in site.categories %}
 	<div class="category-element" id="category-{{category | first}}">
     Category: <div class ="category">{{ category | first }}</div>
@@ -30,6 +35,10 @@ function parseGetParams(val) {
     return result;
 }
 
+ if(parseGetParams("category")!="Not found"){
+	document.getElementById("category-list").style.display='none';
+ }
+ 
 var catElements = document.getElementsByClassName("category-element");
 for(var i = 0; i < catElements.length; i++)
 {

@@ -1,4 +1,4 @@
 ---
 layout: list
-title: Posts by category
+title: Categories
 ---
