@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MVC architecture design: A tutorial"
-date:   2014-08-05 16:07:14
+date:   2014-08-22 18:00:00
 author: Pedro Marquez
 categories: [mvc, pattern]
 comments: true
