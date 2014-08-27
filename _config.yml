@@ -8,6 +8,8 @@ twitter_username: pfernandom
 github_username:  pfernandom
 stackoverflow_username: pfernandom
 
+paginate: 2
+
 # Build settings
 markdown: kramdown
 permalink: pretty
