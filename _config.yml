@@ -8,7 +8,7 @@ twitter_username: pfernandom
 github_username:  pfernandom
 stackoverflow_username: pfernandom
 
-paginate: 2
+paginate: 4
 
 # Build settings
 markdown: kramdown
