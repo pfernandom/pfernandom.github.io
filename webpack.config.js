@@ -72,8 +72,9 @@ var configuration = {
 		),
 		new HtmlWebpackPlugin({
 			title: 'Scallywag',
-			template: 'index.html',
-			hash:true//,
+			template: 'index.html.tmpl',
+			hash:true,
+			filename: '../index.html'
 			//favicon: './src/images/favicon/favicon.ico'
 		}),
 		new FaviconsWebpackPlugin('./src/images/pumpkin.svg')
