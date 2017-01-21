@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e # Exit with nonzero exit code if anything fails
 
-SOURCE_BRANCH="src"
+SOURCE_BRANCH="travis-src"
 TARGET_BRANCH="master"
 
 function doCompile {
