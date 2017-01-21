@@ -1,0 +1,31 @@
+table.scTable{
+  background-color: #ededed;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #989da2;
+  box-shadow: 1px 1px 5px #888888;
+
+  width:100%;
+  thead{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #989da2;
+    th{
+      border-style: solid;
+      border-width: 1px;
+      border-color: #989da2;
+    }
+  }
+  tbody{
+    tr{
+      background-color: white;
+    }
+  }
+  th{
+    padding:5px;
+  }
+  td{
+    padding:5px;
+  }
+}

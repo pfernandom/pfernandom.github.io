@@ -11,3 +11,4 @@ permalink: /about/
 
 Currently working as a Java Architect, Pedro spends his days working on enterprise applications and learning the many technologies they use.
 </div>
+

@@ -1,0 +1,4 @@
+{
+  "env": "development",
+  "base": "https://grumpy-wizards.azurewebsites.net/"
+}
