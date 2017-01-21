@@ -5,7 +5,7 @@ SOURCE_BRANCH="travis-src"
 TARGET_BRANCH="master"
 
 function doCompile {
-  ./compile.sh
+  npm run build
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify

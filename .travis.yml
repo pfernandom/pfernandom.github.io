@@ -1,8 +1,6 @@
 language: generic # don't install any environment
 
-script: 
-    - npm run build
-    - bash ./deploy.sh
+script: bash ./deploy.sh
 env:
   global:
   - ENCRYPTION_LABEL: 89fd4ac60f44
