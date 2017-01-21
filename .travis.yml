@@ -3,8 +3,8 @@ language: generic # don't install any environment
 script: bash ./deploy.sh
 env:
   global:
-  - ENCRYPTION_LABEL: "<.... encryption label from previous step ....>"
-  - COMMIT_AUTHOR_EMAIL: "you@example.com"
+  - ENCRYPTION_LABEL: 89fd4ac60f44
+  - COMMIT_AUTHOR_EMAIL: pfernandom@gmail.com
   
 language: node_js
 node_js:
