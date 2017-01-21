@@ -14,7 +14,7 @@ var configuration = {
 		vendor: ['react', 'react-dom', 'react-redux', 'redux'],
 	},
 	output: {
-		path: __dirname + '/dist',
+		path: __dirname + '/docs',
 		filename: '[name].js',
 	},
 	devServer: {
@@ -74,10 +74,28 @@ var configuration = {
 			title: 'Scallywag',
 			template: 'index.html.tmpl',
 			hash:true,
-			filename: '../index.html'
+			filename: 'index.html'
 			//favicon: './src/images/favicon/favicon.ico'
 		}),
-		new FaviconsWebpackPlugin('./src/images/pumpkin.svg')
+		new FaviconsWebpackPlugin({
+			logo:'./src/images/pumpkin.svg',
+			prefix: 'icons/',
+			persistentCache: true,
+			inject: true,
+			title: 'Webpack App',
+			icons: {
+			  android: false,
+			  appleIcon: false,
+			  appleStartup: false,
+			  coast: false,
+			  favicons: true,
+			  firefox: false,
+			  opengraph: false,
+			  twitter: false,
+			  yandex: false,
+			  windows: false
+			}
+		})
 	]
 }
 
