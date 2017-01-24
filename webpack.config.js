@@ -2,6 +2,7 @@ var webpack = require("webpack");
 var config = require('config');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+var fs = require("fs")
 
 //var jsxLoader = (config.get('env') === 'development') ? 'react-hot!babel!es2015' : 'babel!es2015';
 //console.log("Loader "+jsxLoader)
@@ -21,7 +22,13 @@ var configuration = {
 		contentBase: __dirname,
 		historyApiFallback: {
 			index: 'index.html'
-		}
+		},
+		setup: function(app) {
+			var file = fs.readFileSync('./json/data.json', 'utf8');
+			app.get('/json/data.json', function(req, res) {
+				res.json(JSON.parse(file));
+			});
+		},
 	},
 	module: {
 		loaders: [
@@ -74,8 +81,8 @@ var configuration = {
 			title: 'Scallywag',
 			template: 'index.html.tmpl',
 			hash:true,
-			filename: '../index.html'
-			//favicon: './src/images/favicon/favicon.ico'
+			filename: '../index.html',
+			favicon: './dist/icons/favicon.ico'
 		}),
 		new FaviconsWebpackPlugin({
 			logo:'./src/images/pumpkin.svg',

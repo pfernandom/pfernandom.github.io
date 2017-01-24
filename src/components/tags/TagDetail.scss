@@ -1,0 +1,31 @@
+.tag-description{
+    margin:20px;
+    padding:20px;
+    background-color: #e3e3e3;
+    webkit-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+}
+
+@media (min-width: 990px) {
+    .tag-description{
+        height: 50%;
+    }
+}
+
+.tag-description-enter {
+    opacity: 0.01;
+    &.tag-description-enter-active {
+        opacity: 1;
+        transition: opacity 500ms ease-in;
+    }
+}
+
+.tag-description-leave {
+    opacity: 1;
+    &.tag-description-leave-active {
+        opacity: 0.01;
+        transition: opacity 300ms ease-in;
+    }
+}

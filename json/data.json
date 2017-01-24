@@ -1,0 +1,12 @@
+[
+  {
+    "value": "reactjs",
+    "label": "ReactJS",
+    "description": "This page is done with ReactJS!"
+  },
+  {
+    "value": "angular",
+    "label": "AngularJS (1.5)",
+    "description": "I am good with Angular too"
+  }
+]

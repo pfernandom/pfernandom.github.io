@@ -1,6 +1,13 @@
 $icon-font-path: "~bootstrap/fonts/bootstrap/";
 
 body{
-    background: #dfdfdf;
-    font-family: Verdana;
+    background: rgba(248, 248, 248, 0.21);
+    //font-family: Verdana;
+    min-width: 320px;
+}
+
+h3{
+    font-size: 1.5em;
+    color: grey;
+    margin-top: 0px;
 }

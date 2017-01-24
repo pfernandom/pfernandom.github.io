@@ -4,23 +4,21 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
+import { Router, Route, browserHistory, hashHistory, IndexRoute  } from 'react-router'
 
 import todoApp from './reducers'
 import About from './components/about'
 import Menu from './components/menu'
 import Help from './components/about/help'
 import NotFound from './components/error'
-import Home from './components/home'
-import { SignUpForm, ConfirmForm, LoginForm } from './components/user'
+import { Home, SplitHome } from './components/home'
+import {TagDetail} from './components/tags'
+import { loadState } from './actions'
 
-import {loadSession} from './actions'
-
-import {VisibleProjectList, ProjectDetail, NewProject} from './components/projects'
 import { Grid, Row, Col } from 'react-bootstrap';
-import './style.scss';
-import { Router, Route, Link, browserHistory, hashHistory, IndexRoute  } from 'react-router'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css'
+import './style.scss';
 
 const loggerMiddleware = createLogger()
 
@@ -34,12 +32,15 @@ let unsubscribe = store.subscribe(() =>
 	console.log(store.getState())
 )
 
+store.dispatch(loadState('json/data.json')).then(() =>
+	console.log(store.getState())
+)
+
 class Main extends React.Component {
 	render() {
 		return (
 			<Provider store={store}>
 				<div>
-				<Menu/>
 				<Grid>
 					{this.props.children}
 				</Grid>
@@ -49,21 +50,16 @@ class Main extends React.Component {
 	}
 }
 
-store.dispatch(loadSession())
-
 render((
 	<Router history = {hashHistory}>
 		<Route path = "/" component = {Main}>
 			<IndexRoute component = {Home} />
+			<Route path = "tags" component = {SplitHome}>
+				<Route path=":tag" component={TagDetail} />
+			</Route>
 			<Route path = "about" component = {About}>
 				<Route path="help" component={Help} />
 			</Route>
-			<Route path = "login" component = {LoginForm}/>
-			<Route path = "signup" component = {SignUpForm}/>
-			<Route path = "confirm" component = {ConfirmForm}/>
-			<Route path = "project" component = {VisibleProjectList}/>
-			<Route path = "project/new" component = {NewProject}/>
-			<Route path = "project(/:projectId)" component = {ProjectDetail}/>
 			<Route path='*' component={NotFound} />
 		</Route>
 	</Router>
