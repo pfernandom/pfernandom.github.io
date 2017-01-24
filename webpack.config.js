@@ -24,8 +24,8 @@ var configuration = {
 			index: 'index.html'
 		},
 		setup: function(app) {
-			var file = fs.readFileSync('./json/data.json', 'utf8');
 			app.get('/json/data.json', function(req, res) {
+				var file = fs.readFileSync('./json/data.json', 'utf8');
 				res.json(JSON.parse(file));
 			});
 		},

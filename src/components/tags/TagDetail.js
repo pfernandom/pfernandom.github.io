@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {  Link } from 'react-router'
 import './TagDetail.scss'
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -18,6 +19,11 @@ class SimpleTagDetail extends React.Component {
 		return (
 			<div className="tag-description animated slideInRight">
 				<h3>Skill: {name}</h3>
+				<button className="close-detail">
+					<Link to={'/'}>
+						<span className="glyphicon glyphicon-remove"></span>
+					</Link>
+				</button>
 				<p>{description}</p>
 			</div>
 		)

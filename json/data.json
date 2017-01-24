@@ -2,11 +2,11 @@
   {
     "value": "reactjs",
     "label": "ReactJS",
-    "description": "This page is done with ReactJS!"
+    "description": "After learning AngularJS, ReactJS was a natural next step.\n\nSince 2016 I started learning on my spare time, using blogs and podcasts as a learning source.\n\nAs an extra detail, this page is built with ReactJS/ES6."
   },
   {
     "value": "angular",
     "label": "AngularJS (1.5)",
-    "description": "I am good with Angular too"
+    "description": "Starting on 2015 I learned AngularJS during an analysis for a new development project.\n\nI became the main Angular developer and helped train other developers and to build our first effort.\n\nSince then, I've worked in multiple projects involving Angular, and its integration with other technologies like Java Portlets."
   }
 ]

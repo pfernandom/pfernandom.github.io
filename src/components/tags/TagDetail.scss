@@ -1,4 +1,5 @@
 .tag-description{
+    position:relative;
     margin:20px;
     padding:20px;
     background-color: #e3e3e3;
@@ -6,11 +7,21 @@
     -moz-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.75);
     border-radius: 2px;
+    p{
+        white-space: pre-wrap;
+    }
+    .close-detail{
+        position: absolute;
+        right: 0;
+        top:0;
+        margin:1px;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 990px) {
     .tag-description{
-        height: 50%;
+        min-height: 50%;
     }
 }
 
