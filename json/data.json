@@ -2,11 +2,72 @@
   {
     "value": "reactjs",
     "label": "ReactJS",
-    "description": "After learning AngularJS, ReactJS was a natural next step.\n\nSince 2016 I started learning on my spare time, using blogs and podcasts as a learning source.\n\nAs an extra detail, this page is built with ReactJS/ES6."
+    "description": "After learning AngularJS, ReactJS was a natural next step.\n\nSince 2016 I started learning on my spare time, using blogs and podcasts as a learning source.\n\nAs an extra detail, this page is built with ReactJS/ES6.",
+    "highlights": ["Integration with Redux", "Integration with Webpack"],
+    "related": ["webpack"]
   },
   {
     "value": "angular",
     "label": "AngularJS (1.5)",
-    "description": "Starting on 2015 I learned AngularJS during an analysis for a new development project.\n\nI became the main Angular developer and helped train other developers and to build our first effort.\n\nSince then, I've worked in multiple projects involving Angular, and its integration with other technologies like Java Portlets."
+    "description": "Starting on 2015 I learned AngularJS during an analysis for a new development project.\n\nI became the main Angular developer and helped train other developers and to build our first effort.\n\nSince then, I've worked in multiple projects involving Angular, and its integration with other web technologies\n\nOne of my main speciallities is the integration of AngularJS with Java Portlets",
+    "highlights": ["Integrated AngularJS with Java Portlets",
+      "Designed libraries of reusable components for internal projects",
+      "Collaborated to open source projects like mdGridList"],
+    "related": ["portlet"]
+  },
+  {
+    "value": "javaee",
+    "label": "Java EE",
+    "description": "With 5+ years of professional experience, Java is my main programming language. I've used it in all the layers of the development stack",
+    "highlights": ["Integration with Spring modules like Spring MVC, Spring Data and Spring Boot"],
+    "related": ["spring"]
+  },
+  {
+    "value": "maven",
+    "label": "Maven",
+    "description": "All of the development projects I've worked on the last 3 years use Maven for dependency management and build tasks.",
+    "highlights": ["Designed  the structure of multiple projects to enable component and dependency reuse and extensibility"],
+    "related": ["javaee"]
+  },
+  {
+    "value": "rest",
+    "label": "REST",
+    "description": "As an architect, I've been in charge of designing APIs which follow the REST architecture. I designed the REST API for one of our products, which was intended to be available to allow the design of mobile apps; and for our clients to design their own client applications",
+    "highlights": ["Designed Java APIs to be JAX-RS compliant",
+      "Used API Gateway products like WSO2 API Manager and AWS API Gateway",
+      "Trained developers on the best practices for designing REST Web Services",
+      "Implemented REST Security with OAuth2"],
+    "related": ["oauth"]
+  },
+  {
+    "value": "webpack",
+    "label": "Webpack",
+    "description": "I've used Webpack to bundle Angular and ReactJS modules for personal web projects.",
+    "highlights": ["Designed  the structure of multiple projects to enable component and dependency reuse and extensibility"],
+    "related": []
+  },
+  {
+    "value": "portlet",
+    "label": "Java Portlet",
+    "description": "My two last projects used Java Portlets at its core. Integrated with Spring Portlet MVC, portlets allowed us to create self-contained applications that can be distributed and sold independently. \n\nI've wokred in the design of Portal applications, which require a different approach from regular Java Web applications",
+    "highlights": ["Designed the architecture on portal applications to support multiple vendor implementations: Liferay and Websphere Portal and Weblogic Portal",
+      "Integrated Portlets with AngularJS",
+      "Created User Interfaces and themes for portal applications"],
+    "related": ["liferay", "websphere-portal", "weblogic-portal"]
+  },
+  {
+    "value": "spring",
+    "label": "Spring",
+    "description": "On my previous and current roles, I've implemented multiple Spring modules into our applications. I've worked on the design of applications to fully leverage Spring features like dependency injection.",
+    "highlights": [""],
+    "related": ["javaee"]
+  },
+  {
+    "value": "oauth",
+    "label": "OAuth",
+    "description": "While working on the",
+    "highlights": ["Designed  the structure of multiple projects to enable component and dependency reuse and extensibility"],
+    "related": []
   }
+
 ]
