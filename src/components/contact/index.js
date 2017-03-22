@@ -7,8 +7,9 @@ class ContactCard extends React.Component {
 			<div className="contact-card">
 				<h1>Pedro Marquez</h1>
 				<h2>Full-stack Software Developer</h2>
+				
 				<p>
-					Full Stack developer, Java Architect and Certified Ethical Hacker.
+					Full Stack developer, Java Architect and Certified Ethical Hacker. 
 				</p>
 				<ul>
 					<li>5+ years of experience in Java technologies (back-end).</li>

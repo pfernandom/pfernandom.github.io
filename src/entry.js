@@ -7,9 +7,7 @@ import createLogger from 'redux-logger'
 import { Router, Route, browserHistory, hashHistory, IndexRoute  } from 'react-router'
 
 import todoApp from './reducers'
-import About from './components/about'
 import Menu from './components/menu'
-import Help from './components/about/help'
 import NotFound from './components/error'
 import { Home, SplitHome } from './components/home'
 import {TagDetail} from './components/tags'
@@ -56,9 +54,6 @@ render((
 			<IndexRoute component = {Home} />
 			<Route path = "tags" component = {SplitHome}>
 				<Route path=":tag" component={TagDetail} />
-			</Route>
-			<Route path = "about" component = {About}>
-				<Route path="help" component={Help} />
 			</Route>
 			<Route path='*' component={NotFound} />
 		</Route>
