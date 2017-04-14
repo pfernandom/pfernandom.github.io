@@ -8,7 +8,8 @@ var fs = require("fs")
 //console.log("Loader "+jsxLoader)
 var configuration = {
 	//watch:true,
-	devtool: 'inline-eval-cheap-source-map',
+	//devtool: 'inline-eval-cheap-source-map',
+	devtools: 'source-map',
 	//entry:'./src/entry.js',
 	entry: {
 		main: ['./src/entry.js'],
@@ -26,6 +27,10 @@ var configuration = {
 		setup: function(app) {
 			app.get('/json/data.json', function(req, res) {
 				var file = fs.readFileSync('./json/data.json', 'utf8');
+				res.json(JSON.parse(file));
+			});
+			app.get('/json/professionalExperience.json', function(req, res) {
+				var file = fs.readFileSync('./json/professionalExperience.json', 'utf8');
 				res.json(JSON.parse(file));
 			});
 		},

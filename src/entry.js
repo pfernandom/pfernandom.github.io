@@ -1,49 +1,59 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
-import thunkMiddleware from 'redux-thunk'
-import createLogger from 'redux-logger'
 import { Router, Route, browserHistory, hashHistory, IndexRoute  } from 'react-router'
+import axios from 'axios'
 
-import todoApp from './reducers'
-import Menu from './components/menu'
 import NotFound from './components/error'
-import { Home, SplitHome } from './components/home'
-import {TagDetail} from './components/tags'
-import { loadState } from './actions'
+import { Home } from './components/home'
 
 import { Grid, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css'
 import './style.scss';
 
-const loggerMiddleware = createLogger()
-
-let store = createStore(todoApp,
-	applyMiddleware(
-	thunkMiddleware, // lets us dispatch() functions
-	loggerMiddleware // neat middleware that logs actions
-))
-
-let unsubscribe = store.subscribe(() =>
-	console.log(store.getState())
-)
-
-store.dispatch(loadState('json/data.json')).then(() =>
-	console.log(store.getState())
-)
-
+//'json/data.json'
 class Main extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			tags:[],
+			id: {
+				name:'',
+				role:'',
+				summary:'',
+				highlights:[]
+			},
+			experience: [],
+			roles:{},
+			skills:[]
+		};
+	}
+	componentDidMount(){
+		axios.get('json/professionalExperience.json').then(data=>{
+			let experience = data.data.experience;
+
+			experience = experience.map(project => {
+				let categories = project.responsabilities.map(r=> r.categories );
+				project.tags = categories.reduce((ac, e)=> ac.concat(e),[]);
+				return project;
+			});
+
+			let tags = experience.reduce((ac, e)=> ac.concat(e.tags),[]);
+			tags = tags.filter((t,pos) => tags.indexOf(t) == pos ).sort()
+
+			this.setState({
+				id:data.data.id,
+				experience:experience,
+				roles:data.data.roles,
+				skills: tags
+			})
+		});
+	}
 	render() {
 		return (
-			<Provider store={store}>
-				<div>
-				<Grid>
-					{this.props.children}
-				</Grid>
-				</div>
-			</Provider>
+			<Grid>
+				<Home {...this.state}/>
+			</Grid>
 		)
 	}
 }
@@ -51,10 +61,7 @@ class Main extends React.Component {
 render((
 	<Router history = {hashHistory}>
 		<Route path = "/" component = {Main}>
-			<IndexRoute component = {Home} />
-			<Route path = "tags" component = {SplitHome}>
-				<Route path=":tag" component={TagDetail} />
-			</Route>
+			<IndexRoute component = {Main} />
 			<Route path='*' component={NotFound} />
 		</Route>
 	</Router>

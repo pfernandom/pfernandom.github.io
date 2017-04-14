@@ -5,23 +5,27 @@ class ContactCard extends React.Component {
 	render() {
 		return (
 			<div className="contact-card">
-				<h1>Pedro Marquez</h1>
-				<h2>Full-stack Software Developer</h2>
+				<h1>{this.props.name}</h1>
+				<h2>{this.props.role}</h2>
 				
 				<p>
-					Full Stack developer, Java Architect and Certified Ethical Hacker. 
+					{this.props.summary}
 				</p>
 				<ul>
-					<li>5+ years of experience in Java technologies (back-end).</li>
-					<li>7+ years of experience in front-end technologies (JavaScript, CSS, HTML).</li>
-					<li>2 years of experience in Application Security and Penetration Testing.</li>
-					<li>Scrum Master trained.</li>
-					<li>Six Sigma Green Belt trained.</li>
+					{this.props.highlights.map(h =>
+						<li key={h}>{h}</li>
+					)}
 				</ul>
-
 			</div>
 		)
 	}
+}
+
+ContactCard.propTypes = {
+	name: React.PropTypes.string.isRequired,
+	role: React.PropTypes.string.isRequired,
+	summary: React.PropTypes.string.isRequired,
+	highlights: React.PropTypes.array.isRequired
 }
 
 export default ContactCard

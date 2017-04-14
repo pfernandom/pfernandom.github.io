@@ -16,7 +16,7 @@
     "related": ["portlet"]
   },
   {
-    "value": "javaee",
+    "value": "java",
     "label": "Java EE",
     "description": "With 5+ years of professional experience, Java is my main programming language. I've used it in all the layers of the development stack",
     "highlights": ["Integration with Spring modules like Spring MVC, Spring Data and Spring Boot"],

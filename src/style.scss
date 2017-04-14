@@ -1,5 +1,15 @@
 $icon-font-path: "~bootstrap/fonts/bootstrap/";
 
+@mixin noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 body{
     background: rgba(248, 248, 248, 0.21);
     //font-family: Verdana;
@@ -10,4 +20,39 @@ h3{
     font-size: 1.5em;
     color: grey;
     margin-top: 0px;
+}
+
+.blured{
+    //color:red;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.highlighted{
+    font-weight: bold;
+}
+
+.hidden{
+    display:none;
+}
+
+.tag{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c9d1d6;
+    margin:3px;
+    padding:5px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    @include noselect;
+    &:hover{
+        text-decoration: none;
+        background-color: #dae2e7;
+    }
+
+    &.selected{
+        background-color: #d9eaff;
+        font-weight: bold;
+    }
 }
