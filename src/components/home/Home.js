@@ -66,7 +66,7 @@ class Home extends React.Component {
 				</section>
 				<section>
 					<h3>Skills</h3>
-					<Instruction text="Select one or more skills to filter the experience related to them"/>
+					<Instruction text="Select one or more skills to filter the experience by them"/>
 					<div className="animated fadeIn">
 						{tags.map(tag =>
 							<Tag key={tag} value={tag} isSelected={this.isTagSelected(tag)} toggle={this.updateSelectedTag.bind(this)}></Tag>

@@ -86,22 +86,17 @@ h3{
     }
 }
 
-@include keyframes(pulse3d) {
-    0% {transform: scale3d(1,1,1);}
-    50% {transform: scale3d(1.5,1.5,1.5);}
-    100% {transform: scale3d(1,1,1);}
-}
-
-
 .instructions{
-    color:#8ebffb;
+    color:#03A9F4;
     display:inline-block;
-    cursor: pointer;
     &.pulse{
-        animation-name: pulse3d;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-        -webkit-animation-iteration-count: infinite;
+        cursor: pointer;
+        box-shadow: 0 0 0 rgba(3, 169, 244, 0.4);
+        animation: loading 2s infinite;
+        border-radius: 50%;
+        &:hover {
+            animation: none;
+        }
     }
 }
 

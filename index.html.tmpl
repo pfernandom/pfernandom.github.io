@@ -1,29 +1,67 @@
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Pedro Marquez: Fullstack Sofware Developer</title>
         <style>
         .no-script .contact-card h2 {
             font-size: 1.5em;
             color: grey;
             margin-top: 0px;
         }
+
+        .loading {
+          margin:10% auto;
+          width:130px;
+          padding:20px;
+          font-size: 1.5em;
+          color: white;
+          display: block;
+          background: #03A9F4;
+          border-radius: 3%;
+          cursor: pointer;
+          box-shadow: 0 0 0 rgba(3, 169, 244, 0.4);
+          animation: loading 2s infinite;
+        }
+        .loading:hover {
+          animation: none;
+        }
+
+        @-webkit-keyframes loading {
+          0% {
+            -webkit-box-shadow: 0 0 0 0 rgba(3, 169, 244, 0.4);
+          }
+          70% {
+              -webkit-box-shadow: 0 0 0 10px rgba(3, 169, 244, 0);
+          }
+          100% {
+              -webkit-box-shadow: 0 0 0 0 rgba(3, 169, 244, 0);
+          }
+        }
+        @keyframes loading {
+          0% {
+            -moz-box-shadow: 0 0 0 0 rgba(3, 169, 244, 0.4);
+            box-shadow: 0 0 0 0 rgba(3, 169, 244, 0.4);
+          }
+          70% {
+              -moz-box-shadow: 0 0 0 10px rgba(3, 169, 244, 0);
+              box-shadow: 0 0 0 10px rgba(3, 169, 244, 0);
+          }
+          100% {
+              -moz-box-shadow: 0 0 0 0 rgba(3, 169, 244, 0);
+              box-shadow: 0 0 0 0 rgba(3, 169, 244, 0);
+          }
+        }
         </style>
     </head>
     <body>
         <div id="app">
             <div class="no-script container">
-                <div class="contact-card">
-                <h1>Pedro Marquez</h1><h2>Full-stack Software Developer</h2>
-                <p>Full Stack developer, Java Architect and Certified Ethical Hacker.</p>
-                <ul><li>5+ years of experience in Java technologies (back-end).</li>
-                <li>7+ years of experience in front-end technologies (JavaScript, CSS, HTML).</li>
-                <li>2 years of experience in Application Security and Penetration Testing.</li></ul>
-                </div>
+                <div class="loading">Loading...</div>
             </div>
         </div>
+        <link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
     </body>
 </html>
