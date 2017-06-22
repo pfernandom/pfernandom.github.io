@@ -1,13 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, browserHistory, hashHistory, IndexRoute  } from 'react-router'
+import { Router, Route, hashHistory, IndexRoute  } from 'react-router'
 import axios from 'axios'
 
 import NotFound from './components/error'
 import { Home } from './components/home'
 
-import { Grid, Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Grid } from 'react-bootstrap';
 import 'animate.css'
 import './style.scss';
 

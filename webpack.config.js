@@ -13,7 +13,7 @@ var configuration = {
 	//entry:'./src/entry.js',
 	entry: {
 		main: ['./src/entry.js'],
-		vendor: ['react', 'react-dom', 'react-redux', 'redux'],
+		vendor: ['react', 'react-dom', 'react-redux', 'redux']
 	},
 	output: {
 		path: __dirname + '/dist',

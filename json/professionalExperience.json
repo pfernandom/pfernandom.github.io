@@ -55,8 +55,12 @@
 			"endDate": "Today",
 			"role": "Senior Full-stack Developer",
 			"description": "As a senior developer, I contribuite to create PaaS based applications using microservices over an AWS infrastructure. I mentor and help my teammates to complete their user stories successfully and in time. Also, I collaborate with the Architects team to improve the design of our cloud-based infrastructure, implement proofs of concept, document research results, and solve problems which appear during day-to-day development.",
-			"tags":["java","aws","docker","angular","wso-apimanager","rest","ci/cd","git","agile/scrum","paas","openshift","cloudfoundry","spring","cloud","oauth","maven","rabbitmq","mongodb","bash","linux"],
+			"tags":["java","nodejs","aws","docker","angular","wso-apimanager","rest","ci/cd","git","agile/scrum","paas","openshift","cloudfoundry","spring","reactjs","cloud","oauth","maven","rabbitmq","mongodb","bash","linux"],
 			"responsabilities": [
+				{
+					"categories":["ui","react","rxjs","rest","backend","nodejs"],
+					"content":"Built an internal ReactJS application with Redux and Rxjs (including it's REST API build in NodeJS with Restify) to execute and monitor build jobs in Jenkins"
+				},
 				{
 					"categories":["devops","api-management","aws","rest","backend","java","linux"],
 					"content":"Implemented and mantained a cluster of WSO2 products (over AWS EC2 instances running CentOS) including API Manager, Identity Server and Data Analytics"

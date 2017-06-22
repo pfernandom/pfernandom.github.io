@@ -1,5 +1,23 @@
 $icon-font-path: "~bootstrap/fonts/bootstrap/";
 
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
 @mixin noselect{
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -54,5 +72,48 @@ h3{
     &.selected{
         background-color: #d9eaff;
         font-weight: bold;
+    }
+}
+
+.summary{
+    h3{
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .roles{
+        min-height: 38px;
+    }
+}
+
+@include keyframes(pulse3d) {
+    0% {transform: scale3d(1,1,1);}
+    50% {transform: scale3d(1.5,1.5,1.5);}
+    100% {transform: scale3d(1,1,1);}
+}
+
+
+.instructions{
+    color:#8ebffb;
+    display:inline-block;
+    cursor: pointer;
+    &.pulse{
+        animation-name: pulse3d;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+    }
+}
+
+@media print{
+    .no-print{
+        display:none;
+    }
+    .tag:not(.selected){
+        display:none;
+    }
+
+    @page {
+        margin: 0.5cm;
     }
 }
