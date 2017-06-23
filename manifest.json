@@ -1,0 +1,24 @@
+{
+  "short_name": "Pedro Marquez CV",
+  "name": "Pedro Marquez - Full-stack developer - CV",
+  "icons": [
+    {
+      "src": "/dist/icons/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/dist/icons/favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/dist/icons/favicon-230x230.png",
+      "type": "image/png",
+      "sizes": "230x230"
+    },
+  ],
+  "start_url": "index.html?launcher=true",
+  "display": "standalone",
+  "background_color": "white"
+}
