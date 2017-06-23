@@ -16,10 +16,10 @@ import sw from "file?name=offline.js!babel!./workers/offline";
 if ("serviceWorker" in navigator) {
 	// Service worker registered
 	navigator.serviceWorker.register(sw).catch(err => {
-		// Service worker registration failed
+		console.error("Could not register service worker",err)
 	});
 } else {
-	// Service worker is not supported
+	console.error("Service workers are not supported")
 }
 
 //'json/data.json'
