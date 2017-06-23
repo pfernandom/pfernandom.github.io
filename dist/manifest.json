@@ -1,0 +1,5 @@
+{
+  "main.js": "main.js",
+  "offline.js": "offline.js",
+  "vendor.js": "vendor.bundle.js"
+}

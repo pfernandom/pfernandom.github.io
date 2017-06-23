@@ -10,6 +10,18 @@ import { Grid } from 'react-bootstrap';
 import 'animate.css'
 import './style.scss';
 
+
+import sw from "file?name=offline.js!babel!./workers/offline";
+
+if ("serviceWorker" in navigator) {
+	// Service worker registered
+	navigator.serviceWorker.register(sw).catch(err => {
+		// Service worker registration failed
+	});
+} else {
+	// Service worker is not supported
+}
+
 //'json/data.json'
 class Main extends React.Component {
 	constructor(props) {

@@ -22,7 +22,8 @@ class Experience extends React.Component{
 				{this.props.data.map(e =>
 					<div className={"project"+(this.isVisible( e.tags )?'':' disabled')} key={e.project}>
 						<h4>{e.project}</h4>
-						{ !this.isVisible( e.tags ) ? (<span className="instructions">The selected skills were not used in this project</span>): null }
+						{ !this.isVisible( e.tags ) ?
+							(<span className="instructions">The selected skills were not used in this project</span>): null }
 						<h5 className="role">{e.role}</h5>
 						<span className="start-date">{e.startDate}</span> until <span className="start-date">{e.endDate}</span>
 

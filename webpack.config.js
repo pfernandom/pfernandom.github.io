@@ -2,6 +2,7 @@ var webpack = require("webpack");
 var config = require('config');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+var ManifestPlugin = require('webpack-manifest-plugin');
 var fs = require("fs")
 
 //var jsxLoader = (config.get('env') === 'development') ? 'react-hot!babel!es2015' : 'babel!es2015';
@@ -13,7 +14,7 @@ var configuration = {
 	//entry:'./src/entry.js',
 	entry: {
 		main: ['./src/entry.js'],
-		vendor: ['react', 'react-dom', 'react-redux', 'redux']
+		vendor: ['react', 'react-dom']
 	},
 	output: {
 		path: __dirname + '/dist',
@@ -74,6 +75,7 @@ var configuration = {
 		]
 	},
 	plugins: [
+		new ManifestPlugin(),
 		new webpack.ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery"
