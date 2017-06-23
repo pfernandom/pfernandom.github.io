@@ -76,6 +76,7 @@ var configuration = {
 	},
 	plugins: [
 		new ManifestPlugin(),
+		new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
 		new webpack.ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery"
