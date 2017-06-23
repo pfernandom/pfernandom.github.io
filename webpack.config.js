@@ -87,7 +87,7 @@ var configuration = {
 		new HtmlWebpackPlugin({
 			title: 'Scallywag',
 			template: 'index.html.tmpl',
-			hash:true,
+			hash:false,
 			filename: '../index.html',
 			favicon: './dist/icons/favicon.ico'
 		}),
