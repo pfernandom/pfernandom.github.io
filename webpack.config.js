@@ -10,7 +10,7 @@ var fs = require("fs")
 var configuration = {
 	//watch:true,
 	//devtool: 'inline-eval-cheap-source-map',
-	devtools: 'cheap-module-source-map',
+	devtools: 'source-map',
 	//entry:'./src/entry.js',
 	entry: {
 		main: ['./src/entry.js'],
@@ -19,6 +19,7 @@ var configuration = {
 	output: {
 		path: __dirname + '/dist',
 		filename: '[name].js',
+		sourceMapFilename: "[name].js.map",
 	},
 	devServer: {
 		contentBase: __dirname,
