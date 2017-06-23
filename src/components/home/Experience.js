@@ -2,7 +2,6 @@
  * Created by pedro.f.marquez.soto on 4/13/2017.
  */
 import React from 'react'
-import {Accordion, Panel} from 'react-bootstrap'
 import './experience.scss';
 
 class Experience extends React.Component{

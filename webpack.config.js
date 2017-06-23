@@ -5,13 +5,9 @@ var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 var ManifestPlugin = require('webpack-manifest-plugin');
 var fs = require("fs")
 
-//var jsxLoader = (config.get('env') === 'development') ? 'react-hot!babel!es2015' : 'babel!es2015';
-//console.log("Loader "+jsxLoader)
 var configuration = {
-	//watch:true,
 	devtool: 'inline-eval-cheap-source-map',
 	//devtools: 'source-map',
-	//entry:'./src/entry.js',
 	entry: {
 		main: ['./src/entry.js'],
 		vendor: ['react', 'react-dom']
@@ -120,13 +116,4 @@ var configuration = {
 	]
 }
 
-/*
- if (config.env === 'development') {
- configuration.entry.main.unshift(
- 'webpack/hot/dev-server'//,
- //'webpack-hot-middleware/client'
- );
- configuration.plugins.push(new webpack.HotModuleReplacementPlugin());
- }
- */
 module.exports = configuration;

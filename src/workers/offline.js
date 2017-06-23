@@ -9,7 +9,7 @@ self.addEventListener("install", event => {
 	event.waitUntil(
 		caches.open(CACHE_NAME)
 			.then(cache =>
-				fetch("manifest.json")
+				fetch("/dist/manifest.json")
 					.then(response => response.json())
 					.then(assets =>
 						cache.addAll([
@@ -20,6 +20,7 @@ self.addEventListener("install", event => {
 						])
 					)
 			).then(() => self.skipWaiting())
+			.catch(err => console.log)
 	);
 });
 

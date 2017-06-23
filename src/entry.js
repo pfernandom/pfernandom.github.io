@@ -13,10 +13,7 @@ import './style.scss';
 
 import sw from "!!file?outputPath=../&publicPath=/&name=offline.js!babel!./workers/offline";
 
-console.log(sw)
-
 if ("serviceWorker" in navigator) {
-	// Service worker registered
 	navigator.serviceWorker.register(sw).catch(err => {
 		console.error("Could not register service worker",err)
 	});
