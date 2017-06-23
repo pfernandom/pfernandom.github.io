@@ -10,7 +10,7 @@ var fs = require("fs")
 var configuration = {
 	//watch:true,
 	//devtool: 'inline-eval-cheap-source-map',
-	devtools: 'source-map',
+	devtools: 'cheap-module-source-map',
 	//entry:'./src/entry.js',
 	entry: {
 		main: ['./src/entry.js'],
@@ -108,6 +108,11 @@ var configuration = {
 			  twitter: false,
 			  yandex: false,
 			  windows: false
+			}
+		}),
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('production')
 			}
 		})
 	]

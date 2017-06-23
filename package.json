@@ -5,7 +5,7 @@
   "main": "entry.js",
   "scripts": {
     "test": "jest",
-    "build": "node_modules/.bin/webpack",
+    "build": "node_modules/.bin/webpack -p",
     "start": "node_modules/.bin/webpack-dev-server --progress --color  --hot --inline --content-base dist/"
   },
   "jest": {
