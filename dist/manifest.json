@@ -1,7 +1,7 @@
 {
+  "\\dist\\offline.js": "/dist/offline.js",
   "main.js": "main.js",
   "main.js.map": "main.js.map",
-  "offline.js": "offline.js",
   "vendor.js": "vendor.bundle.js",
   "vendor.js.map": "vendor.js.map"
 }

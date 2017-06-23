@@ -11,7 +11,7 @@ import 'animate.css'
 import './style.scss';
 
 
-import sw from "file?name=offline.js!babel!./workers/offline";
+import sw from "file?name=/dist/offline.js!babel!./workers/offline";
 
 if ("serviceWorker" in navigator) {
 	// Service worker registered

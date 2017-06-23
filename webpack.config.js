@@ -20,6 +20,7 @@ var configuration = {
 		path: __dirname + '/dist',
 		filename: '[name].js',
 		sourceMapFilename: "[name].js.map",
+		publicPath: '/dist'
 	},
 	devServer: {
 		contentBase: __dirname,
