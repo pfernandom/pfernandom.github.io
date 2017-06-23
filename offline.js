@@ -51,16 +51,3 @@ var _temp = function () {
 }();
 
 ;
-;
-
-var _temp2 = function () {
-	if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-		return;
-	}
-
-	__REACT_HOT_LOADER__.register(CACHE_NAME, "CACHE_NAME", "C:/Users/pedro.f.marquez.soto/Dev/ReactJS/pfernandom.github.io/src/workers/offline.js");
-
-	__REACT_HOT_LOADER__.register(_temp, "_temp", "C:/Users/pedro.f.marquez.soto/Dev/ReactJS/pfernandom.github.io/src/workers/offline.js");
-}();
-
-;
