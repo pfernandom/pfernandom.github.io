@@ -36,32 +36,41 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 		//console.log(compilation.options)
 		//console.log(compilation.assets['../index.html'].source())
 		/*
-		compilation.options.plugins.forEach(p =>{
-			console.log(p instanceof HtmlWebpackPlugin)
-		})*/
-		var dom = new JSDOM(compilation.assets['../index.html'].source(), {runScripts: "dangerously",resources: "usable"});
-		dom.window.document.addEventListener('DOMContentLoaded', (ev)=>{
-			console.log(dom.window.document.querySelector("#app").innerHTML);
-			var html = dom.serialize();
-			compilation.assets['../index.html'] = {
-				source: function () {
-					return html;
-				},
-				size: function () {
-					return html.length;
-				}
-			};
-			callback()
+		 compilation.options.plugins.forEach(p =>{
+		 console.log(p instanceof HtmlWebpackPlugin)
+		 })*/
+		if (compilation.assets['../index.html']) {
 
-			/*
-			 fs.writeFile(self.options.template, dom.serialize(), 'utf8', function (err) {
-			 if (err) return console.log(err);
-			 callback()
-			 });
-			 */
+			//console.log(compilation.assets)
+			var dom = new JSDOM(compilation.assets['../index.html'].source(), {
+				runScripts: "dangerously",
+				resources: "usable"
+			});
+			dom.window.document.addEventListener('DOMContentLoaded', (ev) => {
+				console.log(dom.window.document.querySelector("#app").innerHTML);
+				var html = dom.serialize();
+				compilation.assets['../index.html'] = {
+					source: function () {
+						return html;
+					},
+					size: function () {
+						return html.length;
+					}
+				};
+				callback()
 
-		}, false);
+				/*
+				 fs.writeFile(self.options.template, dom.serialize(), 'utf8', function (err) {
+				 if (err) return console.log(err);
+				 callback()
+				 });
+				 */
 
+			}, false);
+		}
+		else{
+			callback();
+		}
 
 	});
 }

@@ -16,7 +16,7 @@ class Experience extends React.Component{
 	}
 	render(){
 		return (
-			<div className="animated fadeIn">
+			<div>
 				<h3>Professional Experience</h3>
 				{this.props.data.map(e =>
 					<div className={"project"+(this.isVisible( e.tags )?'':' disabled')} key={e.project}>

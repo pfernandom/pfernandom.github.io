@@ -58,7 +58,8 @@ class Home extends React.Component {
 					<Instruction text="Select a role to filter the experience related to it"/>
 					<div className="roles">
 					{
-						roles.map(role =>
+						roles.length <= 0 ?(<span>Loading roles...</span>) :
+							roles.map(role =>
 							<Tag key={role} value={role} isSelected={this.isRoleSelected(role)} toggle={this.updateSelectedRoles.bind(this)}></Tag>
 						)
 					}
@@ -68,7 +69,8 @@ class Home extends React.Component {
 					<h3>Skills</h3>
 					<Instruction text="Select one or more skills to filter the experience by them"/>
 					<div>
-						{tags.map(tag =>
+						{tags.length <= 0 ? (<span>Loading skills...</span>) :
+							tags.map(tag =>
 							<Tag key={tag} value={tag} isSelected={this.isTagSelected(tag)} toggle={this.updateSelectedTag.bind(this)}></Tag>
 						)}
 					</div>
