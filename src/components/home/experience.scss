@@ -29,4 +29,12 @@
         }
 
     }
+
+    @media (max-width: 770px) {
+        .responsabilities{
+            ul{
+                padding: 10px;
+            }
+        }
+    }
 }

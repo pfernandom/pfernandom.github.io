@@ -16,8 +16,8 @@ class Experience extends React.Component{
 	}
 	render(){
 		return (
-			<div>
-				<h3>Professional Experience</h3>
+			<section aria-labelledby="experience-heading">
+				<h3 id="experience-heading">Professional Experience</h3>
 				{this.props.data.map(e =>
 					<div className={"project"+(this.isVisible( e.tags )?'':' disabled')} key={e.project}>
 						<h4>{e.project}</h4>
@@ -35,7 +35,7 @@ class Experience extends React.Component{
 					</div>
 				)}
 
-			</div>
+			</section>
 		);
 	}
 }

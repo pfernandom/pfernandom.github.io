@@ -55,7 +55,7 @@
 			"responsabilities": [
 				{
 					"categories":["aws","aws-rekognition","rabbitmq","golang"],
-					"content":"Hackathon: Developed an application with Golang to retrieve photos from a Raspberry Pi and send them to AWS Rekognition for facial recognition"
+					"content":"Hackathon: Developed an application with Golang to retrieve pictures from a Raspberry Pi and send them to AWS Rekognition for facial recognition"
 				},
 				{
 					"categories":["ionic","serverless","aws","aws-lambda"],

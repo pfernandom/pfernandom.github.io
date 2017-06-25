@@ -56,11 +56,11 @@ class Home extends React.Component {
 		let tags = this.props.skills;
 		let roles = Object.keys(this.props.roles);
 		return (
-			<div className="summary">
+			<div className="summary" id="top">
 				<ContactCard {...this.props.id}/>
 
-				<section className={this.state.role === "" ? 'no-print':null}>
-					<h3>Roles</h3>
+				<section aria-labelledby="roles-heading" className={this.state.role === "" ? 'no-print':null}>
+					<h3 id="roles-heading">Roles</h3>
 					<Instruction text="Select a role to filter the experience related to it"/>
 					<div className="roles">
 					{
@@ -71,8 +71,8 @@ class Home extends React.Component {
 					}
 					</div>
 				</section>
-				<section className={this.state.highlights.length <= 0 ? 'no-print':null}>
-					<h3>Skills</h3>
+				<section aria-labelledby="skills-heading" role="region" className={this.state.highlights.length <= 0 ? 'no-print':null}>
+					<h3 id="skills-heading">Skills</h3>
 					<Instruction text="Select one or more skills to filter the experience by them"/>
 					{this.state.highlights.length > 0 ? (<button className="no-print clear" onClick={this.clearTags.bind(this)}>Clear skills</button>):null}
 					<div>
@@ -84,6 +84,9 @@ class Home extends React.Component {
 					<hr/>
 				</section>
 				<Experience data={this.props.experience} highlight={this.state.highlights}/>
+				<footer>
+					<a href="#top">Go to top</a>
+				</footer>
 			</div>
 		)
 	}
