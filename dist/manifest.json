@@ -1,7 +1,5 @@
 {
   "..\\offline.js": "../offline.js",
   "main.js": "main.js",
-  "main.js.map": "main.js.map",
-  "vendor.js": "vendor.bundle.js",
-  "vendor.js.map": "vendor.js.map"
+  "vendor.js": "vendor.bundle.js"
 }

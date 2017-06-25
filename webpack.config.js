@@ -3,6 +3,7 @@ var config = require('config');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 var ManifestPlugin = require('webpack-manifest-plugin');
+var ReactServerHTMLPlugin = require('./src/webpack/plugin/react-server-html')
 var fs = require("fs")
 
 var configuration = {
@@ -73,7 +74,7 @@ var configuration = {
 	},
 	plugins: [
 		new ManifestPlugin(),
-		new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+		//new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
 		new webpack.ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery"
@@ -88,6 +89,9 @@ var configuration = {
 			hash:false,
 			filename: '../index.html',
 			favicon: './dist/icons/favicon.ico'
+		}),
+		new ReactServerHTMLPlugin({
+			mua:'woof'
 		}),
 		new FaviconsWebpackPlugin({
 			logo:'./src/images/pumpkin.svg',
