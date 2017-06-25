@@ -46,9 +46,15 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 				runScripts: "dangerously",
 				resources: "usable"
 			});
+
+			var originalDom = new JSDOM(compilation.assets['../index.html'].source());
+
 			dom.window.document.addEventListener('DOMContentLoaded', (ev) => {
 				console.log(dom.window.document.querySelector("#app").innerHTML);
-				var html = dom.serialize();
+
+				originalDom.window.document.querySelector("#app").innerHTML = dom.window.document.querySelector("#app").innerHTML
+
+				var html = originalDom.serialize();
 				compilation.assets['../index.html'] = {
 					source: function () {
 						return html;
