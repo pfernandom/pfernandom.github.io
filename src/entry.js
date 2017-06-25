@@ -31,7 +31,8 @@ class Main extends React.Component {
 				name:'',
 				role:'',
 				summary:'',
-				highlights:[]
+				highlights:[],
+				contact:[]
 			},
 			experience: [],
 			roles:{},

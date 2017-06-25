@@ -6,4 +6,44 @@
         color: grey;
         margin-top: 0px;
     }
+
+    @media (max-width: 770px) {
+        &.contact-card{
+            margin:0px;
+            padding: 0px;
+        }
+        .contact-section{
+            margin:0px;
+            padding: 0px;
+        }
+    }
+
+    .icon{
+        width: 20px;
+        display:inline-block;
+        margin:7px;
+        color:#C2C2C2;
+    }
+
+    ul{
+        list-style-type: none;
+        a{
+            display:inline-block;
+        }
+    }
+
+    @media (max-width: 770px) {
+        .icon{
+            margin:5px;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            display:inline-block;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+
 }

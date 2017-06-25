@@ -17,7 +17,7 @@ class Home extends React.Component {
 		super(props)
 		this.state={
 			highlights:[],
-			role:""
+			role:"",
 		}
 	}
 	updateSelectedRoles(role){
@@ -47,13 +47,19 @@ class Home extends React.Component {
 	isTagSelected(tag) {
 		return this.state.highlights.indexOf(tag) >= 0? true:false;
 	}
+	clearTags(){
+		this.setState({
+			highlights:[]
+		})
+	}
 	render() {
 		let tags = this.props.skills;
 		let roles = Object.keys(this.props.roles);
 		return (
 			<div className="summary">
 				<ContactCard {...this.props.id}/>
-				<section>
+
+				<section className={this.state.role === "" ? 'no-print':null}>
 					<h3>Roles</h3>
 					<Instruction text="Select a role to filter the experience related to it"/>
 					<div className="roles">
@@ -65,9 +71,10 @@ class Home extends React.Component {
 					}
 					</div>
 				</section>
-				<section>
+				<section className={this.state.highlights.length <= 0 ? 'no-print':null}>
 					<h3>Skills</h3>
 					<Instruction text="Select one or more skills to filter the experience by them"/>
+					{this.state.highlights.length > 0 ? (<button className="no-print clear" onClick={this.clearTags.bind(this)}>Clear skills</button>):null}
 					<div>
 						{tags.length <= 0 ? (<span>Loading skills...</span>) :
 							tags.map(tag =>

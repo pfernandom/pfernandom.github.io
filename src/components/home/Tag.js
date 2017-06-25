@@ -10,9 +10,9 @@ const Tag = (props)=>{
 
 	}
 	return (
-		<span className={classes} onClick={toggle.bind(this)}>
+		<button className={classes} onClick={toggle.bind(this)}>
 			{props.value}
-		</span>
+		</button>
 	)
 }
 

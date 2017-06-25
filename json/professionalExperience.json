@@ -7,11 +7,41 @@
 			"5+ years of experience in Java technologies (back-end).",
 			"7+ years of experience in front-end technologies (JavaScript, CSS, HTML).",
 			"2 years of experience in Application Security and Penetration Testing."
+		],
+		"contact":[
+			{
+				"icon":"github",
+				"link":"https://github.com/pfernandom",
+				"text":"Github"
+			},
+			{
+				"icon":"linkedin",
+				"link":"https://www.linkedin.com/in/pedro-fernando-m%C3%A1rquez-soto-1218a345/?locale=en_US",
+				"text":"LinkedIn"
+			},
+			{
+				"icon":"twitter",
+				"link":"https://twitter.com/pfernandom",
+				"text":"Twitter"
+			},
+			{
+				"icon":"mail",
+				"link":"mailto:pfernandom@gmail.com",
+				"text":"pfernandom@gmail.com"
+			},
+			{
+				"icon":"phone",
+				"link":"tel:+5129039712",
+				"text":"(512) 903-9712"
+			}
 		]
 	},
 	"roles":{
-		"Java developer":["java","maven","git","rest","oauth","portlet","liferay","wps"],
-		"JavaScript developer": ["js","angular","reactjs","webpack","bootstrap","electron","ionic","jquery","extjs","aws-lambda","responsive-design"],
+		"Java developer":["java","maven","git","rest","oauth","portlet","liferay","wps","backend"],
+		"JavaScript developer": ["js","angular","reactjs","webpack","bootstrap","electron","ionic","jquery","extjs","aws-lambda",
+			"responsive-design","rxjs","material","d3","react","ui"],
+		"Full-stack developer":["java","maven","git","rest","oauth","portlet","liferay","wps","js","angular","reactjs","webpack",
+			"bootstrap","electron","ionic","jquery","extjs","aws-lambda","responsive-design","rxjs","material","d3","react","ui"],
 		"Security Analyst":["fortify","burp","app-sec","threat-modeling"]
 	},
 	"experience":[
@@ -20,12 +50,16 @@
 			"startDate": "2015",
 			"endDate": "Today",
 			"role": "Software Developer",
-			"description": "As a software developer, I like to learn new technologies. Being contributing to Open Source projects, or building toy projects to try new languages, these are a few of the technologies I've tried outside my day job",
+			"description": "I like to learn new technologies and I'm constantly involved in learning and participate in hackathons. These are a few of the technologies I've tried outside my day job",
 			"tags":[],
 			"responsabilities": [
 				{
+					"categories":["aws","aws-rekognition","rabbitmq","golang"],
+					"content":"Hackathon: Developed an application with Golang to retrieve photos from a Raspberry Pi and send them to AWS Rekognition for facial recognition"
+				},
+				{
 					"categories":["ionic","serverless","aws","aws-lambda"],
-					"content":"Developed an Ionic application for a Hackathon about Serverless applications. The mobile application consumed an AWS Lambda exposed through AWS API Gateway; and it provided a list of ratings for the latest movies in theaters"
+					"content":"Hackathon: Developed an Ionic application for a Hackathon about Serverless applications. The mobile application consumed an AWS Lambda exposed through AWS API Gateway; and it provided a list of ratings for the latest movies in theaters"
 				},
 				{
 					"categories":["serverless"],
@@ -40,12 +74,8 @@
 					"content":"Used ReactJS, Redux and Webpack to build web applications (including this website)"
 				},
 				{
-					"categories":["angular"],
-					"content":"Contributed to Open Source libraries like md-data-table: https://github.com/daniel-nagy/md-data-table"
-				},
-				{
 					"categories":["angular","d3","neo4j"],
-					"content":"Developed an Angular application to visualize relationships between people stored in a Neo4J database, and displaying the data through a D3 data graph"
+					"content":"Hackathon: Developed an Angular application to visualize relationships between people stored in a Neo4J database, and displaying the data through a D3 data graph"
 				}
 			]
 		},
