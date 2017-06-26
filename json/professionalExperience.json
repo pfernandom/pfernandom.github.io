@@ -4,9 +4,9 @@
 		"role": "Full-stack Software Developer",
 		"summary": "Full Stack developer, Java Architect and Certified Ethical Hacker.",
 		"highlights":[
-			"5+ years of experience in Java technologies (back-end).",
-			"7+ years of experience in front-end technologies (JavaScript, CSS, HTML).",
-			"2 years of experience in Application Security and Penetration Testing."
+			"5+ years of experience in Java technologies (back-end),",
+			"7+ years of experience in front-end technologies (JavaScript, CSS, HTML),",
+			"2 years of experience in Application Security and Penetration Testing"
 		],
 		"contact":[
 			{
@@ -16,7 +16,7 @@
 			},
 			{
 				"icon":"linkedin",
-				"link":"https://www.linkedin.com/in/pedro-fernando-m%C3%A1rquez-soto-1218a345/?locale=en_US",
+				"link":"https://goo.gl/2atU47",
 				"text":"LinkedIn"
 			},
 			{
@@ -59,7 +59,7 @@
 				},
 				{
 					"categories":["ionic","serverless","aws","aws-lambda"],
-					"content":"Hackathon: Developed an Ionic application for a Hackathon about Serverless applications. The mobile application consumed an AWS Lambda exposed through AWS API Gateway; and it provided a list of ratings for the latest movies in theaters"
+					"content":"Hackathon: Developed an Ionic application to consume a Serverless application. The mobile application consumed an AWS Lambda exposed through AWS API Gateway; and it provided a list of ratings for the latest movies in theaters"
 				},
 				{
 					"categories":["serverless"],
@@ -68,10 +68,6 @@
 				{
 					"categories":["electron","angular","git"],
 					"content":"Built an Electron application, using Angular, to manage services hosted in a Docker Swarm cluster: https://github.com/pfernandom/electroswarm"
-				},
-				{
-					"categories":["reactjs","webpack"],
-					"content":"Used ReactJS, Redux and Webpack to build web applications (including this website)"
 				},
 				{
 					"categories":["angular","d3","neo4j"],
@@ -84,16 +80,16 @@
 			"startDate": "Dec, 2017",
 			"endDate": "Today",
 			"role": "Senior Full-stack Developer",
-			"description": "As a senior developer, I contribuite to create PaaS based applications using microservices over an AWS infrastructure. I mentor and help my teammates to complete their user stories successfully and in time. Also, I collaborate with the Architects team to improve the design of our cloud-based infrastructure, implement proofs of concept, document research results, and solve problems which appear during day-to-day development.",
+			"description": "As a senior developer, I contribute to create PaaS based applications using microservices over an AWS infrastructure. I mentor and help my teammates to complete their user stories successfully and in time. Also, I collaborate with the Architects team to improve the design of our cloud-based infrastructure, implement proofs of concept, document research results, and solve problems which appear during day-to-day development.",
 			"tags":["java","nodejs","aws","docker","angular","wso-apimanager","rest","ci/cd","git","agile/scrum","paas","openshift","cloudfoundry","spring","reactjs","cloud","oauth","maven","rabbitmq","mongodb","bash","linux"],
 			"responsabilities": [
 				{
 					"categories":["ui","react","rxjs","rest","backend","nodejs"],
-					"content":"Built an internal ReactJS application with Redux and Rxjs (including it's REST API build in NodeJS with Restify) to execute and monitor build jobs in Jenkins"
+					"content":"Built an internal ReactJS application with Redux and Rxjs (including its REST API build in NodeJS with Restify) to execute and monitor build jobs in Jenkins"
 				},
 				{
 					"categories":["devops","api-management","aws","rest","backend","java","linux"],
-					"content":"Implemented and mantained a cluster of WSO2 products (over AWS EC2 instances running CentOS) including API Manager, Identity Server and Data Analytics"
+					"content":"Implemented and maintained a cluster of WSO2 products (over AWS EC2 instances running CentOS) including API Manager, Identity Server and Data Analytics"
 				},
 				{
 					"categories":["devops","bash","linux"],
@@ -167,11 +163,7 @@
 				},
 				{
 					"categories":["management","rest","oauth","backend","java"],
-					"content":"Implemented best practices for building REST APIs to expose core functionality in the product. Also implemented OAuth2 for the authorization of those REST services"
-				},
-				{
-					"categories":["management","oauth","backend","java"],
-					"content":"Implemented best practices for building REST APIs to expose core functionality in the product"
+					"content":"Implemented best practices for building REST APIs to expose core functionality in the product. Also, implemented OAuth2 for the authorization of those REST services"
 				},
 				{
 					"categories":["management","backend","java"],
@@ -179,11 +171,11 @@
 				},
 				{
 					"categories":["backend","java","portlet"],
-					"content":"Analized and implemented portal servers like Liferay and Websphere Portal Server"
+					"content":"Analyzed and implemented portal servers like Liferay and Websphere Portal Server"
 				},
 				{
 					"categories":["backend","java","management"],
-					"content":"Analized and designed integration of new code modules with legacy code"
+					"content":"Analyzed and designed integration of new code modules with legacy code"
 				},
 				{
 					"categories":["backend","java","ui","portlet","java","angular","spring"],
@@ -215,7 +207,7 @@
 				},
 				{
 					"categories":["backend","java","ui","management","app-sec"],
-					"content":"Analyzed security reports comming from the testing team and designed solutions to remediate vulnerabilities"
+					"content":"Analyzed security reports coming from the testing team and designed solutions to remediate vulnerabilities"
 				},
 				{
 					"categories":["management","backend","java","ui"],
@@ -249,7 +241,7 @@
 				},
 				{
 					"categories":["backend","java","alfresco-ecm","oracle-ecm","oracle-soa","oracle-db","pentaho-bi","oracle-bi"],
-					"content":"Updated adapters for SQL databases like Oracle and MySQL, ECM servers like Oracle ECM, Business Intelligence servers like Pentaho and Oracle BI and BPM productos like Oracle SOA"
+					"content":"Updated adapters for SQL databases like Oracle and MySQL, ECM servers like Oracle ECM, Business Intelligence servers like Pentaho and Oracle BI and BPM products like Oracle SOA"
 				},
 				{
 					"categories":["backend","java"],
@@ -293,10 +285,10 @@
 		},
 		{
 			"project": "TDSI Consultoria",
-			"startDate": "Sept, 209",
+			"startDate": "Sept, 2009",
 			"endDate": "Sept, 2011",
 			"role": "Web Developer",
-			"description": "As a Web Developer I used JQuery, ExtJS and Lotus Domino to create web applications",
+			"description": "As a Web Developer, I used JQuery, ExtJS and Lotus Domino to create web applications",
 			"tags":["js","jquery","extjs","lotus-domino","ruby-on-rails"],
 			"responsabilities": [
 				{

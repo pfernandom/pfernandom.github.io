@@ -20,8 +20,10 @@
 
     .icon{
         width: 20px;
+        font-size: 1.5em;
         display:inline-block;
         margin:7px;
+        margin-right: 10px;
         color:#C2C2C2;
     }
 
@@ -38,6 +40,7 @@
     @media (max-width: 770px) {
         .icon{
             margin:5px;
+            color:#C2C2C2;
         }
         ul{
             padding: 0;
@@ -46,6 +49,13 @@
             display:inline-block;
             margin-right: 5px;
             margin-left: 5px;
+        }
+    }
+
+    @media print{
+        .icon{
+            margin:5px;
+            color:#C2C2C2;
         }
     }
 

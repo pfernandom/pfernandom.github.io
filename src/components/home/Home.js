@@ -85,7 +85,8 @@ class Home extends React.Component {
 				</section>
 				<Experience data={this.props.experience} highlight={this.state.highlights}/>
 				<footer>
-					<a href="#top">Go to top</a>
+					<a href="#top" className="no-print">Go to top</a>
+					<div>Pedro Fernando Marquez Soto - Full-stack developer</div>
 				</footer>
 			</div>
 		)

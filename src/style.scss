@@ -119,6 +119,13 @@ h3{
     border-style: hidden;
 }
 
+footer{
+    margin:10px;
+    div{
+        text-align: center;
+    }
+}
+
 @media print{
     .no-print{
         display:none;
@@ -128,10 +135,14 @@ h3{
     }
 
     @page {
-        margin: 0.5cm;
+       margin: 0.5cm;
     }
-}
 
-footer{
-    margin:10px;
+    h1 {
+        page-break-before: always;
+    }
+
+    h1, h2, h3, h4, h5 {
+        page-break-after: avoid;
+    }
 }
