@@ -14,8 +14,8 @@ self.addEventListener("install", event => {
 					.then(assets =>
 						cache.addAll([
 							"/",
-							assets["main.js"],
-							assets["vendor.js"],
+							assets["/dist/main.js"],
+							assets["/dist/vendor.js"],
 							'/json/professionalExperience.json',
 						])
 					)
