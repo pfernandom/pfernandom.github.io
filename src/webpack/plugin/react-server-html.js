@@ -14,8 +14,6 @@ const { JSDOM } = jsdom;
 
 function ReactServerHTMLPlugin(options){
 	this.options = Object.assign({
-		entry: "./dist/main.js",
-		vendor: "./dist/vendor.bundle.js",
 		template: "../index.html",
 		url:"https://pfernandom.github.io/"
 	},options);
@@ -24,16 +22,10 @@ function ReactServerHTMLPlugin(options){
 ReactServerHTMLPlugin.prototype.apply = function(compiler){
 	var self = this;
 
-	self.options.template = this.getFullTemplatePath(this.options.template, compiler.context);
-	self.options.entry = this.getFullTemplatePath(this.options.entry, compiler.context);
-	self.options.template = this.getFullTemplatePath(this.options.template, compiler.context);
-
 	compiler.plugin("emit", function(compilation, callback) {
 		if (compilation.assets[self.options.template]) {
 
 			var html = compilation.assets[self.options.template].source();
-
-			//console.log(compilation.assets)
 			var dom = new JSDOM(html, {
 				url: self.options.url,
 				runScripts: "dangerously",
