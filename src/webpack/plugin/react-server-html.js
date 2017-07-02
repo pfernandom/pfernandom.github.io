@@ -35,20 +35,20 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 			var originalDom = new JSDOM(html);
 
 			dom.window.document.addEventListener('DOMContentLoaded', (ev) => {
-				console.log(dom.window.document.querySelector("#app").innerHTML);
+				setTimeout(()=>{
+					originalDom.window.document.querySelector("#app").innerHTML = dom.window.document.querySelector("#app").innerHTML
 
-				originalDom.window.document.querySelector("#app").innerHTML = dom.window.document.querySelector("#app").innerHTML
-
-				var html = originalDom.serialize();
-				compilation.assets[self.options.template] = {
-					source: function () {
-						return html;
-					},
-					size: function () {
-						return html.length;
-					}
-				};
-				callback()
+					var html = originalDom.serialize();
+					compilation.assets[self.options.template] = {
+						source: function () {
+							return html;
+						},
+						size: function () {
+							return html.length;
+						}
+					};
+					callback()
+				},1000);
 
 			}, false);
 		}
