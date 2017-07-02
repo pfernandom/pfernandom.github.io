@@ -73,7 +73,9 @@ var configuration = {
 		]
 	},
 	plugins: [
-		new ManifestPlugin(),
+		new ManifestPlugin({
+			basePath: '/dist/'
+		}),
 		//new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
 		new webpack.ProvidePlugin({
 			$: "jquery",
