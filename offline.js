@@ -12,7 +12,7 @@ self.addEventListener("install", function (event) {
 		return fetch("/dist/manifest.json").then(function (response) {
 			return response.json();
 		}).then(function (assets) {
-			return cache.addAll(["/", assets["main.js"], assets["vendor.js"], '/json/professionalExperience.json']);
+			return cache.addAll(["/", assets["/dist/main.js"], assets["/dist/vendor.js"], '/json/professionalExperience.json']);
 		});
 	}).then(function () {
 		return self.skipWaiting();
