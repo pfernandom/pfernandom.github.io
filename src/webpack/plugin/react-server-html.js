@@ -14,10 +14,10 @@ const { JSDOM } = jsdom;
 
 function ReactServerHTMLPlugin(options){
 	this.options = Object.assign({
-		template:"index.html.tmpl",
 		entry: "./dist/main.js",
 		vendor: "./dist/vendor.bundle.js",
-		template: "./index.html"
+		template: "../index.html",
+		url:"https://pfernandom.github.io/"
 	},options);
 }
 
@@ -28,26 +28,19 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 	self.options.entry = this.getFullTemplatePath(this.options.entry, compiler.context);
 	self.options.template = this.getFullTemplatePath(this.options.template, compiler.context);
 
-	var vendor = fs.readFileSync(this.options.vendor, 'utf8');
-	var entry = fs.readFileSync(this.options.entry, 'utf8');
-	var template = fs.readFileSync(this.options.template, 'utf8');
-
 	compiler.plugin("emit", function(compilation, callback) {
-		//console.log(compilation.options)
-		//console.log(compilation.assets['../index.html'].source())
-		/*
-		 compilation.options.plugins.forEach(p =>{
-		 console.log(p instanceof HtmlWebpackPlugin)
-		 })*/
-		if (compilation.assets['../index.html']) {
+		if (compilation.assets[self.options.template]) {
+
+			var html = compilation.assets[self.options.template].source();
 
 			//console.log(compilation.assets)
-			var dom = new JSDOM(compilation.assets['../index.html'].source(), {
+			var dom = new JSDOM(html, {
+				url: self.options.url,
 				runScripts: "dangerously",
 				resources: "usable"
 			});
 
-			var originalDom = new JSDOM(compilation.assets['../index.html'].source());
+			var originalDom = new JSDOM(html);
 
 			dom.window.document.addEventListener('DOMContentLoaded', (ev) => {
 				console.log(dom.window.document.querySelector("#app").innerHTML);
@@ -55,7 +48,7 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 				originalDom.window.document.querySelector("#app").innerHTML = dom.window.document.querySelector("#app").innerHTML
 
 				var html = originalDom.serialize();
-				compilation.assets['../index.html'] = {
+				compilation.assets[self.options.template] = {
 					source: function () {
 						return html;
 					},
@@ -64,13 +57,6 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 					}
 				};
 				callback()
-
-				/*
-				 fs.writeFile(self.options.template, dom.serialize(), 'utf8', function (err) {
-				 if (err) return console.log(err);
-				 callback()
-				 });
-				 */
 
 			}, false);
 		}

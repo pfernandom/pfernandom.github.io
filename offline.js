@@ -4,7 +4,7 @@
  * Created by pedro.f.marquez.soto on 6/22/2017.
  */
 
-var CACHE_NAME = 'v1';
+var CACHE_NAME = 'v2';
 self.addEventListener("install", function (event) {
 	console.log("Installed");
 
@@ -49,7 +49,7 @@ var _temp = function () {
 		return;
 	}
 
-	__REACT_HOT_LOADER__.register(CACHE_NAME, "CACHE_NAME", "C:/Users/pedro.f.marquez.soto/Dev/ReactJS/pfernandom.github.io/src/workers/offline.js");
+	__REACT_HOT_LOADER__.register(CACHE_NAME, "CACHE_NAME", "C:/Users/Pedro/Dev/pfernandom.github.io/src/workers/offline.js");
 }();
 
 ;

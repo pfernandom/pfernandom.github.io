@@ -2,7 +2,7 @@
  * Created by pedro.f.marquez.soto on 6/22/2017.
  */
 
-const CACHE_NAME = 'v1'
+const CACHE_NAME = 'v2'
 self.addEventListener("install", event => {
 	console.log("Installed");
 
