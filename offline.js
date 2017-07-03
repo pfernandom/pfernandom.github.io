@@ -6,8 +6,6 @@
 
 var CACHE_NAME = 'v2';
 self.addEventListener("install", function (event) {
-	console.log("Installed");
-
 	event.waitUntil(caches.open(CACHE_NAME).then(function (cache) {
 		return fetch("/dist/manifest.json").then(function (response) {
 			return response.json();
@@ -22,7 +20,11 @@ self.addEventListener("install", function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-	console.log('Fetch');
+	if (event.request.url[event.request.url.length - 1] === "/") {
+		event.respondWith(fetch(event.request).catch(function () {
+			return caches.match(event.request);
+		}));
+	}
 	event.respondWith(caches.match(event.request).then(function (response) {
 		return response || fetch(event.request);
 	}).catch(function (e) {
