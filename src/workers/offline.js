@@ -17,6 +17,7 @@ self.addEventListener("install", event => {
 							assets["/dist/main.js"],
 							assets["/dist/vendor.js"],
 							'/json/professionalExperience.json',
+							'/lib/css/bootstrap.min.css'
 						])
 					)
 			).then(() => self.skipWaiting())

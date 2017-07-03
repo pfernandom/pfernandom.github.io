@@ -26,6 +26,12 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 		if (compilation.assets[self.options.template]) {
 
 			var html = compilation.assets[self.options.template].source();
+			var virtualConsole = new jsdom.VirtualConsole();
+			virtualConsole.on("error", (err) => { console.error("ERror",err) });
+			virtualConsole.sendTo(console);
+
+			console.log(html)
+
 			var dom = new JSDOM(html, {
 				url: self.options.url,
 				runScripts: "dangerously",

@@ -4,6 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 var ManifestPlugin = require('webpack-manifest-plugin');
 var ReactServerHTMLPlugin = require('./src/webpack/plugin/react-server-html')
+var express = require('express')
 var fs = require("fs")
 
 var configuration = {
@@ -15,6 +16,7 @@ var configuration = {
 	},
 	output: {
 		path: __dirname + '/dist',
+		publicPath: '/dist',
 		filename: '[name].js',
 		sourceMapFilename: "[name].js.map"
 	},
@@ -32,6 +34,7 @@ var configuration = {
 				var file = fs.readFileSync('./json/professionalExperience.json', 'utf8');
 				res.json(JSON.parse(file));
 			});
+			app.use(express.static('lib'))
 		},
 	},
 	module: {
