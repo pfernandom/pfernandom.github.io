@@ -17,7 +17,7 @@ import './style.scss';
 class Main extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
+		this.state = this.state = JSON.parse(window.__PRELOADED_STATE__) || {
 			tags:[],
 			id: {
 				name:'',
@@ -29,9 +29,11 @@ class Main extends React.Component {
 			roles:{},
 			skills:[]
 		};
+		console.log(this.state)
 	}
 	componentDidMount(){
 		axios.get('json/professionalExperience.json').then(data=>{
+			window.__PRELOADED_STATE__ = window.__PRELOADED_STATE__ || data.data.experience;
 			let experience = data.data.experience;
 
 			experience = experience.map(project => {

@@ -5,6 +5,7 @@
 var path = require('path');
 var fs = require('fs')
 var babel = require('babel-core');
+var request = require('request')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 require('jsdom-global')()
 const jsdom = require("jsdom");
@@ -40,20 +41,43 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 
 			var originalDom = new JSDOM(html);
 
+			var dataUrl = 'https://pfernandom.github.io/json/professionalExperience.json';
+
 			dom.window.document.addEventListener('DOMContentLoaded', (ev) => {
 				setTimeout(()=>{
-					originalDom.window.document.querySelector("#app").innerHTML = dom.window.document.querySelector("#app").innerHTML
 
-					var html = originalDom.serialize();
-					compilation.assets[self.options.template] = {
-						source: function () {
-							return html;
-						},
-						size: function () {
-							return html.length;
+					request(dataUrl, (error, response, body)=> {
+						if (!error && response.statusCode === 200) {
+
+							originalDom.window.document.querySelector("#app").innerHTML = dom.window.document.querySelector("#app").innerHTML
+
+
+							var script = originalDom.window.document.createElement('script');
+							var inlineScript = document.createTextNode("window.__PRELOADED_STATE__ = "+JSON.stringify(body).replace(/</g, '\\u003c'));
+							script.appendChild(inlineScript);
+							//console.log(JSON.stringify(body));
+							originalDom.window.document.head.appendChild(script);
+
+
+							var html = originalDom.serialize();
+							compilation.assets[self.options.template] = {
+								source: function () {
+									return html;
+								},
+								size: function () {
+									return html.length;
+								}
+							};
+							callback()
+
+
+						} else {
+							console.log("Got an error: ", error, ", status code: ", response.statusCode)
 						}
-					};
-					callback()
+					})
+
+
+
 				},1000);
 
 			}, false);

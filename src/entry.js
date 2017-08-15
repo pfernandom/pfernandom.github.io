@@ -25,19 +25,19 @@ if ("serviceWorker" in navigator) {
 class Main extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			tags:[],
-			id: {
-				name:'',
-				role:'',
-				summary:'',
-				highlights:[],
-				contact:[]
-			},
-			experience: [],
-			roles:{},
-			skills:[]
-		};
+		this.state = this.state = JSON.parse(window.__PRELOADED_STATE__) || {
+				tags:[],
+				id: {
+					name:'',
+					role:'',
+					summary:'',
+					highlights:[]
+				},
+				experience: [],
+				roles:{},
+				skills:[]
+			};
+		console.log(this.state)
 	}
 	componentDidMount(){
 		axios.get('json/professionalExperience.json').then(data=>{
