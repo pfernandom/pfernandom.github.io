@@ -25,7 +25,28 @@ if ("serviceWorker" in navigator) {
 class Main extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = this.state = Object.assign(JSON.parse(window.__PRELOADED_STATE__) || {} , {
+
+		if(window.__PRELOADED_STATE__){
+			let experience = JSON.parse(window.__PRELOADED_STATE__) ;
+
+			experience = experience.map(project => {
+				let categories = project.responsabilities.map(r=> r.categories );
+				project.tags = categories.reduce((ac, e)=> ac.concat(e),[]);
+				return project;
+			});
+
+			let tags = experience.reduce((ac, e)=> ac.concat(e.tags),[]);
+			tags = tags.filter((t,pos) => tags.indexOf(t) == pos ).sort()
+
+			this.state = {
+				id:data.data.id,
+				experience:experience,
+				roles:data.data.roles,
+				skills: tags
+			};
+		}
+		else{
+			this.state = {
 				tags:[],
 				id: {
 					name:'',
@@ -36,7 +57,10 @@ class Main extends React.Component {
 				experience: [],
 				roles:{},
 				skills:[]
-			});
+			}
+		}
+
+
 		console.log(this.state)
 	}
 	componentDidMount(){
