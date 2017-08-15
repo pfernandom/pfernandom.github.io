@@ -18,9 +18,9 @@ class Main extends React.Component {
 	constructor(props) {
 		super(props);
 		if(window.__PRELOADED_STATE__){
-			let experience = JSON.parse(window.__PRELOADED_STATE__) ;
+			let data = JSON.parse(window.__PRELOADED_STATE__) ;
 
-			experience = experience.experience;
+			let experience = data.experience;
 
 			experience = experience.map(project => {
 				let categories = project.responsabilities.map(r=> r.categories );
@@ -34,7 +34,7 @@ class Main extends React.Component {
 			this.state = {
 				id:data.data.id,
 				experience:experience,
-				roles:data.data.roles,
+				roles:data.roles,
 				skills: tags
 			};
 		}
