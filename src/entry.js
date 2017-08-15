@@ -25,7 +25,7 @@ if ("serviceWorker" in navigator) {
 class Main extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = this.state = JSON.parse(window.__PRELOADED_STATE__) || {
+		this.state = this.state = Object.assign(JSON.parse(window.__PRELOADED_STATE__) || {} , {
 				tags:[],
 				id: {
 					name:'',
@@ -36,7 +36,7 @@ class Main extends React.Component {
 				experience: [],
 				roles:{},
 				skills:[]
-			};
+			});
 		console.log(this.state)
 	}
 	componentDidMount(){
