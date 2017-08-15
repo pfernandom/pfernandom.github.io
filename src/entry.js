@@ -63,9 +63,6 @@ class Main extends React.Component {
 				skills:[]
 			}
 		}
-
-
-		console.log(this.state)
 	}
 	componentDidMount(){
 		axios.get('json/professionalExperience.json').then(data=>{
