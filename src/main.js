@@ -18,6 +18,7 @@ class Main extends React.Component {
 	constructor(props) {
 		super(props);
 		if(window.__PRELOADED_STATE__){
+			console.log("Data preloaded");
 			let data = JSON.parse(window.__PRELOADED_STATE__) ;
 
 			let experience = data.experience;
@@ -45,7 +46,8 @@ class Main extends React.Component {
 					name:'',
 					role:'',
 					summary:'',
-					highlights:[]
+					highlights:[],
+					contact:[]
 				},
 				experience: [],
 				roles:{},

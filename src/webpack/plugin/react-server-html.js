@@ -78,7 +78,7 @@ ReactServerHTMLPlugin.prototype.apply = function(compiler){
 
 
 
-				},1000);
+				},2000);
 
 			}, false);
 		}
