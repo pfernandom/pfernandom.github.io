@@ -32,7 +32,7 @@ class Main extends React.Component {
 			tags = tags.filter((t,pos) => tags.indexOf(t) == pos ).sort()
 
 			this.state = {
-				id:data.data.id,
+				id:data.id,
 				experience:experience,
 				roles:data.roles,
 				skills: tags
