@@ -20,6 +20,8 @@ class Main extends React.Component {
 		if(window.__PRELOADED_STATE__){
 			let experience = JSON.parse(window.__PRELOADED_STATE__) ;
 
+			experience = experience.experience;
+
 			experience = experience.map(project => {
 				let categories = project.responsabilities.map(r=> r.categories );
 				project.tags = categories.reduce((ac, e)=> ac.concat(e),[]);
