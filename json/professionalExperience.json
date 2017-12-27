@@ -38,8 +38,8 @@
 	},
 	"roles":{
 		"Java developer":["java","maven","git","rest","oauth","portlet","liferay","wps","backend"],
-		"JavaScript developer": ["js","angular","reactjs","webpack","bootstrap","electron","ionic","jquery","extjs","aws-lambda",
-			"responsive-design","rxjs","material","d3","react","ui"],
+		"JavaScript developer": ["js","emberjs","angular","reactjs","webpack","bootstrap","electron","ionic","jquery","extjs","aws-lambda",
+			"responsive-design","rxjs","material","d3","react","ui","a11y","nodejs"],
 		"Full-stack developer":["java","maven","git","rest","oauth","portlet","liferay","wps","js","angular","reactjs","webpack",
 			"bootstrap","electron","ionic","jquery","extjs","aws-lambda","responsive-design","rxjs","material","d3","react","ui"],
 		"Security Analyst":["fortify","burp","app-sec","threat-modeling"]
@@ -76,9 +76,31 @@
 			]
 		},
 		{
-			"project": "Magellan (at Accenture)",
-			"startDate": "Dec, 2017",
+			"project": "LinkedIn",
+			"startDate": "Nov 2017",
 			"endDate": "Today",
+			"role": "Front-end + UI Engineer",
+			"description": "As a UI Engineer, I collaborate with a multifunctional team of designers, product owners and other engineers to constantly adapt and update the user interface for multiple LinkedIn products; helping to keep the site secure, performant, and accessible to everyone. Using Ember.js (v2, with ES6) and a set of internal tools (all build on the Pemberly solution) we build reusable UI components.",
+			"tags":["emberjs", "js", "nodejs", "git", "svn"],
+			"responsabilities": [
+				{
+					"categories":["ui","emberjs"],
+					"content":"Build reusable Ember.js components, following all the best Ember and ES6 practices"
+				},
+				{
+					"categories":["ui","emberjs","testing"],
+					"content":"Implemented Unit, Integration and Acceptance tests for Ember components"
+				},
+				{
+					"categories":["ui","a11y"],
+					"content":"Implement accessibility best practices to guarantee that everyone, no matter what disability they have, can access LinkedIn products"
+				}
+			]
+		},
+		{
+			"project": "Magellan (at Accenture)",
+			"startDate": "Dec 2017",
+			"endDate": "Oct 2017",
 			"role": "Senior Full-stack Developer",
 			"description": "As a senior developer, I contribute to create PaaS based applications using microservices over an AWS infrastructure. I mentor and help my teammates to complete their user stories successfully and in time. Also, I collaborate with the Architects team to improve the design of our cloud-based infrastructure, implement proofs of concept, document research results, and solve problems which appear during day-to-day development.",
 			"tags":["java","nodejs","aws","docker","angular","wso-apimanager","rest","ci/cd","git","agile/scrum","paas","openshift","cloudfoundry","spring","reactjs","cloud","oauth","maven","rabbitmq","mongodb","bash","linux"],
@@ -151,7 +173,7 @@
 		},
 		{
 			"project": "ACSSP/REACH (at Accenture)",
-			"startDate": "Dec, 2014",
+			"startDate": "Dec 2014",
 			"endDate": "Dec 2016",
 			"role": "Software Architect & Full-stack developer",
 			"description": "As the software architect for ACSSP/REACH, I worked with the architects of the other H&PS SW products to implement new features and integrate with the other applications. I participated in the innovation initiative to bring new technologies to the product",
@@ -225,8 +247,8 @@
 		},
 		{
 			"project": "APSP (at Accenture)",
-			"startDate": "Nov, 2013",
-			"endDate": "Dec, 2014",
+			"startDate": "Nov 2013",
+			"endDate": "Dec 2014",
 			"role": "Java Developer",
 			"description": "As a Java Developer, I worked in the update of custom adapters. These adapters decoupled the integration of the application with 3rd party provided products like databases, reporting systems and BPM servers",
 			"tags":["java","maven","junit","testing","alfresco-ecm","oracle-ecm","oracle-soa","oracle-db","pentaho-bi","oracle-bi"],
@@ -255,8 +277,8 @@
 		},
 		{
 			"project": "Center of Excellence for Security (at Softtek)",
-			"startDate": "Sept, 2011",
-			"endDate": "Nov, 2013",
+			"startDate": "Sept 2011",
+			"endDate": "Nov 2013",
 			"role": "Security Analyst",
 			"description": "As a Security Analyst, I performed security assessments manually and using automated tools. Also, provided training and guidance for developers on vulnerability remediation, threat modeling and secure coding",
 			"tags":["fortify","burp","app-sec","threat-modeling"],
@@ -285,8 +307,8 @@
 		},
 		{
 			"project": "TDSI Consultoria",
-			"startDate": "Sept, 2009",
-			"endDate": "Sept, 2011",
+			"startDate": "Sept 2009",
+			"endDate": "Sept 2011",
 			"role": "Web Developer",
 			"description": "As a Web Developer, I used JQuery, ExtJS and Lotus Domino to create web applications",
 			"tags":["js","jquery","extjs","lotus-domino","ruby-on-rails"],

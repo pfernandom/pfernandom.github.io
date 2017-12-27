@@ -51,7 +51,7 @@ var _temp = function () {
 		return;
 	}
 
-	__REACT_HOT_LOADER__.register(CACHE_NAME, "CACHE_NAME", "C:/Users/pedro.f.marquez.soto/Dev/pfernandom.github.io/src/workers/offline.js");
+	__REACT_HOT_LOADER__.register(CACHE_NAME, "CACHE_NAME", "/Users/psoto/Documents/Code/pfernandom.github.io/src/workers/offline.js");
 }();
 
 ;

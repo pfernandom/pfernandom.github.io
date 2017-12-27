@@ -1,5 +1,6 @@
 {
-  "/dist/..\\offline.js": "/dist/../offline.js",
+  "/dist/../offline.js": "/dist/../offline.js",
+  "/dist/icons/pumpkin.svg": "/dist/icons/.cache",
   "/dist/main.js": "/dist/main.js",
   "/dist/main.js.map": "/dist/main.js.map",
   "/dist/vendor.js": "/dist/vendor.bundle.js",
