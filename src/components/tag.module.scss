@@ -12,6 +12,7 @@
     border-radius: 4px;
     line-height:2em;
     min-width: 100px;
+    box-shadow: 1px 1px .1rem #bbbbbb;
     @include noselect;
     &:hover, &:focus{
         text-decoration: none;

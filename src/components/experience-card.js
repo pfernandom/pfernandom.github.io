@@ -22,6 +22,7 @@ class Experience extends React.Component{
     return reponsabilities.some((v) => this.props.highlight.includes(v));
 	}
 	isHighlighted(reponsabilities){
+    debugger;
     return reponsabilities.some((v) => this.props.highlight.includes(v));
 	}
 	render(){
@@ -29,7 +30,6 @@ class Experience extends React.Component{
     const { areExpanded } = this.state;
 		return <section aria-labelledby="experience-heading">
         <h3 id="experience-heading">Professional Experience</h3>
-      <button onClick={this.toggleExperiences.bind(this)}>{areExpanded? 'Hide ' : 'Show '} this experience</button>
         {data.map((e, i) => (
           <div
             className={

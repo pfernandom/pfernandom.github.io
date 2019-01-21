@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Link } from "gatsby";
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -10,8 +11,9 @@ export default ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Home {...data.dataJson} />
+    <Link className="navigation-link" to="/about/">Want to know more about Pedro's interests?</Link>
   </Layout>
-)
+);
 
 export const query = graphql`
   query {

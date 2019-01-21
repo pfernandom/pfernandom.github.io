@@ -48,7 +48,8 @@
         "portlet",
         "liferay",
         "wps",
-        "backend"
+        "backend",
+        "rabbitmq"
       ]
     },
     {
@@ -101,7 +102,9 @@
         "material",
         "d3",
         "react",
-        "ui"
+        "ui",
+        "golang",
+        "rust"
       ]
     },
     {
@@ -116,14 +119,24 @@
       "endDate": "Today",
       "role": "Software Developer",
       "description": "I like to learn new technologies and I'm constantly involved in learning and participate in hackathons. These are a few of the technologies I've tried outside my day job",
-      "tags": [],
+      "tags": [
+        "aws-lambda",
+        "aws-rekognition",
+        "rabbitmq",
+        "golang",
+        "serverless",
+        "angular",
+        "electron",
+        "d3",
+        "neo4j"
+      ],
       "responsabilities": [
         {
-          "categories": ["aws", "aws-rekognition", "rabbitmq", "golang"],
+          "categories": ["aws-lambda", "aws-rekognition", "rabbitmq", "golang"],
           "content": "Hackathon: Developed an application with Golang to retrieve pictures from a Raspberry Pi and send them to AWS Rekognition for facial recognition"
         },
         {
-          "categories": ["ionic", "serverless", "aws", "aws-lambda"],
+          "categories": ["ionic", "serverless", "aws-lambda"],
           "content": "Hackathon: Developed an Ionic application to consume a Serverless application. The mobile application consumed an AWS Lambda exposed through AWS API Gateway; and it provided a list of ratings for the latest movies in theaters"
         },
         {
