@@ -1,0 +1,29 @@
+.heading {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.headingButton {
+    border: none;
+    background-color: #6895cc;
+    color: #fdfdfd;
+    padding: .5rem;
+    text-align: left;
+    font-size: 1.4rem;
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &:focus {
+        background-color: #4c6d96;
+    }
+}
+
+
+@media print{
+    .content {
+        display: initial;
+    }
+}

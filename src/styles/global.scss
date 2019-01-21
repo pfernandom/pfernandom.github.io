@@ -1,0 +1,90 @@
+@import "mixins";
+$highlight-color : #03A9F4;
+
+h3{
+    font-size: 1.5em;
+    color: grey;
+}
+
+.blured{
+    //color:red;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.highlighted{
+    font-weight: bold;
+}
+
+.hidden{
+    display:none;
+}
+
+.summary{
+    h3{
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .roles{
+        min-height: 38px;
+    }
+}
+
+.instructions{
+    color:$highlight-color;
+    display:inline-block;
+    &.pulse{
+        cursor: pointer;
+        box-shadow: 0 0 0 rgba(3, 169, 244, 0.4);
+        animation: loading 2s infinite;
+        border-radius: 50%;
+        width: 20px;
+        text-align: center;
+        &:hover {
+            animation: none;
+        }
+    }
+}
+
+.clear{
+    cursor: pointer;
+    margin: 5px;
+    color: $highlight-color;
+    background-color: white;
+    border-style: hidden;
+}
+
+footer{
+    margin:10px;
+    div{
+        text-align: center;
+    }
+    a {
+        display:inline-block;
+    }
+}
+
+@media print{
+    body {
+        font-size:14px;
+    }
+    .no-print{
+        display:none;
+    }
+    .tag:not(.selected){
+        display:none;
+    }
+
+    @page {
+       margin: 0.5cm;
+    }
+
+    h1 {
+        page-break-before: always;
+    }
+
+    h1, h2, h3, h4, h5 {
+        page-break-after: avoid;
+    }
+}
