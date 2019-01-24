@@ -72,12 +72,12 @@ footer {
   .no-print {
     display: none;
   }
-  .tag:not(.selected) {
-    display: none;
-  }
 
   @page {
     margin: 0.5cm;
+  }
+  body {
+    margin: 1.6cm;
   }
 
   h1 {
@@ -103,6 +103,12 @@ footer {
   text-decoration: dotted;
   width: 100%;
   text-align: center;
+}
+
+.tags-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 footer {

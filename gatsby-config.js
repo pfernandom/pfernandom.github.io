@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Pedro Marquez - Full-stack developer`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@pfernandom`,
+    description: `I am a full-stack developer with experience with JavaScript, Java and multiple frameworks. I currently work at LinkedIn and I'm starting on the realms of WebAssembly and Rust.`,
+    author: `@pfernandom`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,8 +11,8 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-        ignore: [`**/\.*`],
-      },
+        ignore: [`**/\.*`]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -25,19 +25,25 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/pumpkin-small.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/pumpkin-small.png` // This path is relative to the root of the site.
+      }
     },
     `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/data/`,
-      },
+        path: `./src/data/`
+      }
     },
     `gatsby-transformer-json`,
-  ],
-}
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-101513682-1"
+      }
+    }
+  ]
+};

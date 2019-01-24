@@ -24,8 +24,9 @@ class Home extends React.Component {
       role,
     })
 
-    let highlights =
-      this.props.roles.filter(curRole => curRole.title === role) || []
+    let highlights = this.props.roles
+        .filter(curRole => curRole.title === role)
+        .flatMap(r => r.tags) || [];
     this.setState({
       highlights,
     })
@@ -46,6 +47,7 @@ class Home extends React.Component {
     return this.state.highlights.includes(tag);
   }
   clearTags() {
+    this.updateSelectedRoles("");
     this.setState({
       highlights: [],
     })
@@ -59,19 +61,13 @@ class Home extends React.Component {
     tags = Array.from(new Set(tags))
 
     let highlights = this.state.highlights || []
-    return (
-      <div className="summary" id="top">
+    return <div className="summary" id="top">
         <ContactCard {...this.props.identification} />
 
-        <section
-          aria-labelledby="roles-heading"
-          className={this.state.role === '' ? 'no-print' : null}
-        >
-          <h3 id="roles-heading">
-            Roles
-          </h3>
+        <section aria-labelledby="roles-heading" className={this.state.role === "" ? "no-print" : null}>
+          <h3 id="roles-heading">Roles</h3>
           <Instruction text="Select a role to filter the experience related to it" />
-          <div className="roles">
+          <div className="roles tags-collection">
             {roles.length <= 0 ? (
               <span>Loading roles...</span>
             ) : (
@@ -86,23 +82,13 @@ class Home extends React.Component {
             )}
           </div>
         </section>
-        <section
-          aria-labelledby="skills-heading"
-          className={highlights.length <= 0 ? 'no-print' : null}
-        >
-          <h3 id="skills-heading">
-            Skills
-          </h3>
+        <section aria-labelledby="skills-heading" className={highlights.length <= 0 ? "no-print" : null}>
+          <h3 id="skills-heading">Skills</h3>
           <Instruction text="Select one or more skills to filter the experience by them" />
-          {highlights.length > 0 ? (
-            <button
-              className="no-print clear"
-              onClick={this.clearTags.bind(this)}
-            >
+          {highlights.length > 0 ? <button className="no-print clear" onClick={this.clearTags.bind(this)}>
               Clear skills
-            </button>
-          ) : null}
-          <div>
+            </button> : null}
+          <div className="tags-collection">
             {tags.length <= 0 ? (
               <span>Loading skills...</span>
             ) : (
@@ -119,8 +105,7 @@ class Home extends React.Component {
           <hr />
         </section>
         <Experience data={this.props.experience} highlight={highlights} />
-      </div>
-    )
+      </div>;
   }
 }
 

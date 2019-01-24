@@ -5,7 +5,7 @@ import React from 'react'
 import styles from './tag.module.scss'
 
 const Tag = (props)=>{
-	let classes = props.isSelected ? `${styles.tag} ${styles.selected}` : styles.tag;
+	let classes = props.isSelected ? `${styles.tag} ${styles.selected}` : `${styles.tag} no-print`;
 	let toggle = ()=>{
 		props.toggle(props.value)
 
