@@ -1,0 +1,51 @@
+{
+    "project": "APSP (at Accenture)",
+    "startDate": "Nov 2013",
+    "endDate": "Dec 2014",
+    "startYear": "2013",
+    "role": "Java Developer",
+    "description": "As a Java Developer, I worked in the update of custom adapters. These adapters decoupled the integration of the application with 3rd party provided products like databases, reporting systems and BPM servers",
+    "tags": [
+      "java",
+      "maven",
+      "junit",
+      "testing",
+      "alfresco-ecm",
+      "oracle-ecm",
+      "oracle-soa",
+      "oracle-db",
+      "pentaho-bi",
+      "oracle-bi"
+    ],
+    "responsabilities": [
+      {
+        "categories": ["backend", "java"],
+        "content": "Implemented new modules in a suite of regression tests to guarantee the adapters back-compatibility"
+      },
+      {
+        "categories": ["backend", "java", "testing"],
+        "content": "Implemented unit tests using JUnit to increase code quality and coverage"
+      },
+      {
+        "categories": [
+          "backend",
+          "java",
+          "alfresco-ecm",
+          "oracle-ecm",
+          "oracle-soa",
+          "oracle-db",
+          "pentaho-bi",
+          "oracle-bi"
+        ],
+        "content": "Updated adapters for SQL databases like Oracle and MySQL, ECM servers like Oracle ECM, Business Intelligence servers like Pentaho and Oracle BI and BPM products like Oracle SOA"
+      },
+      {
+        "categories": ["backend", "java"],
+        "content": "Troubleshooted Maven dependency issues"
+      },
+      {
+        "categories": ["backend", "java"],
+        "content": "Worked with SVN for code versioning"
+      }
+    ]
+  }

@@ -22,7 +22,6 @@ class Experience extends React.Component{
     return reponsabilities.some((v) => this.props.highlight.includes(v));
 	}
 	isHighlighted(reponsabilities){
-    debugger;
     return reponsabilities.some((v) => this.props.highlight.includes(v));
 	}
 	render(){
@@ -40,7 +39,7 @@ class Experience extends React.Component{
             <Expandable
               title={
                 <span>
-                  {e.project},{' '}
+                  <span>{e.project},{' '}</span>
                   <span className="experience-heading-date">
                     {e.startDate} to {e.endDate}
                   </span>
@@ -56,8 +55,8 @@ class Experience extends React.Component{
               ) : (
                 ''
               )}
-              <h5 className="role">{e.role}</h5>
-              <p>{e.description}</p>
+              <span className="role">Role: {e.role}</span>
+              <p>{ e.description}</p>
               <ul
                 className={
                   'responsabilities' +
@@ -74,7 +73,14 @@ class Experience extends React.Component{
                         }
                         key={`${r.content}-${i}`}
                       >
-                        {r.content}
+                      {r.summary? (
+                        <React.Fragment>
+                          <div>{r.summary}</div>
+                          <ul><li>{r.content}</li></ul>
+                        </React.Fragment>
+                      ) : (
+                        <span>{r.content}</span>
+                      )}
                       </li>
                     ))
                   : ''}

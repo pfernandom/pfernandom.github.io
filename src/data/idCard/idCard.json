@@ -1,0 +1,37 @@
+{
+    "name": "Pedro Marquez",
+    "role": "Full-stack Software Developer",
+    "summary": "Full Stack developer, Java Architect and Certified Ethical Hacker.",
+    "highlights": [
+      "5+ years of experience in Java technologies (back-end),",
+      "7+ years of experience in front-end technologies (JavaScript, CSS, HTML),",
+      "2 years of experience in Application Security and Penetration Testing"
+    ],
+    "contact": [
+      {
+        "icon": "github",
+        "link": "https://github.com/pfernandom",
+        "text": "Github"
+      },
+      {
+        "icon": "linkedin",
+        "link": "https://goo.gl/2atU47",
+        "text": "LinkedIn"
+      },
+      {
+        "icon": "twitter",
+        "link": "https://twitter.com/pfernandom",
+        "text": "Twitter"
+      },
+      {
+        "icon": "mail",
+        "link": "mailto:pfernandom@gmail.com",
+        "text": "pfernandom@gmail.com"
+      },
+      {
+        "icon": "phone",
+        "link": "tel:+5129039712",
+        "text": "(512) 903-9712"
+      }
+    ]
+  }

@@ -1,0 +1,23 @@
+{
+    "project": "LinkedIn",
+    "startDate": "Nov 2017",
+    "endDate": "Today",
+    "startYear": "2017",
+    "role": "Front-end + UI Engineer",
+    "description": "As a UI Engineer, I collaborate with a multifunctional team of designers, product owners and other engineers to constantly adapt and update the user interface for multiple LinkedIn products; helping to keep the site secure, performant, and accessible to everyone. Using Ember.js (v2, with ES6) and a set of internal tools (all build on the Pemberly solution) we build reusable UI components.",
+    "tags": ["emberjs", "js", "nodejs", "git", "svn"],
+    "responsabilities": [
+      {
+        "categories": ["ui", "emberjs"],
+        "content": "Build reusable Ember.js components, following all the best Ember and ES6 practices"
+      },
+      {
+        "categories": ["ui", "emberjs", "testing"],
+        "content": "Implemented Unit, Integration and Acceptance tests for Ember components"
+      },
+      {
+        "categories": ["ui", "a11y"],
+        "content": "Implement accessibility best practices to guarantee that everyone, no matter what disability they have, can access LinkedIn products"
+      }
+    ]
+  }

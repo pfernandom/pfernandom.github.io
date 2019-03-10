@@ -1,0 +1,121 @@
+{
+    "project": "Magellan (at Accenture)",
+    "startDate": "Dec 2017",
+    "endDate": "Oct 2017",
+    "startYear": "2017",
+    "role": "Senior Full-stack Developer",
+    "description": "As a senior developer, I contribute to create PaaS based applications using microservices over an AWS infrastructure. I mentor and help my teammates to complete their user stories successfully and in time. Also, I collaborate with the Architects team to improve the design of our cloud-based infrastructure, implement proofs of concept, document research results, and solve problems which appear during day-to-day development.",
+    "tags": [
+      "java",
+      "nodejs",
+      "aws",
+      "docker",
+      "angular",
+      "wso-apimanager",
+      "rest",
+      "ci/cd",
+      "git",
+      "agile/scrum",
+      "paas",
+      "openshift",
+      "cloudfoundry",
+      "spring",
+      "reactjs",
+      "cloud",
+      "oauth",
+      "maven",
+      "rabbitmq",
+      "mongodb",
+      "bash",
+      "linux"
+    ],
+    "responsabilities": [
+      {
+        "categories": ["ui", "react", "rxjs", "rest", "backend", "nodejs"],
+        "content": "Built an internal ReactJS application with Redux and Rxjs (including its REST API build in NodeJS with Restify) to execute and monitor build jobs in Jenkins"
+      },
+      {
+        "categories": [
+          "devops",
+          "api-management",
+          "aws",
+          "rest",
+          "backend",
+          "java",
+          "linux"
+        ],
+        "content": "Implemented and maintained a cluster of WSO2 products (over AWS EC2 instances running CentOS) including API Manager, Identity Server and Data Analytics"
+      },
+      {
+        "categories": ["devops", "bash", "linux"],
+        "content": "Created Bash scripts to run as Cronjobs to synchronize configuration files with Rsync, and to guarantee the availability of servers running inside EC2 instances"
+      },
+      {
+        "categories": ["management", "agile", "backend", "java", "ui"],
+        "content": "Worked under an Agile methodology (Scrum), acting as backup Scrum Master"
+      },
+      {
+        "categories": ["devops", "aws", "backend"],
+        "content": "Troubleshooted infrastructure and networking issues on AWS services using EC2, Security Groups, ELB instances and Route 53"
+      },
+      {
+        "categories": ["devops", "aws", "backend"],
+        "content": "Troubleshooted AWS services like RDS and Elasticache"
+      },
+      {
+        "categories": ["backend", "spring", "mongodb", "mysql", "database"],
+        "content": "Maintained Spring Data repositories which connect to MySQL and MongoDB"
+      },
+      {
+        "categories": ["backend", "rabbitmq"],
+        "content": "Built microservices using RabbitMQ for asynchronous inter-service communication"
+      },
+      {
+        "categories": [
+          "backend",
+          "java",
+          "java",
+          "spring",
+          "microservices",
+          "docker",
+          "maven"
+        ],
+        "content": "Developed microservices using Spring Boot, Spring Cloud, Spring Data and Maven, which used Docker as a deployment unit"
+      },
+      {
+        "categories": [
+          "backend",
+          "java",
+          "ci/cd",
+          "git",
+          "openshift",
+          "cloudfoundry"
+        ],
+        "content": "Troubleshooted CI/CD pipelines implemented with Jenkins, which build the microservices in each commit to Git (BitBucket), packaging them in Docker and deploy them to both Openshift and CloudFoundry on the same pipeline."
+      },
+      {
+        "categories": ["devops", "paas", "openshift", "cloudfoundry"],
+        "content": "Created and maintained services in PaaS products like Openshift and CloudFoundry"
+      },
+      {
+        "categories": ["backend", "java", "ui", "spring"],
+        "content": "Implemented Single-Sign-On clients for SAML 2.0 (with Spring Boot MVC) and OpenID Connect (with JavaScript)"
+      },
+      {
+        "categories": ["backend", "java", "api-management", "rest", "java"],
+        "content": "Designed REST APIs implemented in Spring Boot and exposed them through the WSO2 API Manager"
+      },
+      {
+        "categories": ["ui", "oauth", "rest", "app-sec", "angular"],
+        "content": "Implemented an implicit OAuth2 grant, using the WSO2 Identity Server and AngularJS"
+      },
+      {
+        "categories": ["management", "ui", "backend", "java"],
+        "content": "Trained and mentored other developers in best practices of software development, debugging and infrastructure implementation"
+      },
+      {
+        "categories": ["backend", "docker"],
+        "content": "Built a proof of concept using Docker Swarm to run Docker-packaged microservices"
+      }
+    ]
+  }

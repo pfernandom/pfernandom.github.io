@@ -1,0 +1,31 @@
+{
+    "project": "Center of Excellence for Security (at Softtek)",
+    "startDate": "Sept 2011",
+    "endDate": "Nov 2013",
+    "startYear": "2011",
+    "role": "Security Analyst",
+    "description": "As a Security Analyst, I performed security assessments manually and using automated tools. Also, provided training and guidance for developers on vulnerability remediation, threat modeling and secure coding",
+    "tags": ["fortify", "burp", "app-sec", "threat-modeling"],
+    "responsabilities": [
+      {
+        "categories": ["app-sec", "testing"],
+        "content": "Performed Black, Grey and White box security testing for applications from multiple vendors"
+      },
+      {
+        "categories": ["app-sec", "testing"],
+        "content": "Performed automated static code analysis to detect vulnerabilities using HP Fortify and Burp scanner"
+      },
+      {
+        "categories": ["fortify", "burp", "testing"],
+        "content": "Conducted multiple training sessions for software developers in the company to help them understand common vulnerabilities and how to fix them"
+      },
+      {
+        "categories": ["app-sec", "testing"],
+        "content": "Performed automated security tests using HP Fortify. Analyzed the results, removing false positives and adjusting the criticality based on the application context"
+      },
+      {
+        "categories": ["app-sec", "threat-modeling"],
+        "content": "Performed Thread Modeling analysis for clients to help them determine possible security risks in their applications and infrastructure"
+      }
+    ]
+  }

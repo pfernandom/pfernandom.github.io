@@ -1,0 +1,98 @@
+{
+    "project": "ACSSP/REACH (at Accenture)",
+    "startDate": "Dec 2014",
+    "endDate": "Dec 2016",
+    "startYear": "2014",
+    "role": "Software Architect & Full-stack developer",
+    "description": "As the software architect for ACSSP/REACH, I worked with the architects of the other H&PS SW products to implement new features and integrate with the other applications. I participated in the innovation initiative to bring new technologies to the product",
+    "tags": [
+      "java",
+      "angular",
+      "liferay",
+      "wps",
+      "portlet",
+      "spring",
+      "maven",
+      "responsive-design",
+      "git",
+      "svn",
+      "oauth",
+      "bootstrap",
+      "material-design",
+      "rest"
+    ],
+    "responsabilities": [
+      {
+        "categories": ["management", "agile", "backend", "java", "ui"],
+        "content": "Worked under an Agile methodology (Scrum), participating proactively during Sprint planning and retrospectives"
+      },
+      {
+        "categories": ["management", "rest", "oauth", "backend", "java"],
+        "content": "Implemented best practices for building REST APIs to expose core functionality in the product. Also, implemented OAuth2 for the authorization of those REST services"
+      },
+      {
+        "categories": ["management", "backend", "java"],
+        "content": "Designed a project structure to help clients extend our product"
+      },
+      {
+        "categories": ["backend", "java", "portlet"],
+        "content": "Analyzed and implemented portal servers like Liferay and Websphere Portal Server"
+      },
+      {
+        "categories": ["backend", "java", "management"],
+        "content": "Analyzed and designed integration of new code modules with legacy code"
+      },
+      {
+        "categories": [
+          "backend",
+          "java",
+          "ui",
+          "portlet",
+          "java",
+          "angular",
+          "spring"
+        ],
+        "content": "Created Java Portlets using Maven, Spring Portlet MVC and AngularJS"
+      },
+      {
+        "categories": ["ui", "angular", "sass", "bootstrap"],
+        "content": "Created a library of reusable Angular components, using Bootstrap, Sass, Grunt"
+      },
+      {
+        "categories": ["ui", "angular", "testing"],
+        "content": "Implemented unit tests for Angular modules using Karma and Jasmine"
+      },
+      {
+        "categories": ["ui", "angular", "management"],
+        "content": "Trained developers on AngularJS development and UI best practices"
+      },
+      {
+        "categories": ["ui", "css", "sass", "bootstrap"],
+        "content": "Implemented  a responsive UI theme using HTML5, CSS/Sass and Bootstrap and libraries like modernizr"
+      },
+      {
+        "categories": ["ui", "css", "sass", "bootstrap", "material"],
+        "content": "Worked with client implementation teams to fix Angular-based Java Portlets with Material design, to help them achieve their delivery dates"
+      },
+      {
+        "categories": ["backend", "java", "ui", "management"],
+        "content": "Peer Reviewed software commits from other developers, before deploying on demo environments"
+      },
+      {
+        "categories": ["backend", "java", "ui", "management", "app-sec"],
+        "content": "Analyzed security reports coming from the testing team and designed solutions to remediate vulnerabilities"
+      },
+      {
+        "categories": ["management", "backend", "java", "ui"],
+        "content": "Implemented common design patterns like adapter, facade, decorator, builder and factory method"
+      },
+      {
+        "categories": ["backend", "java", "ui", "svn", "git"],
+        "content": "Worked with source control using both Git and SVN servers"
+      },
+      {
+        "categories": ["backend", "java", "database"],
+        "content": "Maintained Hibernate repositories to connect to Oracle Databases"
+      }
+    ]
+  }

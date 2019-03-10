@@ -1,0 +1,48 @@
+{
+    "project": "Personal Projects",
+    "startDate": "2015",
+    "endDate": "Today",
+    "startYear": "2019",
+    "role": "Software Developer",
+    "description": "I like to learn new technologies and I'm constantly involved in learning and participate in hackathons. These are a few of the technologies I've tried outside my day job",
+    "tags": [
+      "aws-lambda",
+      "aws-rekognition",
+      "rabbitmq",
+      "golang",
+      "serverless",
+      "angular",
+      "electron",
+      "d3",
+      "neo4j",
+      "webassembly",
+      "rust"
+    ],
+    "responsabilities": [
+      {
+        "categories": ["rust", "webassembly"],
+        "summary": "Followed multiple tutorials on WebAssembly with Rust",
+        "content": "I believe that WebAssembly is the future of web development. And since Rust is currently one of the best ways to code for WebAssembly, I've been teaching myself the language and the spec by following all official tutorials."
+      },
+      {
+        "categories": ["aws-lambda", "aws-rekognition", "rabbitmq", "golang"],
+        "content": "Hackathon: Developed an application with Golang to retrieve pictures from a Raspberry Pi and send them to AWS Rekognition for facial recognition"
+      },
+      {
+        "categories": ["ionic", "serverless", "aws-lambda"],
+        "content": "Hackathon: Developed an Ionic application to consume a Serverless application. The mobile application consumed an AWS Lambda exposed through AWS API Gateway; and it provided a list of ratings for the latest movies in theaters"
+      },
+      {
+        "categories": ["serverless"],
+        "content": "Created a blog about Serverless applications, hosted at Medium: https://medium.com/a-man-with-no-server. I'm building a Serverless application as an example, and documenting step by step in the blog"
+      },
+      {
+        "categories": ["electron", "angular", "git"],
+        "content": "Built an Electron application, using Angular, to manage services hosted in a Docker Swarm cluster: https://github.com/pfernandom/electroswarm"
+      },
+      {
+        "categories": ["angular", "d3", "neo4j"],
+        "content": "Hackathon: Developed an Angular application to visualize relationships between people stored in a Neo4J database, and displaying the data through a D3 data graph"
+      }
+    ]
+  }

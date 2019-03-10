@@ -2,10 +2,24 @@
     min-height: 172px;
     display: flex;
 
-    h2{
-        font-size: 1.5em;
-        color: grey;
-        margin-top: 0px;
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+
+        h1 {
+            flex-basis: 300px;
+        }
+
+        h2{
+            font-size: 1.5em;
+            color: grey;
+            margin-top: 0px;
+            flex-basis: 300px;
+        }
+
+        p {
+            margin-bottom: 0.5em;
+        }
     }
 
     .icon{
@@ -62,6 +76,9 @@
     }
 
     @media print{
+        h1 {
+            font-size: 2em;
+        }
         .icon{
             margin:5px;
             color:#C2C2C2;

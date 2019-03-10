@@ -47,8 +47,8 @@ class ContactCard extends React.Component {
 	render() {
 		const contact = this.props.contact || []
 		const highlights = this.props.highlights;
-		return <div className="contact-card col-sm-12">
-        <div className="col-xs-12 col-sm-7">
+		return <div className="contact-card">
+        <div className="info">
           <h1>{this.props.name}</h1>
           <h2>{this.props.role}</h2>
 
@@ -57,7 +57,7 @@ class ContactCard extends React.Component {
             {highlights.map(h => <li key={h}>{h}</li>)}
           </ul>
         </div>
-        <div className="contact-section col-xs-12 col-sm-5">
+        <div className="contact-section">
           <h3>Contact</h3>
           <ul>
             {contact.map(c => <li key={c.link}>
