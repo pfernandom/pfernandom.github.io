@@ -43,16 +43,18 @@ const EmailIcon = () => (<FaEnvelope className="icon"/>)
 
 const PhoneIcon = () => <FaPhone className="icon" />
 
-class ContactCard extends React.Component {
+export default class ContactCard extends React.Component {
 	render() {
-		const contact = this.props.contact || []
-		const highlights = this.props.highlights;
+    const { contact = [], graduationDate, highlights } = this.props;
+    const diff = new Date() - new Date(graduationDate);
+    const yearsSinceGraduation = diff / 1000 / 3600 / 24 / 30 / 12;
+    console.log(Math.floor(yearsSinceGraduation));
 		return <div className="contact-card">
         <div className="info">
           <h1>{this.props.name}</h1>
-          <h2>{this.props.role}</h2>
+          <h2>{this.props.subRole ? this.props.subRole : this.props.role}</h2>
 
-          <p>{this.props.summary}</p>
+          <div className="summary">{this.props.summary}</div>
           <ul>
             {highlights.map(h => <li key={h}>{h}</li>)}
           </ul>
@@ -60,17 +62,16 @@ class ContactCard extends React.Component {
         <div className="contact-section">
           <h3>Contact</h3>
           <ul>
-            {contact.map(c => <li key={c.link}>
+            {contact.map(c => 
+              <li key={c.link} className={c.print ? '' : 'no-print'}>
                 {{ github: <GithubIcon />, twitter: <TwitterIcon />, linkedin: <LinkedInIcon />, phone: <PhoneIcon />, mail: <EmailIcon /> }[c.icon]}
                 <a href={c.link} target="_blank" rel="noopener noreferrer">
                   {c.text}
                 </a>
-              </li>)}
+              </li>)
+            }
           </ul>
         </div>
       </div>
 	}
 }
-
-
-export default ContactCard

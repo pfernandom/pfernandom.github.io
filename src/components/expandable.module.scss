@@ -1,5 +1,5 @@
 .heading {
-    display: block;
+    display: flex;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -12,18 +12,53 @@
     padding: .5rem;
     text-align: left;
     font-size: 1.4rem;
-    display: block;
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
     &:focus {
         background-color: #4c6d96;
     }
 }
 
+.inlineHeadingButton {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
+
+.icon {
+    width: 0.5em;
+    margin: 5px;
+}
+
+.content {
+    display:flex;
+    flex-wrap: wrap;
+    &[hidden] {
+        display:none;
+    }
+}
+
 
 @media print{
+    [hidden] {
+        .responsibilities {
+            display: hidden;
+        }
+    }
     .content {
         display: initial;
+        &[hidden] {
+            display:initial;
+        }
+    }
+
+    .headingButton {
+        border: 1px solid #d4d4d4;
+    }
+
+    .inlineHeadingButton{
+        border: none;
     }
 }

@@ -4,10 +4,26 @@
   border-width: 1px;
   padding: 10px;
   border-color: #8ebffb;
-  .role {
-    font-weight: bold;
-    padding-top: 10px;
+  .collapsible-heading {
+    display:flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    .collapsible-heading__title {
+      padding-right:10px;
+    }
+    .collapsible-heading__date {
+      font-size: medium;
+    }
+    .collapsible-heading__project {
+      max-width: 50%;
+      font-size: large;
+    }
+    .collapsible-heading__role {
+      font-size: large;
+    }
   }
+ 
   .start-date {
     font-weight: bold;
   }
@@ -15,9 +31,54 @@
   .end-date {
     font-weight: bold;
   }
-  .responsabilities {
+  .experience--description__collapsed {
+    flex-basis: 100%;
+    padding-top: 1em;
+  }
+  .experience--expand-message {
+    flex-basis: auto;
+  }
+  .experience--description {
+    flex-basis: 80%;
+    padding-top: 1em;
+  }
+  .experience--summary-toggle {
+    width: 100%;
+    text-align: left;
+    background-color: #dcdbdb;
+  }
+  .experience--content {
+    padding: 0.2em 0;
+  }
+  .experience--expand-message {
+    font-style: italic;
+  }
+  .experience--collapsible {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 0 0;
+  }
+  .experience--collapsible-content {
+    padding: 10px;
+    background-color: #fff6e2;;
+    border-radius: 0 0 5px 5px;
+  }
+  .experience--no-print-check {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 0;
+    input {
+      margin-right: 5px;
+    }
+    label > div {
+      width: 110px;
+    }
+  }
+  .responsibilities {
     li {
-      margin: 5px;
+      margin: 0.5em 0;
     }
   }
 
@@ -31,7 +92,7 @@
   }
 
   @media (max-width: 770px) {
-    .responsabilities {
+    .responsibilities {
       ul {
         padding: 10px;
         word-wrap: break-word;
@@ -41,16 +102,39 @@
 }
 
 @media print {
-  .responsabilities li {
-    &:not(.highlighted) {
-      display: none;
-    }
-    .highlighted {
-      font-weight: normal;
+  .collapsible-heading {
+    color: #fffafa;
+  }
+  .responsibilities {
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+    li {
+    
+      &.experience--content:not(.highlighted) {
+        // display: none;
+      }
+      .highlighted {
+        font-weight: normal;
+      }
     }
   }
+  .project {
+    page-break-inside: avoid;
+    .experience--collapsible-content {
+      margin: 0;
+      padding: 5px;
+      ul {
+        padding: 0;
+      }
+    }
+    .experience--description {
+      flex-basis: 100%;
+    }
+  }
+ 
 }
 
-.experience-heading-date {
+.collapsible-heading__date {
   font-size: 1rem;
 }

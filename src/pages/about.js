@@ -13,15 +13,14 @@ const SecondPage = () => (
       multiple frameworks. I currently work at LinkedIn and I'm starting on the
       realms of WebAssembly and Rust.
     </p>
-    <h2>Prefered Tech Stack</h2>
+    <h2>Preferred Tech Stack</h2>
     <p>
       While most of my experience is working on JavaScript and Java, I've developed
       and interest in coding languages like Rust and Go. I'm looking forward to work
       with WebAssembly and I'm trying to get involved in Open Source as much as possible.
     </p>
     <p>
-      I enjoy systems design. I'm very intersted in distributed systems and while I'm
-      not very good with databases, data management is of great interest to me.
+      I enjoy systems design. I'm very interested in distributed systems and while database management is not my strong suit, data management is of great interest to me.
     </p>
     <h2>Personal Interests</h2>
     <p>
@@ -29,7 +28,7 @@ const SecondPage = () => (
       movies, tv shows and video games.
     </p>
     <p>
-      I like cookin BBQ Texas-style, beer gardens and finding new restaurants.
+      I like cooking BBQ Texas-style, beer gardens and finding new restaurants.
     </p>
     <Link className="navigation-link" to="/">
       Go back to the homepage

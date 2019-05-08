@@ -11,8 +11,8 @@ const Tag = (props)=>{
 
 	}
 	return (
-		<button className={classes} onClick={toggle.bind(this)}>
-			{props.value}
+		<button className={`${classes} ${props.className}`} onClick={toggle.bind(this)}>
+			{props.value || props.children}
 		</button>
 	)
 }

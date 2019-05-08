@@ -4,7 +4,7 @@
     "endDate": "Dec 2014",
     "startYear": "2013",
     "role": "Java Developer",
-    "description": "As a Java Developer, I worked in the update of custom adapters. These adapters decoupled the integration of the application with 3rd party provided products like databases, reporting systems and BPM servers",
+    "description": "As a Java Developer, I worked in the update of custom adapters. These adapters decoupled the integration of the application with 3rd party provided products like databases, reporting systems and BPM servers.",
     "tags": [
       "java",
       "maven",
@@ -17,7 +17,7 @@
       "pentaho-bi",
       "oracle-bi"
     ],
-    "responsabilities": [
+    "responsibilities": [
       {
         "categories": ["backend", "java"],
         "content": "Implemented new modules in a suite of regression tests to guarantee the adapters back-compatibility"

@@ -1,25 +1,33 @@
 .contact-card{
-    min-height: 172px;
+    min-height: 10em;
     display: flex;
 
     .info {
         display: flex;
         flex-wrap: wrap;
-
+        align-items: start;
+        align-content: baseline;
         h1 {
-            flex-basis: 300px;
+            flex-basis: 50%;
         }
 
         h2{
             font-size: 1.5em;
             color: grey;
             margin-top: 0px;
-            flex-basis: 300px;
         }
 
         p {
             margin-bottom: 0.5em;
         }
+    }
+    
+    .contact-section {
+        font-size: small;
+    }
+
+    .summary {
+        flex-basis: 100%;
     }
 
     .icon{
@@ -33,6 +41,7 @@
 
     ul{
         list-style-type: none;
+        margin: 0.5em 0;
         li {
             display: flex;
             margin-bottom: 0;
@@ -52,6 +61,7 @@
         &.contact-card{
             margin:0px;
             padding: 0px;
+            margin: 0.5em;
             flex-direction: column;
         }
         .contact-section{
@@ -70,8 +80,7 @@
         }
         li{
             display:inline-block;
-            margin-right: 5px;
-            margin-left: 5px;
+            margin: 0.5em;
         }
     }
 
@@ -86,6 +95,19 @@
 
         &.contact-card{
             display: flex;
+            flex-direction: row;
+            ul {
+                li {
+                    margin: 0.2em;
+                }
             }
         }
+
+        .contact-section {
+            font-size: small;
+            li {
+                height:3em;
+            }
+        }
+    }
 }

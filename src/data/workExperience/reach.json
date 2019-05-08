@@ -4,7 +4,7 @@
     "endDate": "Dec 2016",
     "startYear": "2014",
     "role": "Software Architect & Full-stack developer",
-    "description": "As the software architect for ACSSP/REACH, I worked with the architects of the other H&PS SW products to implement new features and integrate with the other applications. I participated in the innovation initiative to bring new technologies to the product",
+    "description": "As the software architect for ACSSP/REACH, I worked with the architects of the other H&PS SW products to implement new features and integrate with the other applications. I participated in the innovation initiative to bring new technologies to the product.",
     "tags": [
       "java",
       "angular",
@@ -21,26 +21,16 @@
       "material-design",
       "rest"
     ],
-    "responsabilities": [
+    "responsibilities": [
       {
         "categories": ["management", "agile", "backend", "java", "ui"],
-        "content": "Worked under an Agile methodology (Scrum), participating proactively during Sprint planning and retrospectives"
+        "summary": "Experience working with Agile methodologies",
+        "content": "Worked under an Agile methodology (Scrum)"
       },
       {
         "categories": ["management", "rest", "oauth", "backend", "java"],
+        "summary": "Secured REST APIs with OAuth2",
         "content": "Implemented best practices for building REST APIs to expose core functionality in the product. Also, implemented OAuth2 for the authorization of those REST services"
-      },
-      {
-        "categories": ["management", "backend", "java"],
-        "content": "Designed a project structure to help clients extend our product"
-      },
-      {
-        "categories": ["backend", "java", "portlet"],
-        "content": "Analyzed and implemented portal servers like Liferay and Websphere Portal Server"
-      },
-      {
-        "categories": ["backend", "java", "management"],
-        "content": "Analyzed and designed integration of new code modules with legacy code"
       },
       {
         "categories": [
@@ -52,47 +42,21 @@
           "angular",
           "spring"
         ],
-        "content": "Created Java Portlets using Maven, Spring Portlet MVC and AngularJS"
+        "summary": "Developed Java Portlet-based applications",
+        "content": " - Created Java Portlets using Maven, Spring Portlet MVC and AngularJS for Liferay and Websphere Portal Server\n - Worked with client implementation teams to fix Angular-based Java Portlets with Material design, to help them achieve their delivery dates"
       },
       {
-        "categories": ["ui", "angular", "sass", "bootstrap"],
-        "content": "Created a library of reusable Angular components, using Bootstrap, Sass, Grunt"
-      },
-      {
-        "categories": ["ui", "angular", "testing"],
-        "content": "Implemented unit tests for Angular modules using Karma and Jasmine"
-      },
-      {
-        "categories": ["ui", "angular", "management"],
-        "content": "Trained developers on AngularJS development and UI best practices"
-      },
-      {
-        "categories": ["ui", "css", "sass", "bootstrap"],
-        "content": "Implemented  a responsive UI theme using HTML5, CSS/Sass and Bootstrap and libraries like modernizr"
-      },
-      {
-        "categories": ["ui", "css", "sass", "bootstrap", "material"],
-        "content": "Worked with client implementation teams to fix Angular-based Java Portlets with Material design, to help them achieve their delivery dates"
+        "categories": ["ui", "angular", "sass", "bootstrap", "management"],
+        "summary": "Built modern front-end applications using AngularJS",
+        "content": "Created a library of responsive Angular components, using Bootstrap, CSS/Sass, Grunt\n - Trained developers on AngularJS development and UI best practices"
       },
       {
         "categories": ["backend", "java", "ui", "management"],
-        "content": "Peer Reviewed software commits from other developers, before deploying on demo environments"
+        "content": "Mentored other developers, and reviewed their code"
       },
       {
-        "categories": ["backend", "java", "ui", "management", "app-sec"],
-        "content": "Analyzed security reports coming from the testing team and designed solutions to remediate vulnerabilities"
-      },
-      {
-        "categories": ["management", "backend", "java", "ui"],
-        "content": "Implemented common design patterns like adapter, facade, decorator, builder and factory method"
-      },
-      {
-        "categories": ["backend", "java", "ui", "svn", "git"],
-        "content": "Worked with source control using both Git and SVN servers"
-      },
-      {
-        "categories": ["backend", "java", "database"],
-        "content": "Maintained Hibernate repositories to connect to Oracle Databases"
+        "categories": ["backend", "java", "management"],
+        "content": "Analyzed and designed integration of new code modules with legacy code, implementing common design patterns like adapter, facade, decorator, builder and factory method"
       }
     ]
   }

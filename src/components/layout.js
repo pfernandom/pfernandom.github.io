@@ -29,9 +29,12 @@ const Layout = ({ children }) => (
           {children}
           <footer>
             <div>Pedro Fernando Marquez Soto - Full-stack developer</div>©{" "}
-            {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>.
+            {new Date().getFullYear()}
+            <span className="no-print">
+              , Built with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a>.
+            </span>
             <a href="#top" className="no-print">
               <FaLevelUpAlt />Go to top
             </a>

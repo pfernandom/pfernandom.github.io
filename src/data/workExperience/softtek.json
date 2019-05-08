@@ -4,9 +4,9 @@
     "endDate": "Nov 2013",
     "startYear": "2011",
     "role": "Security Analyst",
-    "description": "As a Security Analyst, I performed security assessments manually and using automated tools. Also, provided training and guidance for developers on vulnerability remediation, threat modeling and secure coding",
-    "tags": ["fortify", "burp", "app-sec", "threat-modeling"],
-    "responsabilities": [
+    "description": "As a Security Analyst, I performed security assessments manually and using automated tools. Also, provided training and guidance for developers on vulnerability remediation, threat modeling and secure coding.",
+    "tags": ["fortify", "burp", "app-sec", "threat-modeling", "testing"],
+    "responsibilities": [
       {
         "categories": ["app-sec", "testing"],
         "content": "Performed Black, Grey and White box security testing for applications from multiple vendors"

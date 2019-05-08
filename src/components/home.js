@@ -2,14 +2,13 @@ import React from 'react'
 import ContactCard from './contact-card'
 import Experience from './experience-card'
 import Tag from './tag'
-import Tooltop from './tooltip'
+import Tooltip from './tooltip'
 
 const Instruction = props => (
-  <Tooltop className="instructions pulse" hoverText={props.text}>
+  <Tooltip className="instructions pulse" hoverText={props.text}>
     &#8984;
-  </Tooltop>
+  </Tooltip>
 )
-
 class Home extends React.Component {
   constructor(props) {
     super(props)
@@ -62,9 +61,9 @@ class Home extends React.Component {
 
     let highlights = this.state.highlights || []
     return <div className="summary" id="top">
-        <ContactCard {...this.props.identification} />
+        <ContactCard subRole={this.state.role} {...this.props.identification} />
 
-        <section aria-labelledby="roles-heading" className={this.state.role === "" ? "no-print" : null}>
+        <section aria-labelledby="roles-heading" className="no-print">
           <h3 id="roles-heading">Roles</h3>
           <Instruction text="Select a role to filter the experience related to it" />
           <div className="roles tags-collection">
