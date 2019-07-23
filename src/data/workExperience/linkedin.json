@@ -13,9 +13,14 @@
         "content": " - [Microsoft Word Resume Assistant](https://support.office.com/en-gb/article/write-your-best-resume-with-help-from-linkedin-and-resume-assistant-444ff6f0-ef74-4a9c-9091-ffd7a9d1917a) is a Microsoft Office Word feature to help job seekers craft quality resumes\n - As lead developer, I have to maintain this Ember application, following all the quality guidelines from Microsoft"
       },
       {
+        "categories": ["ui", "emberjs"],
+        "summary": "Front-end developer for LinkedIn Jobs",
+        "content": " - Build new web features using Ember components to help job seekers find better job opportunities and employers to find quality candidates."
+      },
+      {
         "categories": ["ui", "a11y"],
         "summary": "Accessibility champion for LinkedIn Jobs",
-        "content": " - As a champion, my job is to improve LinkedIn Jobs web pages to make sure it is accessible all people, doesn't matter what kind of disabilities they might have.\n - Provide guidance on A11y best practices to other team members"
+        "content": " - As a champion, my job is to improve LinkedIn Jobs web pages to make sure it is accessible all people, doesn't matter what kind of disabilities they might have.\n - Provide guidance on A11y best practices to other team members.\nWork with designers to make sure A11y is considered for new features."
       },
       {
         "categories": ["performance", "backend"],

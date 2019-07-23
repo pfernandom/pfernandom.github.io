@@ -24,7 +24,6 @@
     "responsibilities": [
       {
         "categories": ["management", "agile", "backend", "java", "ui"],
-        "summary": "Experience working with Agile methodologies",
         "content": "Worked under an Agile methodology (Scrum)"
       },
       {
@@ -48,11 +47,7 @@
       {
         "categories": ["ui", "angular", "sass", "bootstrap", "management"],
         "summary": "Built modern front-end applications using AngularJS",
-        "content": "Created a library of responsive Angular components, using Bootstrap, CSS/Sass, Grunt\n - Trained developers on AngularJS development and UI best practices"
-      },
-      {
-        "categories": ["backend", "java", "ui", "management"],
-        "content": "Mentored other developers, and reviewed their code"
+        "content": "- Created a library of responsive Angular components, using Bootstrap, CSS/Sass, Grunt\n - Trained developers on AngularJS development and UI best practices"
       },
       {
         "categories": ["backend", "java", "management"],

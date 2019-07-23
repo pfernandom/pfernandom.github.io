@@ -28,7 +28,6 @@ export default ({ data }) => {
       return b.startDate - a.startDate;
     });
   const result = { identification, roles, experience };
-  console.log(result)
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} lang="en_US" />
