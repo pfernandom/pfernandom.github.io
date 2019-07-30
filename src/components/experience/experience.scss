@@ -1,24 +1,29 @@
-.project {
+.experience__project {
   margin-bottom: 20px;
   border-style: solid;
   border-width: 1px;
   padding: 10px;
   border-color: #8ebffb;
+
   .collapsible-heading {
-    display:flex;
+    display: flex;
     align-items: center;
     flex-grow: 1;
     justify-content: space-between;
+
     .collapsible-heading__title {
-      padding-right:10px;
+      padding-right: 10px;
     }
+
     .collapsible-heading__date {
       font-size: medium;
     }
+
     .collapsible-heading__project {
       max-width: 50%;
       font-size: large;
     }
+
     .collapsible-heading__role {
       font-size: large;
     }
@@ -31,52 +36,43 @@
   .end-date {
     font-weight: bold;
   }
+
   .experience--description__collapsed {
     flex-basis: 100%;
-    padding-top: 1em;
   }
-  .experience--expand-message {
-    flex-basis: auto;
-  }
-  .experience--description {
-    flex-basis: 80%;
-    padding-top: 1em;
-  }
-  .experience--summary-toggle {
-    width: 100%;
-    text-align: left;
-    background-color: #dcdbdb;
-  }
-  .experience--content {
-    padding: 0.2em 0;
-  }
+
   .experience--expand-message {
     font-style: italic;
-  }
-  .experience--collapsible {
+    flex-basis: auto;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f1f1f1;
-    border-radius: 5px 5px 0 0;
+    height: 3em;
   }
-  .experience--collapsible-content {
-    padding: 10px;
-    background-color: #fff6e2;;
-    border-radius: 0 0 5px 5px;
+
+  .experience--description {
+    flex-basis: 80%;
   }
+
+  .experience--tooltip {
+    color: #6d6c6c;
+  }
+
   .experience--no-print-check {
     display: flex;
-    align-items: center;
     padding: 0.5em 0;
+
     input {
       margin-right: 5px;
     }
+
     label > div {
       width: 110px;
     }
   }
-  .responsibilities {
+
+  ul.responsibilities {
+    margin: 0;
+    padding-left: 1em;
+
     li {
       margin: 0.5em 0;
     }
@@ -101,33 +97,32 @@
   }
 }
 
+.markdown p {
+  margin: 0.5em 0;
+}
+
 @media print {
   .collapsible-heading {
     color: #fffafa;
   }
+
   .responsibilities {
     padding: 0;
     margin: 0;
     padding-left: 15px;
-    li {
     
-      &.experience--content:not(.highlighted) {
-        // display: none;
-      }
+    li {
+      margin: 0;
+
       .highlighted {
         font-weight: normal;
       }
     }
   }
-  .project {
+
+  .experience__project {
     page-break-inside: avoid;
-    .experience--collapsible-content {
-      margin: 0;
-      padding: 5px;
-      ul {
-        padding: 0;
-      }
-    }
+    
     .experience--description {
       flex-basis: 100%;
     }

@@ -3,9 +3,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-body {
-  margin: 0;
-}
 article,
 aside,
 details,
@@ -201,7 +198,8 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  margin-top:2em;
+  margin: 2em 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -613,6 +611,9 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
+.only-print {
+  display: none;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -631,8 +632,13 @@ pre tt:after {
     color-adjust: exact;
     -webkit-print-color-adjust: exact !important;
   }
-  .no-print {
+  
+  .no-print.no-print {
     display: none !important;
+  }
+
+  .only-print.only-print {
+    display: block;
   }
 
   h1, h3 {

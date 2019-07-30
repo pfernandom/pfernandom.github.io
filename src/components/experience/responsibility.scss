@@ -1,0 +1,42 @@
+.resp__content {
+  padding: 0.2em 0;
+  font-size: 1em;
+}
+
+.resp__content--highlighted {
+  color: black;
+  font-weight: 500;
+}
+
+.resp__content--dimmed {
+  color: #505050;
+}
+
+.resp__summary {
+  width: 100%;
+  text-align: left;
+}
+
+.resp__summary--highlighted {
+  color: black;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.resp__collapsible-content {
+  padding: 10px;
+  background-color: #fff6e2;;
+  border-radius: 0 0 5px 5px;
+}
+
+
+@media print {
+  .resp__collapsible-content {
+    margin: 0;
+    padding: 0.5em;
+
+    ul {
+      padding: 0;
+    }
+  }
+}

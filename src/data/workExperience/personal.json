@@ -29,10 +29,6 @@
         "content": "__Hackathon__: Developed an [embedded application](https://github.com/orgs/golang-iot/dashboard) with Golang to retrieve pictures from a Raspberry Pi and send them to AWS Rekognition for facial recognition."
       },
       {
-        "categories": ["ionic", "serverless", "aws-lambda"],
-        "content": "__Hackathon__: Developed a mobile application to provide a list of movie recommendations using Ionic to consume an AWS Lambda Serverless application"
-      },
-      {
         "categories": ["serverless"],
         "content": "Created a blog about Serverless applications, hosted at [Medium](https://medium.com/a-man-with-no-server)."
       },

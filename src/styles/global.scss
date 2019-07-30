@@ -87,6 +87,21 @@ footer {
   margin-bottom: 1em;
 }
 
+.tags-collection--print {
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
 footer {
   text-align: center;
+}
+.markdown {
+  p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    li {
+      margin: 0;
+    }
+  }
 }

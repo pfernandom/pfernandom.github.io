@@ -1,11 +1,11 @@
-import React from 'react'
-import styles from './tooltip.module.scss'
+import React from 'react';
+import './tooltip.scss';
 
-export default (props) => (
-    <div className={`${styles.tooltip} ${props.className}`}>
-        {props.children}
-        <span className={styles.tooltiptext}>
-            {props.hoverText}
-        </span>
+export default function Tooltip({ className, hoverText, children }) {
+  return (
+    <div className={`tooltip ${className}`}>
+      {children}
+      <span className="tooltip__text">{hoverText}</span>
     </div>
-)
+  );
+}

@@ -1,75 +1,105 @@
-import React from 'react'
-import styles from './expandable.module.scss'
-import { FaPlus, FaMinus } from 'react-icons/fa'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './expandable.scss';
 
-class Expandable extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { }
+export default class Expandable extends React.Component {
+  constructor(...props) {
+    super(...props);
+    this.state = {
+      expanded: null,
+    };
   }
+
+  componentDidUpdate({ expanded: prevExpanded }) {
+    const { expanded } = this.props;
+    if (expanded !== prevExpanded) {
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({
+        expanded,
+      });
+    }
+  }
+
+  onToggle(ev) {
+    // This is needed because pouter <details> elements were
+    // capturing the inner details event
+    ev.stopPropagation();
+    const { onToggle } = this.props;
+    if (onToggle) {
+      onToggle.call(this, ev);
+    }
+    this.setState({
+      expanded: ev.target.open,
+    });
+  }
+
   toggle() {
-    const expanded = !this.state.expanded
-    this.setState({ expanded })
+    const { expanded } = this.state;
+    this.setState({
+      expanded: !expanded,
+    });
   }
+
   render() {
-    const expanded = this.state.expanded || this.props.expanded;
-    const { title, ariaLabel } = this.props
-    console.log({expanded})
+    const { expanded: expandedInState } = this.state;
+    const {
+      title,
+      theme,
+      expanded: expandedInProps,
+      children,
+      preview,
+      buttonClassName,
+    } = this.props;
+    const expanded = expandedInState == null ? expandedInProps : expandedInState;
     return (
       <React.Fragment>
-        <h3 className={styles.heading}>
-          <button
-            aria-expanded={expanded}
-            aria-label={ariaLabel || title}
-            className={styles.headingButton}
-            onClick={this.toggle.bind(this)}
+        <details open={expanded} onToggle={this.onToggle.bind(this)}>
+          <summary
+            className={`expandable__title 
+            ${theme === 'inline' && 'expandable__title--inline'}
+            ${buttonClassName}
+            `}
           >
-            {title}
+            <h3
+              className={`expandable__heading 
+            ${theme === 'inline' && 'expandable__heading--inline'}`}
+            >
+              {title}
+            </h3>
+          </summary>
 
-            {expanded ? 
-              <FaMinus className={`${styles.icon} no-print`} /> :
-              <FaPlus  className={`${styles.icon} no-print`} />
-            }
-          </button>
-        </h3>
-        <div className={`${styles.content} ${expanded ? 'no-print' : ''}`} hidden={expanded}>{this.props.preview.call(this, {toggle:this.toggle.bind(this)})}</div>
-        <div className={`${styles.content} ${expanded ? '' : 'no-print'}`} hidden={!expanded}>{this.props.children}</div>
+          <div
+            className={`expandable__content
+            ${theme === 'inline' && 'expandable__content--inline'}
+            ${expanded ? '' : 'no-print'}`}
+            hidden={!expanded}
+          >
+            {children}
+          </div>
+        </details>
+        {preview && (
+          <div className={`expandable__preview ${expanded ? 'no-print' : ''}`} hidden={expanded}>
+            {preview.call(this, { toggle: this.toggle.bind(this) })}
+          </div>
+        )}
       </React.Fragment>
-    )
+    );
   }
 }
+Expandable.propTypes = {
+  title: PropTypes.PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  theme: PropTypes.string,
+  buttonClassName: PropTypes.string,
+  expanded: PropTypes.bool,
+  onToggle: PropTypes.func,
+  preview: PropTypes.func,
+  children: PropTypes.node.isRequired,
+};
 
-
-class InlineExpandable extends React.PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = { }
-  }
-  toggle() {
-    const expanded = !this.state.expanded
-    this.setState({ expanded })
-  }
-  render() {
-    const expanded = this.state.expanded || this.props.expanded;
-    const { title, ariaLabel } = this.props;
-    return (
-      <React.Fragment>
-        <button
-          aria-expanded={expanded}
-          aria-label={ariaLabel || title}
-          className={`${styles.inlineHeadingButton} ${this.props.buttonClassName}`}
-          onClick={this.toggle.bind(this)}
-        >
-          {title}
-
-          {expanded ? 
-            <FaMinus className={`${styles.icon} no-print`} /> :
-            <FaPlus  className={`${styles.icon} no-print`} />
-          }
-        </button>
-        <div className={styles.content} hidden={!expanded}>{this.props.children}</div>
-      </React.Fragment>
-    )
-  }
-}
-export { Expandable, InlineExpandable }
+Expandable.defaultProps = {
+  expanded: false,
+  buttonClassName: '',
+  theme: '',
+  onToggle: () => {},
+  preview: () => {},
+};

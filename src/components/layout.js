@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import { FaLevelUpAlt } from "react-icons/fa";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import { FaLevelUpAlt } from 'react-icons/fa';
 
-import "./layout.scss";
+import './layout.scss';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -23,12 +23,12 @@ const Layout = ({ children }) => (
             margin: `0 auto`,
             maxWidth: 960,
             padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0
+            paddingTop: 0,
           }}
         >
           {children}
           <footer>
-            <div>Pedro Fernando Marquez Soto - Full-stack developer</div>©{" "}
+            <div>Pedro Fernando Marquez Soto - Full-stack developer</div>©{' '}
             {new Date().getFullYear()}
             <span className="no-print">
               , Built with
@@ -36,7 +36,8 @@ const Layout = ({ children }) => (
               <a href="https://www.gatsbyjs.org">Gatsby</a>.
             </span>
             <a href="#top" className="no-print">
-              <FaLevelUpAlt />Go to top
+              <FaLevelUpAlt />
+              Go to top
             </a>
           </footer>
         </div>
@@ -46,7 +47,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

@@ -20,14 +20,14 @@
         background-color: #dae2e7;
     }
 
-    &.selected{
+    &--selected{
         background-color: #d9eaff;
         text-shadow:0px 0px 1px black;
     }
 }
 
 @media print {
-  .tag:not(.selected) {
+  .tag:not(.tag--selected) {
     display: none;
   }
   .tag.tag {
