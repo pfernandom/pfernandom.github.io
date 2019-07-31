@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expandable renders correctly, collapsed 1`] = `
+Array [
+  <details
+    onToggle={[Function]}
+    open={false}
+  >
+    <summary
+      className="expandable__title 
+            false
+            
+            "
+    >
+      <h3
+        className="expandable__heading 
+            false"
+      >
+        <h1>
+          Hello
+        </h1>
+      </h3>
+    </summary>
+    <div
+      className="expandable__content
+            false
+            no-print"
+      hidden={true}
+    >
+      Content
+    </div>
+  </details>,
+  <div
+    className="expandable__preview "
+    hidden={false}
+  />,
+]
+`;
+
+exports[`Expandable renders correctly, expanded 1`] = `
+Array [
+  <details
+    onToggle={[Function]}
+    open={true}
+  >
+    <summary
+      className="expandable__title 
+            false
+            
+            "
+    >
+      <h3
+        className="expandable__heading 
+            false"
+      >
+        <h1>
+          Hello
+        </h1>
+      </h3>
+    </summary>
+    <div
+      className="expandable__content
+            false
+            "
+      hidden={false}
+    >
+      Content
+    </div>
+  </details>,
+  <div
+    className="expandable__preview no-print"
+    hidden={true}
+  />,
+]
+`;

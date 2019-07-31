@@ -32,15 +32,15 @@ export default class Experience extends React.Component {
         <Tag className="no-print" toggle={this._toggleExperiences}>
           Expand all
         </Tag>
-        {data.map((e) => 
-          (<ExperienceElement
+        {data.map(e => (
+          <ExperienceElement
             key={`${e.id}`}
             experience={e}
             shouldPrint={e.print}
             isExpanded={areExpanded}
             highlights={highlights}
-          />)
-        )}
+          />
+        ))}
       </section>
     );
   }

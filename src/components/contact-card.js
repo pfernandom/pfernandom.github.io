@@ -127,7 +127,7 @@ ContactCard.propTypes = {
   role: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   contact: PropTypes.array,
-  highlights: PropTypes.arrayOf(PropTypes.string)
+  highlights: PropTypes.arrayOf(PropTypes.string),
 };
 
 ContactCard.defaultProps = {

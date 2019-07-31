@@ -84,7 +84,7 @@ export default class ExperienceElement extends React.Component {
 
   hasHighlights() {
     const { highlights } = this.props;
-    return highlights.length > 0;;
+    return highlights.length > 0;
   }
 
   isHighlighted(responsibilities) {
