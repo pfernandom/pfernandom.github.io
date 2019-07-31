@@ -12,18 +12,23 @@ const Instruction = ({ text }) => (
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    const { roles } = props;
     const urlRole =
       typeof window !== `undefined` ? decodeURI(window.location.hash).replace('#', '') : '';
     const highlights =
-      this.props.roles.filter(curRole => curRole.title === urlRole).flatMap(r => r.tags) || [];
+      roles.filter(curRole => curRole.title === urlRole).flatMap(r => r.tags) || [];
     this.state = {
       highlights,
       role: urlRole,
     };
+
+    this._updateSelectedTag = this.updateSelectedTag.bind(this);
   }
 
   updateSelectedRoles(selectedRole) {
-    const role = selectedRole === this.state.role ? '' : selectedRole;
+    const { role: stateRole } = this.state;
+    const { roles } = this.props;
+    const role = selectedRole === stateRole ? '' : selectedRole;
     if (typeof window !== `undefined`) {
       window.history.pushState({}, role, `/#${role}`);
     }
@@ -31,8 +36,7 @@ class Home extends React.Component {
       role,
     });
 
-    const highlights =
-      this.props.roles.filter(curRole => curRole.title === role).flatMap(r => r.tags) || [];
+    const highlights = roles.filter(curRole => curRole.title === role).flatMap(r => r.tags) || [];
     this.setState({
       highlights,
     });
@@ -40,20 +44,26 @@ class Home extends React.Component {
 
   updateSelectedTag(tag) {
     this.updateSelectedRoles('');
-    const highlights = this.state.highlights;
+    const { highlights } = this.state;
     const index = highlights.indexOf(tag);
-    index >= 0 ? highlights.splice(index, 1) : highlights.push(tag);
+    if (index >= 0) {
+      highlights.splice(index, 1);
+    } else {
+      highlights.push(tag);
+    }
     this.setState({
       highlights,
     });
   }
 
-  isRoleSelected(role) {
-    return this.state.role === role ? true : false;
+  isRoleSelected(selectedRole) {
+    const { role } = this.state;
+    return selectedRole === role;
   }
 
   isTagSelected(tag) {
-    return this.state.highlights.includes(tag);
+    const { highlights } = this.state;
+    return highlights.includes(tag);
   }
 
   clearTags() {
@@ -67,8 +77,9 @@ class Home extends React.Component {
     const {
       identification: { role, name, summary, contact = [], highlights: idHighlights },
       roles = [],
+      experience,
     } = this.props;
-    const { highlights = [] } = this.state;
+    const { highlights = [], role: stateRole } = this.state;
     let tags = roles.reduce((acc, cur) => {
       acc.push(...cur.tags);
       return acc;
@@ -77,7 +88,7 @@ class Home extends React.Component {
     return (
       <div className="summary" id="top">
         <ContactCard
-          role={this.state.role || role}
+          role={stateRole || role}
           name={name}
           summary={summary}
           contact={contact}
@@ -91,12 +102,13 @@ class Home extends React.Component {
             {roles.length <= 0 ? (
               <span>Loading roles...</span>
             ) : (
-              roles.map(role => (
+              roles.map(curRole => (
                 <Tag
-                  key={role.title}
-                  value={role.title}
-                  isSelected={this.isRoleSelected(role.title)}
-                  toggle={this.updateSelectedRoles.bind(this, role.title)}
+                  key={curRole.title}
+                  value={curRole.title}
+                  isSelected={this.isRoleSelected(curRole.title)}
+                  // eslint-disable-next-line react/jsx-no-bind
+                  toggle={this.updateSelectedRoles.bind(this, curRole.title)}
                 />
               ))
             )}
@@ -117,12 +129,12 @@ class Home extends React.Component {
             {tags.length <= 0 ? (
               <span>Loading skills...</span>
             ) : (
-              tags.map((tag, i) => (
+              tags.map(tag => (
                 <Tag
                   key={`${tag}`}
                   value={tag}
                   isSelected={this.isTagSelected(tag)}
-                  toggle={this.updateSelectedTag.bind(this)}
+                  toggle={this._updateSelectedTag}
                 />
               ))
             )}
@@ -132,7 +144,7 @@ class Home extends React.Component {
           </div>
           <hr />
         </section>
-        <ExperienceList data={this.props.experience} highlights={highlights} />
+        <ExperienceList data={experience} highlights={highlights} />
       </div>
     );
   }

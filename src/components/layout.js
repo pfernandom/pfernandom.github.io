@@ -22,14 +22,12 @@ const Layout = ({ children }) => (
           style={{
             margin: `0 auto`,
             maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
           }}
         >
           {children}
           <footer>
-            <div>Pedro Fernando Marquez Soto - Full-stack developer</div>©{' '}
-            {new Date().getFullYear()}
+            <div>{data.site.siteMetadata.title}</div>© {new Date().getFullYear()}
             <span className="no-print">
               , Built with
               {` `}

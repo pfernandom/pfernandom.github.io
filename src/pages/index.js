@@ -1,6 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -13,15 +12,16 @@ export default ({ data }) => {
   const experience = data.allWorkExperienceJson.edges
     .map(i => i.node)
     .map(i => {
-      i.startDate = i.startDate && new Date(i.startDate);
-      i.endDate = i.endDate && new Date(i.endDate);
-      i.print = true;
-      return i;
+      const startDate = i.startDate && new Date(i.startDate);
+      const endDate = i.endDate && new Date(i.endDate);
+      const print = true;
+      return Object.assign({}, i, { startDate, endDate, print });
     })
     .sort(function(a, b) {
       if (!a.startDate) {
         return -1;
-      } else if (!b.startDate) {
+      }
+      if (!b.startDate) {
         return 1;
       }
       return b.startDate - a.startDate;
@@ -32,7 +32,7 @@ export default ({ data }) => {
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} lang="en_US" />
       <Home {...result} />
       <Link className="navigation-link no-print" to="/about/">
-        Want to know more about Pedro's interests?
+        Want to know more about Pedro&apos;s interests?
       </Link>
     </Layout>
   );

@@ -19,12 +19,12 @@
   "react/jsx-filename-extension": ["off"],
   "react/prop-types": ["warn"],
   "no-return-assign": ["off"],
+  "no-underscore-dangle": ["off"],
+  "import/no-extraneous-dependencies": ["off"],
   "react/button-has-type": ["off"],
   "react/jsx-one-expression-per-line": ["off"],
   "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false}],
   "jsx-a11y/label-has-for": ["off"],
-  "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js", "**/*.stories.js"]}],
-  "no-underscore-dangle": ["error", { "allowAfterThis": true }],
   "react/forbid-prop-types": ["warn"],
 }
 }

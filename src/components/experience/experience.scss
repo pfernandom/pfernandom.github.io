@@ -72,6 +72,7 @@
   ul.responsibilities {
     margin: 0;
     padding-left: 1em;
+    width: 100%;
 
     li {
       margin: 0.5em 0;
@@ -125,6 +126,10 @@
     
     .experience--description {
       flex-basis: 100%;
+    }
+
+    ul.responsibilities {
+      width: auto;
     }
   }
  
