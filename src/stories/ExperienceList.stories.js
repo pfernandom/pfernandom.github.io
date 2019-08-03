@@ -43,4 +43,4 @@ const highlights = ['ui'];
 
 storiesOf('ExperienceList', module)
   .add('default', () => <ExperienceList data={data} highlight={[]} />)
-  .add('default (with highlights)', () => <ExperienceList data={data} highlight={highlights} />);
+  .add('default (with highlights)', () => <ExperienceList data={data} highlights={highlights} />);

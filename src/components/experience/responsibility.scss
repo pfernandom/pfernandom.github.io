@@ -3,6 +3,15 @@
   font-size: 1em;
 }
 
+.resp__content--can-exclude {
+  display: flex;
+  flex-direction: row;
+}
+
+.resp__content_print_check {
+  margin: 0.5em;
+}
+
 .resp__content--highlighted {
   color: black;
   font-weight: 500;
@@ -37,6 +46,7 @@
 
     ul {
       padding: 0;
+      margin-top: 0;
     }
   }
 }

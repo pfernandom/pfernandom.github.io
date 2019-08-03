@@ -15,7 +15,8 @@
       "oracle-soa",
       "oracle-db",
       "pentaho-bi",
-      "oracle-bi"
+      "oracle-bi",
+      "backend"
     ],
     "responsibilities": [
       {

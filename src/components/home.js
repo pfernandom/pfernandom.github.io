@@ -9,6 +9,14 @@ const Instruction = ({ text }) => (
     &#8984;
   </Tooltip>
 );
+
+const Skill = ({ tag, isSelected, onToggleSkill }) => {
+  function updateSelectedTag() {
+    onToggleSkill(tag);
+  }
+
+  return <Tag key={`${tag}`} value={tag} isSelected={isSelected} toggle={updateSelectedTag} />;
+};
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +30,21 @@ class Home extends React.Component {
       role: urlRole,
     };
 
-    this._updateSelectedTag = this.updateSelectedTag.bind(this);
+    this._onToggleSkill = this.onToggleSkill.bind(this);
+  }
+
+  onToggleSkill(tag) {
+    this.updateSelectedRoles('');
+    const { highlights } = this.state;
+    const index = highlights.indexOf(tag);
+    if (index >= 0) {
+      highlights.splice(index, 1);
+    } else {
+      highlights.push(tag);
+    }
+    this.setState({
+      highlights,
+    });
   }
 
   updateSelectedRoles(selectedRole) {
@@ -37,20 +59,6 @@ class Home extends React.Component {
     });
 
     const highlights = roles.filter(curRole => curRole.title === role).flatMap(r => r.tags) || [];
-    this.setState({
-      highlights,
-    });
-  }
-
-  updateSelectedTag(tag) {
-    this.updateSelectedRoles('');
-    const { highlights } = this.state;
-    const index = highlights.indexOf(tag);
-    if (index >= 0) {
-      highlights.splice(index, 1);
-    } else {
-      highlights.push(tag);
-    }
     this.setState({
       highlights,
     });
@@ -130,11 +138,11 @@ class Home extends React.Component {
               <span>Loading skills...</span>
             ) : (
               tags.map(tag => (
-                <Tag
-                  key={`${tag}`}
-                  value={tag}
+                <Skill
+                  key={tag}
+                  tag={tag}
                   isSelected={this.isTagSelected(tag)}
-                  toggle={this._updateSelectedTag}
+                  onToggleSkill={this._onToggleSkill}
                 />
               ))
             )}

@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExperienceList renders correctly 1`] = `
+<section
+  aria-labelledby="experience-heading"
+>
+  <h3
+    id="experience-heading"
+  >
+    Professional Experience
+  </h3>
+  <div
+    class="experience__project  "
+  >
+    <details
+      data-testid="expandable-details"
+      open=""
+    >
+      <summary
+        class="expandable__title 
+            false
+            
+            "
+        data-testid="expandable-summary"
+      >
+        <h3
+          class="expandable__heading 
+            false"
+        >
+          <span
+            class="collapsible-heading"
+          >
+            <div
+              class="collapsible-heading__title"
+            >
+              <div
+                class="collapsible-heading__role"
+              >
+                Web Developer
+              </div>
+              <div
+                class="collapsible-heading__date"
+              >
+                Aug 2019
+                 to 
+                Aug 2019
+              </div>
+            </div>
+            <div
+              class="collapsible-heading__project"
+            >
+              TDSI Consultoria
+            </div>
+          </span>
+        </h3>
+      </summary>
+      <div
+        class="expandable__content
+            false
+            "
+      >
+        <div
+          class="markdown experience--description"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in lacus vel ante consequat luctus eu vel libero. Aliquam at lacus vehicula, vehicula felis vitae, fringilla metus. Cras et consectetur velit, fringilla pellentesque odio. Proin in venenatis felis, sed viverra lorem. Pellentesque lobortis elit nisl, eget convallis sapien faucibus pulvinar. Suspendisse eu justo sit amet nibh facilisis fringilla. Maecenas dictum magna sed ante ornare vestibulum. Vivamus feugiat velit eget arcu feugiat, vel vulputate lectus suscipit. In turpis nisi, scelerisque vitae tempor faucibus, egestas eget felis. Sed commodo gravida nulla, vel faucibus velit consectetur id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus ante nisl, a dapibus velit pharetra eget. Duis pulvinar erat vitae nisl porttitor semper. Sed molestie eleifend tristique. Proin euismod porttitor purus vel eleifend.
+          </p>
+          
+
+        </div>
+        <div
+          class="experience--no-print-check no-print"
+        >
+          <label>
+            <input
+              type="checkbox"
+            />
+            <div
+              class="tooltip instructions experience--tooltip"
+            >
+              Don't print this project
+              <span
+                class="tooltip__text"
+              >
+                Check this box if you don't want to include this project in the printable version of this page
+              </span>
+            </div>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+            />
+            <div
+              class="tooltip instructions experience--tooltip"
+            >
+              Exclude individual elements from printing
+              <span
+                class="tooltip__text"
+              >
+                Check this box if you want to exclude individual experience elements in the printable version of this page
+              </span>
+            </div>
+          </label>
+        </div>
+        <ul
+          class="responsibilities false false"
+        >
+          <li
+            class="resp__content resp__content--highlighted false false"
+          >
+            <details
+              data-testid="expandable-details"
+              open=""
+            >
+              <summary
+                class="expandable__title 
+            expandable__title--inline
+            
+            "
+                data-testid="expandable-summary"
+              >
+                <h3
+                  class="expandable__heading 
+            expandable__heading--inline"
+                >
+                  <div
+                    class="markdown resp__summary resp__summary--highlighted"
+                  >
+                    <p>
+                      Lotus Domino developer
+                    </p>
+                    
+
+                  </div>
+                </h3>
+              </summary>
+              <div
+                class="expandable__content
+            expandable__content--inline
+            "
+              >
+                <div
+                  class="markdown resp__collapsible-content"
+                >
+                  <p>
+                    Used JQuery to perform AJAX requests to backend services exposed by Lotus Domino
+                  </p>
+                  
+
+                </div>
+              </div>
+            </details>
+            <div
+              class="expandable__preview no-print"
+              hidden=""
+            />
+          </li>
+          <li
+            class="resp__content resp__content--highlighted false false"
+          >
+            <div
+              class="markdown "
+            >
+              <p>
+                Created UI modules using HTML, CSS and JavaScript
+              </p>
+              
+
+            </div>
+          </li>
+          <li
+            class="resp__content resp__content--dimmed false false"
+          >
+            <div
+              class="markdown "
+            >
+              <p>
+                Maintained a Lotus Domino database, to store client records
+              </p>
+              
+
+            </div>
+          </li>
+          <li
+            class="resp__content resp__content--dimmed false false"
+          >
+            <div
+              class="markdown "
+            >
+              <p>
+                Implemented a proof of concept using Ruby on Rails to create a web application
+              </p>
+              
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </details>
+    <div
+      class="expandable__preview no-print"
+      hidden=""
+    >
+      <div
+        class="markdown experience--description__collapsed"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in lacus vel ante consequat luctus eu vel libero. Aliquam at lacus vehicula, vehicula felis vitae, fringilla metus. Cras et consectetur velit, fringilla pellentesque odio. Proin in venenatis felis, sed viverra lorem. Pellentesque lobortis elit nisl, eget convallis sapien faucibus pulvi...
+        </p>
+        
+
+      </div>
+      <button
+        class="tag no-print experience--expand-message no-print"
+      >
+        Expand to see more details...
+      </button>
+    </div>
+  </div>
+</section>
+`;

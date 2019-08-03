@@ -27,7 +27,18 @@
       "rabbitmq",
       "mongodb",
       "bash",
-      "linux"
+      "linux",
+      "management",
+      "agile",
+      "backend",
+      "ui",
+      "react",
+      "rxjs",
+      "devops",
+      "api-management",
+      "microservices",
+      "mysql",
+      "database"
     ],
     "responsibilities": [
       {

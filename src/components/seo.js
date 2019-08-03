@@ -19,15 +19,15 @@ function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
-        const metaDescription = description || data.site.siteMetadata.description;
+      render={({ site: { siteMetadata } }) => {
+        const metaDescription = description || siteMetadata.description;
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s | ${siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
@@ -51,7 +51,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
+                content: siteMetadata.author,
               },
               {
                 name: `twitter:title`,
@@ -80,12 +80,13 @@ function SEO({ description, lang, meta, keywords, title }) {
 
 SEO.defaultProps = {
   lang: `en`,
+  description: '',
   meta: [],
   keywords: [],
 };
 
 SEO.propTypes = {
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),

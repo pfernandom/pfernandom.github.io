@@ -1,75 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Expandable renders correctly, collapsed 1`] = `
-Array [
-  <details
-    onToggle={[Function]}
-    open={false}
-  >
-    <summary
-      className="expandable__title 
+<details
+  data-testid="expandable-details"
+>
+  <summary
+    class="expandable__title 
             false
             
             "
-    >
-      <h3
-        className="expandable__heading 
+    data-testid="expandable-summary"
+  >
+    <h3
+      class="expandable__heading 
             false"
-      >
-        <h1>
-          Hello
-        </h1>
-      </h3>
-    </summary>
-    <div
-      className="expandable__content
+    >
+      <span>
+        Hello
+      </span>
+    </h3>
+  </summary>
+  <div
+    class="expandable__content
             false
             no-print"
-      hidden={true}
-    >
-      Content
-    </div>
-  </details>,
-  <div
-    className="expandable__preview "
-    hidden={false}
-  />,
-]
+    hidden=""
+  >
+    Content
+  </div>
+</details>
 `;
 
 exports[`Expandable renders correctly, expanded 1`] = `
-Array [
-  <details
-    onToggle={[Function]}
-    open={true}
-  >
-    <summary
-      className="expandable__title 
+<details
+  data-testid="expandable-details"
+  open=""
+>
+  <summary
+    class="expandable__title 
             false
             
             "
-    >
-      <h3
-        className="expandable__heading 
+    data-testid="expandable-summary"
+  >
+    <h3
+      class="expandable__heading 
             false"
-      >
-        <h1>
-          Hello
-        </h1>
-      </h3>
-    </summary>
-    <div
-      className="expandable__content
+    >
+      <span>
+        Hello
+      </span>
+    </h3>
+  </summary>
+  <div
+    class="expandable__content
             false
             "
-      hidden={false}
-    >
-      Content
-    </div>
-  </details>,
-  <div
-    className="expandable__preview no-print"
-    hidden={true}
-  />,
-]
+  >
+    Content
+  </div>
+</details>
 `;

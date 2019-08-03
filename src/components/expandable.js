@@ -5,8 +5,9 @@ import './expandable.scss';
 export default class Expandable extends React.Component {
   constructor(...props) {
     super(...props);
+    const [{ expanded }] = props;
     this.state = {
-      expanded: null,
+      expanded,
     };
   }
 
@@ -28,9 +29,12 @@ export default class Expandable extends React.Component {
     if (onToggle) {
       onToggle.call(this, ev);
     }
-    this.setState({
-      expanded: ev.target.open,
-    });
+    const { expanded: stateExpanded } = this.state;
+    if (stateExpanded !== ev.target.open) {
+      this.setState({
+        expanded: ev.target.open,
+      });
+    }
   }
 
   toggle() {
@@ -41,24 +45,21 @@ export default class Expandable extends React.Component {
   }
 
   render() {
-    const { expanded: expandedInState } = this.state;
-    const {
-      title,
-      theme,
-      expanded: expandedInProps,
-      children,
-      preview,
-      buttonClassName,
-    } = this.props;
-    const expanded = expandedInState == null ? expandedInProps : expandedInState;
+    const { expanded } = this.state;
+    const { title, theme, children, preview, buttonClassName } = this.props;
     return (
       <React.Fragment>
-        <details open={expanded} onToggle={this.onToggle.bind(this)}>
+        <details
+          open={expanded}
+          onToggle={this.onToggle.bind(this)}
+          data-testid="expandable-details"
+        >
           <summary
             className={`expandable__title 
             ${theme === 'inline' && 'expandable__title--inline'}
             ${buttonClassName}
             `}
+            data-testid="expandable-summary"
           >
             <h3
               className={`expandable__heading 

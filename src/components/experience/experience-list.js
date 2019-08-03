@@ -29,9 +29,11 @@ export default class Experience extends React.Component {
     return (
       <section aria-labelledby="experience-heading">
         <h3 id="experience-heading">Professional Experience</h3>
-        <Tag className="no-print" toggle={this._toggleExperiences}>
-          Expand all
-        </Tag>
+        {highlights.length === 0 &&
+          <Tag className="experience__toggle-all no-print" toggle={this._toggleExperiences}>
+            {areExpanded ? 'Collapse all' : 'Expand all'}
+          </Tag>
+        }
         {data.map(e => (
           <ExperienceElement
             key={`${e.id}`}

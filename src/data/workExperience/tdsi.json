@@ -5,7 +5,7 @@
     "startYear": "2009",
     "role": "Web Developer",
     "description": "As a Web Developer, I used JQuery, ExtJS and Lotus Domino to create web applications.",
-    "tags": ["js", "jquery", "extjs", "lotus-domino", "ruby-on-rails"],
+    "tags": ["js", "jquery", "extjs", "lotus-domino", "ruby-on-rails", "backend", "ui"],
     "responsibilities": [
       {
         "categories": ["backend", "ui"],

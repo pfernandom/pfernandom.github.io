@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Expandable from '../expandable';
@@ -53,9 +54,9 @@ ExperiencePreview.defaultProps = {
 };
 
 const NoPrintCheck = ({ toggleSkipProject }) => (
-  <div className="experience--no-print-check no-print">
-    <label htmlFor="chk1-label">
-      <input type="checkbox" onChange={toggleSkipProject} id="chk1-label" />
+  <React.Fragment>
+    <label>
+      <input type="checkbox" onChange={toggleSkipProject} />
       <Tooltip
         className="instructions experience--tooltip"
         hoverText="Check this box if
@@ -64,22 +65,50 @@ const NoPrintCheck = ({ toggleSkipProject }) => (
         Don&apos;t print this project
       </Tooltip>
     </label>
-  </div>
+  </React.Fragment>
 );
+
+const ExcludeElementsCheck = ({ toggleSkipElements }) => {
+  function onChange(ev) {
+    toggleSkipElements(ev.target && ev.target.checked);
+  }
+  return (
+    <React.Fragment>
+      <label>
+        <input type="checkbox" onChange={onChange} />
+        <Tooltip
+          className="instructions experience--tooltip"
+          hoverText="Check this box if
+        you want to exclude individual experience elements in the printable version of this page"
+        >
+          Exclude individual elements from printing
+        </Tooltip>
+      </label>
+    </React.Fragment>
+  );
+};
+ExcludeElementsCheck.propTypes = {
+  toggleSkipElements: PropTypes.func.isRequired,
+};
 
 export default class ExperienceElement extends React.Component {
   constructor(props) {
     super(props);
     const { experience, shouldPrint } = this.props;
-    this.state = { experience, shouldPrint };
+    this.state = { experience, shouldPrint, canExcludeExperience: false };
 
     this._toggleSkipProject = this.toggleSkipProject.bind(this);
     this._isHighlighted = this.isHighlighted.bind(this);
+    this._toggleSkipElements = this.toggleSkipElements.bind(this);
   }
 
   toggleSkipProject() {
     const { shouldPrint } = this.state;
     this.setState({ shouldPrint: !shouldPrint });
+  }
+
+  toggleSkipElements(canExcludeExperience) {
+    this.setState({ canExcludeExperience });
   }
 
   hasHighlights() {
@@ -107,7 +136,7 @@ export default class ExperienceElement extends React.Component {
   }
 
   render() {
-    const { experience, shouldPrint } = this.state;
+    const { experience, shouldPrint, canExcludeExperience } = this.state;
     const { isExpanded } = this.props;
     return (
       <div
@@ -131,14 +160,21 @@ export default class ExperienceElement extends React.Component {
             <span className="instructions">The selected skills were not used in this project</span>
           )}
           <Markdown className="experience--description">{experience.description}</Markdown>
-          <NoPrintCheck toggleSkipProject={this._toggleSkipProject} />
-          <ul className={`responsibilities ${!this.isVisible(experience.tags) && 'hidden'}`}>
+          <div className="experience--no-print-check no-print">
+            <NoPrintCheck toggleSkipProject={this._toggleSkipProject} />
+            <ExcludeElementsCheck toggleSkipElements={this._toggleSkipElements} />
+          </div>
+          <ul
+            className={`responsibilities ${!this.isVisible(experience.tags) &&
+              'hidden'} ${canExcludeExperience && 'responsibilities--can-exclude'}`}
+          >
             {experience.responsibilities &&
               experience.responsibilities.map(r => (
                 <Responsibility
                   key={`${r.content}`}
                   value={r}
                   isHighlighted={this._isHighlighted(r.categories)}
+                  canExclude={canExcludeExperience}
                 />
               ))}
           </ul>

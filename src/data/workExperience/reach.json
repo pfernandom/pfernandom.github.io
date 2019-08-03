@@ -19,7 +19,12 @@
       "oauth",
       "bootstrap",
       "material-design",
-      "rest"
+      "rest",
+      "management",
+      "agile",
+      "backend",
+      "ui",
+      "sass"
     ],
     "responsibilities": [
       {
