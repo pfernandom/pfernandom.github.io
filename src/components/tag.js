@@ -5,9 +5,12 @@ import React from 'react';
 import './tag.scss';
 
 export default ({ value, children, isSelected, className, toggle }) => {
-  const classes = isSelected ? `tag tag--selected` : `tag no-print`;
+  const classes = isSelected ? ['tag', 'tag--selected'] : ['tag', 'no-print'];
+  if (className) {
+    classes.push(className);
+  }
   return (
-    <button className={`${classes} ${className}`} onClick={toggle}>
+    <button className={classes.join(' ')} onClick={toggle}>
       {value || children}
     </button>
   );

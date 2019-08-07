@@ -21,6 +21,7 @@
 
 .expandable__content {
     display:flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     border-radius: 0 0 5px 5px;
     &[hidden] {
