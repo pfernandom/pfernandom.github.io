@@ -1,24 +1,24 @@
 /* eslint-disable react/jsx-props-no-spreading */
-// import { graphql, Link } from 'gatsby';
-
 import React from 'react';
-
-import Link from 'next/link';
-// eslint-disable-next-line import/no-unresolved
-import { getAllPosts } from 'src/helpers/blog';
 import CategoryLinkSection from 'src/components/category-link';
+import RightPane from 'src/components/right-pane';
+import SkillPane from 'src/components/skill-pane';
 import SkillsList from 'src/components/skills-list';
 import { LayoutProvider } from 'src/context/layout-context';
-import SkillPane from 'src/components/skill-pane';
+import { getAllPosts } from 'src/helpers/page-fetcher';
 import { parseDates } from 'src/helpers/utils';
-import { useRouter } from 'next/router';
-import RightPane from 'src/components/right-pane';
-import { IdCard, Role, WorkExperience, Metadata, PostInfo } from '../models/data';
+import {
+  IdCard,
+  Metadata,
+  PostInfo,
+  Role,
+  RoleWithSkills,
+  WorkExperience,
+} from '../models/interfaces';
 
 // eslint-disable-next-line import/no-unresolved
 import Layout from '../components/layout';
-import SEO from '../components/seo';
-import { getDataFile, getDataFiles } from '../helpers/data';
+import { getDataFile, getDataFiles } from '../helpers/data-fetchers';
 
 export interface IndexParams {
   idCard: IdCard;
@@ -38,7 +38,7 @@ export default function Index({
   const experience = parseDates(data.allWorkExperience);
   // const result = { identification, roles, experience };
 
-  const rolesWithSkills = posts.map(post => ({
+  const rolesWithSkills: Array<RoleWithSkills> = posts.map(post => ({
     role: post.frontmatter?.title,
     skills: post.frontmatter?.skills,
   }));
@@ -46,7 +46,6 @@ export default function Index({
   return (
     <Layout data={metadata}>
       <div>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} lang="en_US" />
         <p style={{ color: 'white', textAlign: 'center', paddingTop: '1em' }}>
           I am a full-stack developer with experience with JavaScript, Java and multiple frameworks.
           I currently work at LinkedIn

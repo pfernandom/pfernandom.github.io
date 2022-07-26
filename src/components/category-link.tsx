@@ -3,9 +3,9 @@ import { LayoutGroup, motion, useAnimation, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { SetStateAction, useEffect, useMemo, useState } from 'react';
-import { Callback, debouncer } from 'src/helpers/utils';
-import { PostInfo } from 'src/models/data';
+import React, { SetStateAction, useEffect, useState } from 'react';
+import { debouncer } from 'src/helpers/utils';
+import { PostInfo } from 'src/models/interfaces';
 
 function ToParagraphs({
   posts,
@@ -160,7 +160,7 @@ export function CategoryLink({ post }: { post: PostInfo }) {
   const [isHovering, setIsHovering] = useState(false);
   const router = useRouter();
 
-  const isLg = useMediaQuery('(max-width: 700px)');
+  const isLg = useMediaQuery('(max-width: $screen-lg)');
 
   const { cardMotion, titleMotion, imageMotion, descriptionMotion } = getVariants(isLg);
 
@@ -207,6 +207,7 @@ export function CategoryLink({ post }: { post: PostInfo }) {
               className="category__hero"
               style={{ zIndex: 0 }}
               src={post.frontmatter.hero_image}
+              blurDataURL={post.frontmatter.hero_image_blur}
               priority
               alt="Picture of the author"
               // When "responsive", similar to "fluid" from Gatsby
@@ -214,7 +215,7 @@ export function CategoryLink({ post }: { post: PostInfo }) {
               // When "fixed", similar to "fixed" from Gatsby
               layout="responsive"
               // Optional, similar to "blur-up" from Gatsby
-              // placeholder="blur"
+              placeholder="blur"
               // Optional, similar to "width" in Gatsby GraphQL
               width={500}
               // Optional, similar to "height" in Gatsby GraphQL
@@ -241,7 +242,7 @@ export function CategoryLinkSection({ posts }: { posts: Array<PostInfo> }) {
   return (
     <div className="category__list">
       <LayoutGroup>
-        {posts.map((post: any) => (
+        {posts.map((post: PostInfo) => (
           <CategoryLink key={post?.slug} post={post} />
         ))}
       </LayoutGroup>

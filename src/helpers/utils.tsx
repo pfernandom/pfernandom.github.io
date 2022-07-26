@@ -1,9 +1,9 @@
-import { WorkExperience } from 'src/models/data';
+import { WorkExperience } from 'src/models/interfaces';
 
 // eslint-disable-next-line no-unused-vars
 export type Callback<P, T> = (params: P | unknown) => T;
 
-export function debouncer(timeInMillis: number, _fn: Callback<any, any>, args?) {
+export function debouncer(timeInMillis: number, _fn: Callback<unknown, unknown>, args?) {
   let canCall = true;
   return function _voidFn(...params) {
     if (canCall) {

@@ -9,16 +9,24 @@ import { useRouter } from 'next/router';
 import { AnimatePresence, MotionConfig } from 'framer-motion';
 
 import Heading from 'src/components/heading';
+import { DefaultSeo } from 'next-seo';
 import SocialAndContact from 'src/components/social';
-import * as gtag from '../helpers/gtag';
+import { Metadata, PostInfo } from 'src/models/interfaces';
 
-const index = '/';
-const about = '/about';
+import * as gtag from '../helpers/gtag';
 
 let visitedPages = [];
 
+export interface PageInfo {
+  data: unknown;
+  metadata: Metadata;
+  post?: PostInfo;
+  posts?: Array<PostInfo>;
+  content?: string;
+}
+
 interface MyAppProps extends AppProps {
-  pageProps: Record<any, any>;
+  pageProps: PageInfo;
 }
 
 const pageToClassName = {
@@ -56,20 +64,32 @@ export default function MyApp({ Component, pageProps }: MyAppProps) {
     };
   }, [router.events]);
   return (
-    <MotionConfig reducedMotion="user">
-      <SocialAndContact />
-      <Heading title={pageProps.frontmatter?.title ?? 'Full-stack engineer'} />
+    <>
+      <DefaultSeo
+        title="CV - Pedro Marquez-Soto"
+        description={pageProps.metadata.description}
+        twitter={{
+          handle: '@pfernandom',
+          site: '@site',
+          cardType: 'summary_large_image',
+        }}
+      />
 
-      <div className={getClassNameForRoute()}>
-        <AnimatePresence
-          key="animatePrescence"
-          exitBeforeEnter
-          initial={false}
-          onExitComplete={() => window.scrollTo(0, 0)}
-        >
-          <Component key="body" {...pageProps} />
-        </AnimatePresence>
-      </div>
-    </MotionConfig>
+      <MotionConfig reducedMotion="user">
+        <SocialAndContact />
+        <Heading title={pageProps.post?.frontmatter.title ?? 'Full-stack engineer'} />
+
+        <div className={getClassNameForRoute()}>
+          <AnimatePresence
+            key="animatePrescence"
+            exitBeforeEnter
+            initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}
+          >
+            <Component key="body" {...pageProps} />
+          </AnimatePresence>
+        </div>
+      </MotionConfig>
+    </>
   );
 }

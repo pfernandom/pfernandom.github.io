@@ -2,7 +2,7 @@ import React from 'react';
 import { LayoutService, useLayoutService } from 'src/context/layout-context';
 import { observer } from 'mobx-react-lite';
 import { motion } from 'framer-motion';
-import { WorkExperience } from 'src/models/data';
+import { WorkExperience } from 'src/models/interfaces';
 import { ExperienceSection } from './experience/experience-element';
 
 const SkillPange = observer(

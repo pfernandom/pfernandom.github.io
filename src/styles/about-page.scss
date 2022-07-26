@@ -1,3 +1,5 @@
+$about_content_color: lighten($white, 10%);
+
 .about-page-title {
   color: white;
 
@@ -9,4 +11,16 @@
   );
   border-bottom-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
+}
+
+.about-content {
+  color: black;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-image: linear-gradient(
+    to bottom,
+    $about_content_color,
+    darken($about_content_color, 5%)
+  );
+  @include boxShadow($color: $black);
 }

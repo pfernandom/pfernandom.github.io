@@ -1,16 +1,7 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
 
-function Heading({
-  title,
-  slug = '',
-  prevPage,
-}: {
-  title: string;
-  slug?: string;
-  prevPage?: string;
-}) {
+function Heading({ title, slug = '' }: { title: string; slug?: string }) {
   return (
     <div className="heading">
       <Link href={`/${slug}`} scroll={false}>
@@ -28,7 +19,6 @@ function Heading({
 
 Heading.defaultProps = {
   slug: '',
-  prevPage: null,
 };
 
 export default Heading;

@@ -1,3 +1,9 @@
+$role_content_color: lighten($page2_color, 50%);
+
+.category__hero-wrapper {
+  @include boxShadow;
+}
+
 .role-page-title {
   position: absolute;
   color: white;
@@ -10,4 +16,12 @@
     rgba(darken($charcoal-color, 20%), 0.8)
   );
   border-top-right-radius: 0.5em;
+}
+
+.role-page-content {
+  margin-top: 1em;
+  background-color: rgba($role_content_color, 0.8);
+  padding: 0.5em 2em;
+  border-radius: 0.3em;
+  @include boxShadow;
 }

@@ -1,12 +1,12 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import useSWR from 'swr';
-import Image from 'next/image';
-import { format, parseISO } from 'date-fns';
+import React from 'react';
+import { format } from 'date-fns';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import useSWR from 'swr';
 import bookImg from '../../public/book.jpeg';
 
-const fetcher = (...args) =>
-  fetch(process.env.NEXT_PUBLIC_RSS)
+const fetcher = url =>
+  fetch(url)
     .then(res => res.text())
     .then(str => new DOMParser().parseFromString(str, 'text/xml'))
     .then(data => {
@@ -24,7 +24,9 @@ const fetcher = (...args) =>
     });
 
 export default function RightPane() {
-  const { data, error } = useSWR('', fetcher, { refreshInterval: 100000 });
+  const { data, error } = useSWR(process.env.NEXT_PUBLIC_RSS, fetcher, {
+    refreshInterval: 10000000,
+  });
 
   const hideRSS = !data || error;
 
@@ -33,35 +35,45 @@ export default function RightPane() {
       {!hideRSS && (
         <div className="rss-feed">
           <div className="rss-title">{data.title}</div>
-          {data.items?.slice(0, 3).map(item => (
-            <motion.a href={item.link} key={item.link} className="rss-item" whileHover={{ x: 2 }}>
-              <div className="rss-image">
-                {item.imageUrl ? (
-                  <Image
-                    src={item.imageUrl}
-                    alt="Post"
-                    height="50px"
-                    width="50px"
-                    style={{ borderRadius: '100%' }}
-                  />
-                ) : (
-                  <div
-                    style={{
-                      height: '50px',
-                      width: '50px',
-                      backgroundColor: 'grey',
-                      borderRadius: '100%',
-                    }}
-                  />
-                )}
-              </div>
+          <ul className="rss-content">
+            {data.items?.slice(0, 3).map(item => (
+              <li>
+                <motion.a
+                  href={item.link}
+                  key={item.link}
+                  className="rss-item"
+                  whileHover={{ x: 2 }}
+                >
+                  <div className="rss-image">
+                    {item.imageUrl ? (
+                      <Image
+                        src={item.imageUrl}
+                        loader={() => item.imageUrl}
+                        alt="Post"
+                        height="50px"
+                        width="50px"
+                        style={{ borderRadius: '100%' }}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          height: '50px',
+                          width: '50px',
+                          backgroundColor: 'grey',
+                          borderRadius: '100%',
+                        }}
+                      />
+                    )}
+                  </div>
 
-              <div>
-                <div>{item.title}</div>
-                <div>{format(new Date(item.pubDate), 'MMMM dd, yyyy')}</div>
-              </div>
-            </motion.a>
-          ))}
+                  <div>
+                    <div>{item.title}</div>
+                    <div>{format(new Date(item.pubDate), 'MMMM dd, yyyy')}</div>
+                  </div>
+                </motion.a>
+              </li>
+            ))}
+          </ul>
           <a className="see-all-link" href="https://pedromarquez.dev">
             See all posts
           </a>
@@ -69,20 +81,23 @@ export default function RightPane() {
       )}
 
       <div className="announcement">
-        <div className="announcement-text">
-          <p>My latest book &quot;Backend Developer in 30 Days&quot; is out!</p>
-          You can get it at{' '}
+        <div className="rss-title">Updates</div>
+        <div className="announcement-content">
+          <div className="announcement-text">
+            <p>My latest book &quot;Backend Developer in 30 Days&quot; is out!</p>
+            You can get it at{' '}
+            <a href="https://www.amazon.com/dp/9355513216/ref=cm_sw_r_apa_i_V19CYDR26B3R3ST9QMPP_0">
+              Amazon
+            </a>
+          </div>
           <a href="https://www.amazon.com/dp/9355513216/ref=cm_sw_r_apa_i_V19CYDR26B3R3ST9QMPP_0">
-            Amazon
+            <Image src={bookImg} height={150} width={150} />
           </a>
+          <p className="book-quote">
+            &quot;Acquire Skills on API Designing, Data Management, Application Testing, Deployment,
+            Security and Performance Optimization&quot;
+          </p>
         </div>
-        <a href="https://www.amazon.com/dp/9355513216/ref=cm_sw_r_apa_i_V19CYDR26B3R3ST9QMPP_0">
-          <Image src={bookImg} height={150} width={150} style={{ padding: '1em' }} />
-        </a>
-        <p className="book-quote">
-          &quot;Acquire Skills on API Designing, Data Management, Application Testing, Deployment,
-          Security and Performance Optimization&quot;
-        </p>
       </div>
     </div>
   );

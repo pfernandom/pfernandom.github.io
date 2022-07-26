@@ -4,6 +4,8 @@ $pastel-gree-color: #ccfff6;
 $button-primary-color: rgb(0, 174, 255);
 $button-active-color: lighten($button-primary-color, 10%);
 $white: #ececec;
+$grey: #888888;
+$black: #1f1f1f;
 
 $screen-xl: 800px;
 $screen-lg: 700px;
@@ -19,8 +21,8 @@ $page3_color: rgb(14 85 48);
   --base-color-light: hsl(var(--base-color-hs), 85%);
   --base-color-dark: hsl(var(--base-color-hs), 20%);
   --base-color-translucent: hsla(var(--base-color-hs), 50%, 0.5);
-  --max-screen-xl: (max-width: 800px);
-  --max-screen-lg: (max-width: 700px);
+  --max-screen-xl: 800px;
+  --max-screen-lg: 700px;
 }
 
 @import 'mixins';
@@ -128,10 +130,13 @@ a {
 }
 
 main {
-  margin: 3em;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin: 3em auto;
   min-height: calc(100vh - 10em);
+  max-width: var(--max-screen-xl);
+  @media only screen and (max-width: $screen-xl) {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 
 footer {

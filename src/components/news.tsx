@@ -1,6 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import Axios from 'axios';
-import useSWR from 'swr';
+import React from 'react';
 
 export default function NewsComponent() {
   return (

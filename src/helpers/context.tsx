@@ -4,7 +4,7 @@ import React from 'react';
 export interface AnimationContextType {
   isAnimating: boolean;
   // eslint-disable-next-line no-unused-vars
-  setIsAnimating: (unknown) => any;
+  setIsAnimating: (unknown) => boolean;
 }
 
 export const AnimationContext = React.createContext({

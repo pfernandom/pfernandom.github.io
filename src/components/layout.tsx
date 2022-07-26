@@ -1,8 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
-import { FaLevelUpAlt } from 'react-icons/fa';
-import { Metadata } from 'src/models/data';
-import NewsComponent from './news';
+import { Metadata } from 'src/models/interfaces';
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },

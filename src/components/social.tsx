@@ -1,6 +1,6 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
-import { AnimatePresence, useAnimation, motion } from 'framer-motion';
+import React from 'react';
 
 export default function SocialAndContact() {
   return (

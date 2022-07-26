@@ -3,17 +3,17 @@
 @use "sass:math";
 
 @mixin page1() {
-  background-color: $page1_color;
+  background-image: radial-gradient(darken($page1_color, 40%), $page1_color 80%);
   color: white;
 }
 
 @mixin page2() {
-  background-color: $page2_color;
+  background-image: radial-gradient(darken($page2_color, 10%) 60%, $page2_color 80%);
   color: black;
 }
 
 @mixin page3() {
-  background-image: radial-gradient(darken($page3_color, 3%), $page3_color 70%);
+  background-image: radial-gradient(darken($page3_color, 40%), $page3_color 80%);
   color: white;
 }
 

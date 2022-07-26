@@ -1,20 +1,26 @@
 import {
+  AnimatePresence,
   motion,
   MotionValue,
-  useScroll,
-  useMotionTemplate,
-  useTransform,
   useAnimation,
-  AnimatePresence,
+  useMotionTemplate,
+  useScroll,
+  useTransform,
 } from 'framer-motion';
-import React, { useRef, useState } from 'react';
+import { observer } from 'mobx-react-lite';
+import React, { useRef } from 'react';
 import { LayoutService, useLayoutService } from 'src/context/layout-context';
-import { observer, Observer } from 'mobx-react-lite';
-import { autorun } from 'mobx';
 import { Callback } from 'src/helpers/utils';
+import { RoleWithSkills } from 'src/models/interfaces';
 import { useMediaQuery } from './category-link';
 
-function ScrollableContainer({ children, useShadows = true }) {
+function ScrollableContainer({
+  children,
+  useShadows = true,
+}: {
+  children: React.ReactElement;
+  useShadows: boolean;
+}) {
   const elementRef = useRef<HTMLDivElement>();
 
   const { scrollYProgress }: { scrollYProgress: MotionValue; scrollY: MotionValue } = useScroll({
@@ -23,10 +29,10 @@ function ScrollableContainer({ children, useShadows = true }) {
 
   const bottomScrollY = useTransform(scrollYProgress, latest => 1 - latest);
 
-  const backgroundImage: any = useMotionTemplate`
+  const backgroundImage: MotionValue = useMotionTemplate`
   linear-gradient(to bottom,rgba(54, 69, 79,${scrollYProgress}), rgba(54, 69, 79, 0))`;
 
-  const bottomBackgroundImage: any = useMotionTemplate`
+  const bottomBackgroundImage: MotionValue = useMotionTemplate`
   linear-gradient(to bottom, rgba(54, 69, 79, 0), rgba(54, 69, 79,${bottomScrollY}))`;
 
   return (
@@ -65,7 +71,7 @@ function ExpandableList({
   onClick: Callback<string, void>;
 }) {
   const context = useLayoutService();
-  const isLg = useMediaQuery('(max-width: 700px)');
+  const isLg = useMediaQuery('(max-width: $screen-lg)');
 
   const skillButoonsVariants = {
     initial: { scale: 1, opacity: 1 },
@@ -109,7 +115,7 @@ function ExpandableList({
 }
 
 const HideWhenFiltered = observer(
-  ({ context, children }: { context: LayoutService; children: any }) => {
+  ({ context, children }: { context: LayoutService; children: React.ReactElement }) => {
     if (context.getIsSkillSelected()) {
       return <div />;
     }
@@ -117,7 +123,7 @@ const HideWhenFiltered = observer(
   },
 );
 
-function SkillsList({ roles }: { roles: Array<any> }) {
+function SkillsList({ roles }: { roles: Array<RoleWithSkills> }) {
   const context = useLayoutService();
 
   const controls = useAnimation();

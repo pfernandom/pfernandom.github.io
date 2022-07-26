@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { ReactNode, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { Responsibility, WorkExperience } from 'src/models/data';
+import React, { useEffect, useState } from 'react';
+import { Responsibility, WorkExperience } from 'src/models/interfaces';
 import { debouncer, filterLatestProjects, highlightTermInContent } from 'src/helpers/utils';
 import { AnimationControls, motion, useAnimationControls } from 'framer-motion';
 import Markdown from '../markdown';
@@ -21,10 +20,12 @@ function ResponsibilityContainer({ value }: { value: Responsibility }) {
   );
 }
 
-function ExperienceTitle({ experience: e }) {
-  const options = { year: 'numeric', month: 'short' };
-  const startDate = e.startDate ? e.startDate.toLocaleDateString('en-US', options) : 'Today';
-  const endDate = e.endDate ? e.endDate.toLocaleDateString('en-US', options) : 'Today';
+function ExperienceTitle({ experience: e }: { experience: WorkExperience }) {
+  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short' };
+  const startDate1 = new Date(e.startDate);
+  const endDate1 = new Date(e.endDate);
+  const startDate = e.startDate ? startDate1.toLocaleDateString('en-US', options) : 'Today';
+  const endDate = e.endDate ? endDate1.toLocaleDateString('en-US', options) : 'Today';
   return (
     <span className="collapsible-heading">
       <div className="collapsible-heading__title">
@@ -39,14 +40,11 @@ function ExperienceTitle({ experience: e }) {
     </span>
   );
 }
-ExperienceTitle.propTypes = {
-  experience: PropTypes.object.isRequired,
-};
 
 type ExperienceProps = {
   experience: WorkExperience;
   shouldPrint?: boolean;
-  highlights?: Array<any>;
+  highlights?: Array<string>;
   skillToHighlight?: Array<string>;
   animControl: AnimationControls;
   alwaysVisible?: boolean;
