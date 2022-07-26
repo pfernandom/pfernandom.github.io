@@ -1,0 +1,79 @@
+@use "sass:color";
+
+.category__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media only screen and (max-width: $screen-lg) {
+  .category__list {
+    flex-direction: column;
+  }
+
+  .category__link {
+    width: 90%;
+  }
+}
+
+.category__title {
+  padding: 0.5em;
+  color: white;
+  background-color: color.adjust($charcoal-color, $alpha: 0.4);
+  border-bottom-right-radius: 0.5em;
+  box-shadow: 1px 1px 5px black;
+  @media only screen and (max-width: $screen-xl) {
+    & {
+      font-size: 0.8em;
+    }
+  }
+  @media only screen and (max-width: $screen-lg) {
+    & {
+      font-size: 1em;
+    }
+  }
+}
+
+.category__description {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0%;
+  height: 10.5em;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(51, 170, 51, 0.7),
+    darken(rgba(51, 170, 51, 0.5), 40%)
+  );
+  //background-color: rgba($pastel-gree-color, 0.5);
+  color: white;
+  @media only screen and (max-width: $screen-xl) {
+    & {
+      font-size: 0.6rem;
+      height: 8.5em;
+    }
+  }
+  @media only screen and (max-width: $screen-lg) {
+    & {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.category__hero-wrapper {
+  box-shadow: 1px 1px 3px 1px #888888;
+}
+
+.category__link {
+  border: 1px solid grey;
+  text-align: center;
+  padding: 1em;
+  background-color: darken($charcoal-color, 10%);
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 5px;
+  flex: 1;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}

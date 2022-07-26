@@ -1,0 +1,42 @@
+.collapsible-heading__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapsible-heading__date {
+  font-size: 1.2em;
+}
+
+.experience__project {
+  h3 {
+    margin-bottom: 0.5em;
+  }
+  h4 {
+    margin-top: 0.5em;
+  }
+  a {
+    text-decoration: underline;
+    color: var(--link-font-color);
+    &:hover {
+      color: rgb(136, 255, 136);
+    }
+  }
+
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  text-rendering: optimizeLegibility;
+  line-height: 1.5em;
+}
+
+$gold: #ad9600;
+
+mark {
+  color: white;
+  padding: 5px;
+  border-radius: 0.1em;
+  background-color: rgba($charcoal-color, 0);
+  background-image: linear-gradient(to bottom, rgba($gold, 1), rgba(darken($gold, 20%), 1));
+}

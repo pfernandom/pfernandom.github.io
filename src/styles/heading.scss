@@ -1,0 +1,32 @@
+$background-color-heading: #2f2f2f;
+
+h1.small {
+  margin: 0;
+  font-size: 1em;
+}
+
+.heading a {
+  color: white;
+}
+
+.heading__link {
+  background-color: $background-color-heading;
+  transition: 0.3s;
+  padding: 1em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($background-color-heading, 3%);
+  }
+}
+
+.heading {
+  min-width: 480px;
+  width: 100vw;
+  background-color: $background-color-heading;
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 3;
+}

@@ -1,5 +1,46 @@
-@import "mixins";
 $highlight-color: #03a9f4;
+$charcoal-color: #36454f;
+$pastel-gree-color: #ccfff6;
+$button-primary-color: rgb(0, 174, 255);
+$button-active-color: lighten($button-primary-color, 10%);
+$white: #ececec;
+
+$screen-xl: 800px;
+$screen-lg: 700px;
+
+$page1_color: $charcoal-color;
+$page2_color: $white;
+$page3_color: rgb(14 85 48);
+
+:root {
+  --charcoal-color: #36454f;
+  --charcoal-color-mid-alpha: hsla(var(--charcoal-color), 50%);
+  --transparent: hsla(var(--charcoal-color), 0%);
+  --base-color-light: hsl(var(--base-color-hs), 85%);
+  --base-color-dark: hsl(var(--base-color-hs), 20%);
+  --base-color-translucent: hsla(var(--base-color-hs), 50%, 0.5);
+  --max-screen-xl: (max-width: 800px);
+  --max-screen-lg: (max-width: 700px);
+}
+
+@import 'mixins';
+@import 'utils';
+@import './page.scss';
+@import './skills.scss';
+@import './heading.scss';
+@import './category-link.scss';
+@import './experience-element.scss';
+@import './role-page.scss';
+@import './about-page.scss';
+@import './news-banner.scss';
+@import './right-pane.scss';
+
+html {
+  min-width: 480px;
+}
+body {
+  min-width: 480px;
+}
 
 h3 {
   font-size: 1.5em;
@@ -34,6 +75,10 @@ h3 {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .instructions {
   color: $highlight-color;
   display: inline-block;
@@ -58,22 +103,12 @@ h3 {
   border-style: hidden;
 }
 
-footer {
-  margin: 10px;
-  div {
-    text-align: center;
-  }
-  a {
-    display: inline-block;
-  }
-}
-
 .navigation-link {
   height: 20px;
   margin: 5px;
   display: inline-block;
   vertical-align: bottom;
-  color: #0067e4;
+  color: #2487ff;
   -webkit-text-decoration: dotted;
   text-decoration: dotted;
   width: 100%;
@@ -92,12 +127,35 @@ footer {
   font-weight: 600;
 }
 
-footer {
-  text-align: center;
+main {
+  margin: 3em;
+  margin-left: 5em;
+  margin-right: 5em;
+  min-height: calc(100vh - 10em);
 }
+
+footer {
+  color: white;
+  background-image: linear-gradient(
+    to bottom,
+    $background-color-heading,
+    lighten($background-color-heading, 10%)
+  );
+  text-align: center;
+  padding: 1em 0;
+  margin: 0;
+  a {
+    color: rgb(146, 215, 255);
+    display: inline-block;
+    text-decoration: underline;
+    margin: 1em;
+  }
+}
+
 .markdown {
-  p, ul {
-    margin-top: 0;
+  p,
+  ul {
+    margin-top: 0.5em;
     margin-bottom: 0;
 
     li {

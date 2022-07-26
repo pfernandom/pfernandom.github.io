@@ -1,0 +1,12 @@
+.about-page-title {
+  color: white;
+
+  padding: 1em;
+  background-image: linear-gradient(
+    to bottom,
+    rgba($charcoal-color, 1),
+    rgba(darken($charcoal-color, 20%), 0.8)
+  );
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}

@@ -1,0 +1,71 @@
+.rss-feed {
+  padding: 1em;
+  background-color: $white;
+  color: black;
+  flex-basis: 50%;
+  border-radius: 0.3em;
+  margin-top: 2em;
+}
+
+.rss-title {
+  color: black;
+  font-size: 1.5em;
+}
+
+.rss-item {
+  display: flex;
+  padding: 1em 0.5em;
+  &:hover {
+    background-color: darken($white, 10%);
+  }
+}
+
+.rss-image {
+  flex-shrink: 0;
+  padding-right: 0.5em;
+}
+
+.see-all-link {
+  margin-top: 0.5em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 1em;
+  background-color: $charcoal-color;
+  color: $white;
+  border-radius: 0.3em;
+  &:hover {
+    background-color: lighten($color: $charcoal-color, $amount: 10%);
+  }
+}
+
+.announcement {
+  padding: 1em;
+  background-color: #bae5ef;
+  color: #004e5f;
+  height: fit-content;
+  border-radius: 0.3em;
+  margin-top: 2em;
+  margin-left: 2em;
+  flex-basis: 30%;
+  height: auto;
+  text-align: center;
+
+  @media only screen and (max-width: $screen-xl) {
+    margin-left: 0;
+  }
+}
+
+.announcement-text {
+  p {
+    margin-top: 0;
+  }
+
+  margin-bottom: 1em;
+}
+
+.book-quote {
+  padding-top: 0.5em;
+  font-size: 0.9em;
+  font-style: italic;
+}

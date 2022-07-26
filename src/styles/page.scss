@@ -1,0 +1,77 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+
+@mixin page1() {
+  background-color: $page1_color;
+  color: white;
+}
+
+@mixin page2() {
+  background-color: $page2_color;
+  color: black;
+}
+
+@mixin page3() {
+  background-image: radial-gradient(darken($page3_color, 3%), $page3_color 70%);
+  color: white;
+}
+
+@mixin applyPageStyles($pageName) {
+  @if $pageName == 'page1' {
+    @include page1();
+  }
+  @if $pageName == 'page2' {
+    @include page2();
+  }
+  @if $pageName == 'page3' {
+    @include page3();
+  }
+}
+
+$pages: 'page1', 'page2', 'page3';
+$pageColors: (
+  'page1': page1,
+  'page2': page2,
+  'page3': page3,
+);
+
+@each $toName in $pages {
+  $toPage: map.get($pageColors, $toName);
+
+  @keyframes pageKeyframes#{$toName} {
+    to {
+      @include applyPageStyles($toName);
+    }
+  }
+
+  .#{$toName} {
+    @include applyPageStyles($toName);
+    animation-name: pageKeyframes#{$toName};
+    animation-duration: 0.5s;
+    overflow: auto;
+    height: 100vh;
+  }
+
+  @each $fromName in $pages {
+    $fromPage: map.get($pageColors, $fromName);
+    @debug $fromPage;
+
+    @keyframes pageKeyframes#{$fromName}#{$toName} {
+      from {
+        @include applyPageStyles($fromName);
+      }
+      to {
+        @include applyPageStyles($toName);
+      }
+    }
+
+    .curr-#{$toName}-prev-#{$fromName} {
+      @include applyPageStyles($toName);
+      animation-name: pageKeyframes#{$fromName}#{$toName};
+      animation-duration: 0.5s;
+      overflow: auto;
+      height: 100vh;
+    }
+  }
+}

@@ -1,62 +1,53 @@
 {
-    "project": "ACSSP/REACH (at Accenture)",
-    "startDate": "Dec 2014",
-    "endDate": "Dec 2016",
-    "startYear": "2014",
-    "role": "Software Architect & Full-stack developer",
-    "description": "As the software architect for ACSSP/REACH, I worked with the architects of the other H&PS SW products to implement new features and integrate with the other applications. I participated in the innovation initiative to bring new technologies to the product.",
-    "tags": [
-      "java",
-      "angular",
-      "liferay",
-      "wps",
-      "portlet",
-      "spring",
-      "maven",
-      "responsive-design",
-      "git",
-      "svn",
-      "oauth",
-      "bootstrap",
-      "material-design",
-      "rest",
-      "management",
-      "agile",
-      "backend",
-      "ui",
-      "sass"
-    ],
-    "responsibilities": [
-      {
-        "categories": ["management", "agile", "backend", "java", "ui"],
-        "content": "Worked under an Agile methodology (Scrum)"
-      },
-      {
-        "categories": ["management", "rest", "oauth", "backend", "java"],
-        "summary": "Secured REST APIs with OAuth2",
-        "content": "Implemented best practices for building REST APIs to expose core functionality in the product. Also, implemented OAuth2 for the authorization of those REST services"
-      },
-      {
-        "categories": [
-          "backend",
-          "java",
-          "ui",
-          "portlet",
-          "java",
-          "angular",
-          "spring"
-        ],
-        "summary": "Developed Java Portlet-based applications",
-        "content": " - Created Java Portlets using Maven, Spring Portlet MVC and AngularJS for Liferay and Websphere Portal Server\n - Worked with client implementation teams to fix Angular-based Java Portlets with Material design, to help them achieve their delivery dates"
-      },
-      {
-        "categories": ["ui", "angular", "sass", "bootstrap", "management"],
-        "summary": "Built modern front-end applications using AngularJS",
-        "content": "- Created a library of responsive Angular components, using Bootstrap, CSS/Sass, Grunt\n - Trained developers on AngularJS development and UI best practices"
-      },
-      {
-        "categories": ["backend", "java", "management"],
-        "content": "Analyzed and designed integration of new code modules with legacy code, implementing common design patterns like adapter, facade, decorator, builder and factory method"
-      }
-    ]
-  }
+  "project": "ACSSP/REACH (at Accenture)",
+  "startDate": "Dec 2014",
+  "endDate": "Dec 2016",
+  "startYear": "2014",
+  "role": "Software Architect & Full-stack developer",
+  "description": "As the software architect for ACSSP/REACH, I worked with the architects of the other H&PS SW products to implement new features and integrate with the other applications. I participated in the innovation initiative to bring new technologies to the product.",
+  "tags": [
+    "java",
+    "angular",
+    "liferay",
+    "wps",
+    "portlet",
+    "spring",
+    "maven",
+    "responsive-design",
+    "git",
+    "svn",
+    "oauth",
+    "bootstrap",
+    "rest",
+    "management",
+    "agile",
+    "backend",
+    "ui",
+    "sass"
+  ],
+  "responsibilities": [
+    {
+      "categories": ["management", "agile", "backend", "java", "ui"],
+      "content": "Worked under an Agile methodology (Scrum)"
+    },
+    {
+      "categories": ["management", "rest", "oauth", "backend", "java"],
+      "summary": "Secured REST APIs with OAuth2",
+      "content": "Implemented best practices for building REST APIs to expose core functionality in the product. Also, implemented OAuth2 for the authorization of those REST services"
+    },
+    {
+      "categories": ["backend", "java", "ui", "portlet", "java", "angular", "spring", "material"],
+      "summary": "Developed Java Portlet-based applications",
+      "content": " - Created Java Portlets using Maven, Spring Portlet MVC and AngularJS for Liferay and Websphere Portal Server\n - Worked with client implementation teams to fix Angular-based Java Portlets with Material design, to help them achieve their delivery dates"
+    },
+    {
+      "categories": ["ui", "angular", "sass", "bootstrap", "management"],
+      "summary": "Built modern front-end applications using AngularJS",
+      "content": "- Created a library of responsive Angular components, using Bootstrap, CSS/Sass, Grunt\n - Trained developers on AngularJS development and UI best practices"
+    },
+    {
+      "categories": ["backend", "java", "management"],
+      "content": "Analyzed and designed integration of new code modules with legacy code, implementing common design patterns like adapter, facade, decorator, builder and factory method"
+    }
+  ]
+}

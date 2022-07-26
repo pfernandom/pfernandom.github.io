@@ -1,4 +1,10 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact"
+  ],
+  "typescript.suggest.autoImports": true,
   "spellright.language": [
     "en"
   ],
@@ -6,5 +12,8 @@
     "markdown",
     "latex",
     "plaintext"
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

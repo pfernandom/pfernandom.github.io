@@ -1,0 +1,115 @@
+@use "sass:color";
+
+.scroll-list-container {
+  position: relative;
+  min-width: 200px;
+}
+
+.scroll-list-container--scrollable {
+  overflow: auto;
+  height: 8 * 3em;
+  @media only screen and (max-width: 700px) {
+    height: 5 * 3em;
+  }
+}
+
+.skill-list-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-list {
+  list-style-type: none;
+  padding: 0 1.5em;
+  margin: 0;
+
+  @media only screen and (max-width: 700px) {
+    & {
+      padding: 0 1em;
+    }
+  }
+}
+
+.skill-list-column {
+  @media only screen and (max-width: 700px) {
+    width: 80%;
+    padding: 0 1em;
+  }
+}
+
+.skill-list-separator {
+  background-color: $pastel-gree-color;
+  width: 100%;
+  height: 1em;
+  border-radius: 0.05em;
+  &.skill-list-separator--top {
+    background-image: linear-gradient(
+      to bottom,
+      rgba($charcoal-color, 1),
+      rgba($charcoal-color, 0.6),
+      rgba($charcoal-color, 0)
+    );
+  }
+  &.skill-list-separator--bottom {
+    background-image: linear-gradient(
+      to bottom,
+      rgba($charcoal-color, 0),
+      rgba($charcoal-color, 0.6),
+      rgba($charcoal-color, 1)
+    );
+  }
+}
+
+.skill-action {
+  background-color: white;
+}
+
+.skill-action button {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  border-radius: 0;
+  text-align: center;
+  justify-content: left;
+  cursor: pointer;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  height: 10px;
+  background-color: blue;
+  transform-origin: 0%;
+  width: 100%;
+  z-index: 2;
+}
+
+.fade_top {
+  position: absolute;
+  height: 1em;
+  width: 100%;
+  z-index: 4;
+}
+
+.skill-pane {
+  --font-color: white;
+  --link-font-color: white;
+  color: var(--font-color);
+  background-color: darken($charcoal-color, 10%);
+  width: 100%;
+  padding: 2em 1em;
+  position: relative;
+  border-radius: 0.5em;
+  h2 {
+    background-image: linear-gradient(to right, darken(green, 5%), darken(rgb(204, 255, 0), 20%));
+    padding: 0.5em;
+    border-radius: 0.2em;
+    box-shadow: 2px 2px 2px 1px darken(green, 20%);
+  }
+}
+
+.no-relevant-text {
+  color: grey;
+}
