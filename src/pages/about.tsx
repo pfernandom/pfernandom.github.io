@@ -39,15 +39,10 @@ function SecondPage({ metadata }: { metadata: Metadata }) {
 }
 
 export async function getStaticProps() {
-  const idCard: IdCard = await getDataFile('src/data/idCard/idCard.json');
-  const allRoles: Array<Role> = await getDataFiles('src/data/roles/');
   const metadata: Metadata = await getDataFile('src/data/metadata.json');
 
-  const allWorkExperience: Array<WorkExperience> = await getDataFiles('src/data/workExperience/');
-  const data: IndexParams = { idCard, allRoles, allWorkExperience };
   return {
     props: {
-      data,
       metadata,
     },
   };

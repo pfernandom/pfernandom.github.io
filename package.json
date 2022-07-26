@@ -88,8 +88,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run lint"
+      "pre-commit": "npm run build",
+      "pre-push": "npm run deploy"
     }
   }
 }

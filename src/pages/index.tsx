@@ -36,7 +36,6 @@ export default function Index({
   posts: Array<PostInfo>;
 }) {
   const experience = parseDates(data.allWorkExperience);
-  // const result = { identification, roles, experience };
 
   const rolesWithSkills: Array<RoleWithSkills> = posts.map(post => ({
     role: post.frontmatter?.title,
