@@ -1,9 +1,7 @@
-/* eslint-disable import/no-unresolved */
 import React from 'react';
-import { IndexParams } from 'pages';
 import Layout from '../components/layout';
-import { getDataFile, getDataFiles } from '../helpers/data-fetchers';
-import { IdCard, Metadata, Role, WorkExperience } from '../models/interfaces';
+import { getDataFile } from '../helpers/data-fetchers';
+import { Metadata } from '../models/interfaces';
 
 function SecondPage({ metadata }: { metadata: Metadata }) {
   return (
