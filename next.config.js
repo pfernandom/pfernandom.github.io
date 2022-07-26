@@ -8,5 +8,7 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     domains: ['pedromarquez.dev', 'localhost'],
+    loader: 'akamai',
+    path: '',
   },
 });

@@ -1,5 +1,5 @@
 {
-  "name": "pfernandom.github.io",
+  "name": "pfernandom-github-io",
   "private": true,
   "description": "The online CV for Pedro Marquez Soto",
   "version": "0.1.0",
@@ -28,9 +28,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "npx next build",
+    "build": "next build && next export",
     "develop": "npm next dev",
-    "deploy": "npx next build && gh-pages -d public -b master",
+    "deploy": "next build && next export && gh-pages -d out -b master",
     "start": "npm next dev",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint ./src",
