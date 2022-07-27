@@ -98,5 +98,6 @@ export function filterLatestProjects(
   );
 
   const limit = Math.max(count, filteredByDate.length);
+  console.log({ count, limit, workExperienceList });
   return [workExperienceList.slice(0, limit), workExperienceList.slice(limit)];
 }

@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import useSWR from 'swr';
-import bookImg from '../../public/book.jpeg';
+import bookImg from '../../public/book.webp';
 
 const fetcher = url =>
   fetch(url)
@@ -89,7 +89,7 @@ export default function RightPane() {
             </a>
           </div>
           <a href="https://www.amazon.com/dp/9355513216/ref=cm_sw_r_apa_i_V19CYDR26B3R3ST9QMPP_0">
-            <Image src={bookImg} height={150} width={150} />
+            <Image src={bookImg} height={150} width={150} alt="Book cover" />
           </a>
           <p className="book-quote">
             &quot;Acquire Skills on API Designing, Data Management, Application Testing, Deployment,

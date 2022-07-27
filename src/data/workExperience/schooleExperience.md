@@ -5,7 +5,7 @@ endDate: 'May 2022'
 startYear: '2017'
 role: 'Masters in Machine Learning'
 description: 'Projects created on school assignments'
-tags: ['python', 'tensorflow', 'pytorch', 'scikit-learn']
+tags: ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'sql']
 ---
 
 - Created models for regression and classification using Python and scikit-learn
@@ -17,3 +17,4 @@ tags: ['python', 'tensorflow', 'pytorch', 'scikit-learn']
 - Built a convolutional neural netowrk with both Tensorflow and Pytorch to solve the following problems:
   - Image classification.
   - Style transfer.
+- Build data visualization tools with D3 and used Tableau integrating with CVS files and PostgreSQL

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Responsibility, WorkExperience } from 'src/models/interfaces';
 import { debouncer, filterLatestProjects, highlightTermInContent } from 'src/helpers/utils';
 import { AnimationControls, motion, useAnimationControls } from 'framer-motion';
+import { withStore } from 'src/helpers/store';
 import Markdown from '../markdown';
 
 function ResponsibilityContainer({ value }: { value: Responsibility }) {
@@ -59,6 +60,7 @@ export default function ExperienceElement({
   alwaysVisible,
 }: ExperienceProps) {
   const control = animControl || useAnimationControls();
+  const store = withStore();
 
   function isVisible(responsibilities) {
     if (highlights.length === 0) {
@@ -80,7 +82,10 @@ export default function ExperienceElement({
     hidden: alwaysVisible ? {} : { opacity: 0, x: -200, y: 0 },
   };
 
-  const experienceToRender = highlightTermInContent(experience, skillToHighlight);
+  const experienceToRender = highlightTermInContent(
+    experience,
+    store.getTermsWithVariations(skillToHighlight),
+  );
   useEffect(() => {
     control.start('displayed');
   });

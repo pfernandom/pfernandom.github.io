@@ -4,7 +4,7 @@ date: '2019-05-21T22:12:03.284Z'
 order: 1
 description:
   ['10+ years of experience working in both the front and back-end of enterprise applications']
-hero_image: '/fullstack_hero.jpeg'
+hero_image: '/fullstack_hero.webp'
 hero_image_alt: 'Hero image for the full stack developer role page'
 skills:
   [
@@ -42,6 +42,7 @@ skills:
     'webassembly',
     'webpack',
     'wps',
+    'sql',
   ]
 ---
 

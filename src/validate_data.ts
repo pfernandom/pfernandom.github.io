@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import colors from 'colors/safe';
 import { IdCard, Role, Metadata, PostInfo, WorkExperience } from './models/interfaces';
 import { parseDates, mapBySkillsSet, filterBySkills } from './helpers/utils';
@@ -46,8 +47,11 @@ async function main() {
 
   allSkillsInExperiences.forEach(skill => {
     const filteredPosts = posts.filter(p => p.frontmatter.skills.includes(skill));
-    const msg = `For skill ${skill}, there are ${filteredPosts.length} experience records`;
+    const msg = `For skill ${skill}, there are ${filteredPosts.length} roles`;
     print(msg, filteredPosts.length === 0);
+    const filteredRoles = allRoles.filter(p => p.tags.includes(skill));
+    const msg2 = `For skill ${skill}, there are ${filteredRoles.length} work experiences`;
+    print(msg2, filteredRoles.length === 0);
   });
 
   const unusedSkills = allSkillsInExperiences.filter(

@@ -13,6 +13,9 @@
   @media only screen and (max-width: $screen-lg) {
     max-height: 5 * 3em;
   }
+  @media only screen and (max-width: $screen-md) {
+    max-height: 10 * 3em;
+  }
 }
 
 .skill-list-container {
@@ -78,6 +81,12 @@
   justify-content: left;
   cursor: pointer;
   border: 0.5px solid grey;
+  @media only screen and (max-width: $screen-md) {
+    height: 5em;
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+  }
 }
 
 .progress-bar {

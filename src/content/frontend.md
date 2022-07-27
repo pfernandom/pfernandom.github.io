@@ -7,7 +7,7 @@ description:
     'Front end developer with 10+ years of experience on JavaScript development',
     'Experience building large-scale web applications with frameworks like Ember and React.',
   ]
-hero_image: '/frontend_hero.jpeg'
+hero_image: '/frontend_hero.webp'
 hero_image_alt: 'Hero image for front end developer role page'
 skills:
   [

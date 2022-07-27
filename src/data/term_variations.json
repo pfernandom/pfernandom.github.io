@@ -1,0 +1,5 @@
+{
+  "javascript": ["js", "Java Script"],
+  "html": ["html", "html5"],
+  "sql": ["mysql", "postgresql", "postgres", "posgresql", " RDS"]
+}

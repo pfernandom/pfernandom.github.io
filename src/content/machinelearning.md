@@ -7,9 +7,9 @@ description:
     'M.S in C.S and Machine Learning',
     'Experience from graduate-level courses on Machine Learning & Python',
   ]
-hero_image: '/machinelearning_hero.jpeg'
+hero_image: '/machinelearning_hero.webp'
 hero_image_alt: 'Hero image for the machine learning role page'
-skills: ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'd3', 'sql', 'posgresql']
+skills: ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'd3', 'sql', 'postgresql']
 ---
 
 I aquired my Master of Science in Computer Science title with a specialization in Machine Learning in May 2020.

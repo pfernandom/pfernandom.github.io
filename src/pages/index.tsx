@@ -7,6 +7,7 @@ import SkillsList from 'src/components/skills-list';
 import { LayoutProvider } from 'src/context/layout-context';
 import { getAllPosts } from 'src/helpers/page-fetcher';
 import { parseDates } from 'src/helpers/utils';
+import { withStore } from 'src/helpers/store';
 import {
   IdCard,
   Metadata,
@@ -24,6 +25,7 @@ export interface IndexParams {
   idCard: IdCard;
   allRoles: Array<Role>;
   allWorkExperience: Array<WorkExperience>;
+  termVariations?: Record<string, Array<string>>;
 }
 
 export default function Index({
@@ -35,6 +37,9 @@ export default function Index({
   metadata: Metadata;
   posts: Array<PostInfo>;
 }) {
+  const store = withStore();
+  store.termVariations = data.termVariations;
+
   const experience = parseDates(data.allWorkExperience);
 
   const rolesWithSkills: Array<RoleWithSkills> = posts.map(post => ({
@@ -80,11 +85,14 @@ export async function getStaticProps() {
   const idCard: IdCard = await getDataFile('src/data/idCard/idCard.json');
   const allRoles: Array<Role> = await getDataFiles('src/data/roles/');
   const metadata: Metadata = await getDataFile('src/data/metadata.json');
+  const termVariations: Record<string, Array<string>> = await getDataFile(
+    'src/data/term_variations.json',
+  );
 
   const posts: Array<PostInfo> = getAllPosts();
 
   const allWorkExperience: Array<WorkExperience> = await getDataFiles('src/data/workExperience/');
-  const data: IndexParams = { idCard, allRoles, allWorkExperience };
+  const data: IndexParams = { idCard, allRoles, allWorkExperience, termVariations };
   return {
     props: {
       posts,

@@ -7,7 +7,7 @@ description:
     'Java developer with +7 years of experience',
     'Experience with cloud-based development and large-scale service integration',
   ]
-hero_image: '/javadeveloper_hero.jpg'
+hero_image: '/javadeveloper_hero.webp'
 hero_image_alt: 'Hero image for the java developer role page'
 skills:
   [
@@ -22,6 +22,7 @@ skills:
     'backend',
     'rabbitmq',
     'webassembly',
+    'sql',
   ]
 ---
 

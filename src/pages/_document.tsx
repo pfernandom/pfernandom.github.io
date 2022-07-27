@@ -23,7 +23,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en_US">
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <Script

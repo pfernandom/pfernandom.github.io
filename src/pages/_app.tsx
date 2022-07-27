@@ -31,6 +31,7 @@ interface MyAppProps extends AppProps {
 
 const pageToClassName = {
   '/': 'page1',
+  '/skill': 'page1',
   '/about': 'page3',
 };
 

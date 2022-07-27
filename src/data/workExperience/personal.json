@@ -1,40 +1,33 @@
 {
-    "project": "Personal Projects",
-    "startDate": null,
-    "endDate": null,
-    "startYear": null,
-    "role": "Software Developer ",
-    "description": "I like to learn new technologies and I'm constantly involved in trainings and hackathons. These are a few of the technologies I've tried outside my day job.",
-    "tags": [
-      "aws-lambda",
-      "aws-rekognition",
-      "rabbitmq",
-      "golang",
-      "serverless",
-      "angular",
-      "electron",
-      "d3",
-      "neo4j",
-      "webassembly",
-      "rust"
-    ],
-    "responsibilities": [
-      {
-        "categories": ["rust", "webassembly"],
-        "summary": "Followed multiple tutorials on WebAssembly with Rust",
-        "content": "A personal goal is to become proficient with Rust + WebAssembly to be prepared for when WASM becomes standard for web development. Also, Rust is a pretty cool language!"
-      },
-      {
-        "categories": ["aws-lambda", "aws-rekognition", "rabbitmq", "golang"],
-        "content": "__Hackathon__: Developed an [embedded application](https://github.com/orgs/golang-iot/dashboard) with Golang to retrieve pictures from a Raspberry Pi and send them to AWS Rekognition for facial recognition."
-      },
-      {
-        "categories": ["serverless"],
-        "content": "Created a blog about Serverless applications, hosted at [Medium](https://medium.com/a-man-with-no-server)."
-      },
-      {
-        "categories": ["angular", "d3", "neo4j"],
-        "content": "__Hackathon__: Developed an Angular application to visualize relationships between people stored in a Neo4J database, and displaying the data through a D3 data graph"
-      }
-    ]
-  }
+  "project": "Personal Projects",
+  "startDate": null,
+  "endDate": null,
+  "startYear": null,
+  "role": "Software Developer ",
+  "description": "I like to learn new technologies and I'm constantly involved in trainings and hackathons. These are a few of the technologies I've tried outside my day job.",
+  "tags": [
+    "aws-lambda",
+    "aws-rekognition",
+    "rabbitmq",
+    "golang",
+    "serverless",
+    "angular",
+    "electron",
+    "d3",
+    "neo4j"
+  ],
+  "responsibilities": [
+    {
+      "categories": ["aws-lambda", "aws-rekognition", "rabbitmq", "golang"],
+      "content": "__Hackathon__: Developed an [embedded application](https://github.com/orgs/golang-iot/dashboard) with Golang to retrieve pictures from a Raspberry Pi and send them to AWS Rekognition for facial recognition."
+    },
+    {
+      "categories": ["serverless"],
+      "content": "Created a blog about Serverless applications, hosted at [Medium](https://medium.com/a-man-with-no-server)."
+    },
+    {
+      "categories": ["angular", "d3", "neo4j"],
+      "content": "__Hackathon__: Developed an Angular application to visualize relationships between people stored in a Neo4J database, and displaying the data through a D3 data graph"
+    }
+  ]
+}

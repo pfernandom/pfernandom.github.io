@@ -1,35 +1,46 @@
 {
-    "project": "LinkedIn",
-    "startDate": "2017-11-01T12:00:00",
-    "endDate": null,
-    "startYear": "2017",
-    "role": "Front-end + UI Engineer",
-    "description": "As a UI Engineer, I collaborate with a multifunctional team of designers, product owners and other engineers to constantly adapt and update the user interface for multiple LinkedIn products. Using Ember.js based tools we build reusable UI components.",
-    "tags": ["emberjs", "js", "html", "git", "svn", "java", "a11y", "performance", "backend", "ui"],
-    "responsibilities": [
-      {
-        "categories": ["ui", "js", "html", "emberjs"],
-        "summary": "Lead front-end developer for Resume Assistant",
-        "content": " - [Microsoft Word Resume Assistant](https://support.office.com/en-gb/article/write-your-best-resume-with-help-from-linkedin-and-resume-assistant-444ff6f0-ef74-4a9c-9091-ffd7a9d1917a) is a Microsoft Office Word feature to help job seekers craft quality resumes\n - As lead developer, I have to maintain this Ember application, following all the quality guidelines from Microsoft"
-      },
-      {
-        "categories": ["ui", "js", "html", "emberjs"],
-        "summary": "Front-end developer for LinkedIn Jobs",
-        "content": " - Build new web features using Ember components to help job seekers find better job opportunities and employers to find quality candidates."
-      },
-      {
-        "categories": ["ui", "html", "a11y"],
-        "summary": "Accessibility champion for LinkedIn Jobs",
-        "content": " - As a champion, my job is to improve LinkedIn Jobs web pages to make sure it is accessible all people, doesn't matter what kind of disabilities they might have.\n - Provide guidance on A11y best practices to other team members.\nWork with designers to make sure A11y is considered for new features."
-      },
-      {
-        "categories": ["performance", "backend"],
-        "summary": "Diagnose and fix performance regressions",
-        "content": "Web applications can have performance problems for multiple reasons: Increased asset size, network and server issues, memory leaks. My role is to find when a regression happens and fix it (if possible)"
-      },
-      {
-        "categories": ["java", "backend"],
-        "content": "Maintain a REST API built with Java, [Rest.li](https://linkedin.github.io/rest.li/) and [Parseq](https://github.com/linkedin/parseq)"
-      }
-    ]
-  }
+  "project": "LinkedIn",
+  "startDate": "2017-11-01T12:00:00",
+  "endDate": null,
+  "startYear": "2017",
+  "role": "Front-end + UI Engineer",
+  "description": "As a UI Engineer, I collaborate with a multifunctional team of designers, product owners and other engineers to constantly adapt and update the user interface for multiple LinkedIn products. Using Ember.js based tools we build reusable UI components.",
+  "tags": [
+    "emberjs",
+    "javascript",
+    "html",
+    "git",
+    "svn",
+    "java",
+    "a11y",
+    "performance",
+    "backend",
+    "ui"
+  ],
+  "responsibilities": [
+    {
+      "categories": ["ui", "javascript", "html", "emberjs"],
+      "summary": "Lead front-end developer for Resume Assistant",
+      "content": " - [Microsoft Word Resume Assistant](https://support.office.com/en-gb/article/write-your-best-resume-with-help-from-linkedin-and-resume-assistant-444ff6f0-ef74-4a9c-9091-ffd7a9d1917a) is a Microsoft Office Word feature to help job seekers craft quality resumes\n - As lead developer, I have to maintain this Ember application, following all the quality guidelines from Microsoft"
+    },
+    {
+      "categories": ["ui", "javascript", "html", "emberjs"],
+      "summary": "Front-end developer for LinkedIn Jobs",
+      "content": " - Build new web features using Ember components to help job seekers find better job opportunities and employers to find quality candidates."
+    },
+    {
+      "categories": ["ui", "html", "a11y"],
+      "summary": "Accessibility champion for LinkedIn Jobs",
+      "content": " - As a champion, my job is to improve LinkedIn Jobs web pages to make sure it is accessible all people, doesn't matter what kind of disabilities they might have.\n - Provide guidance on A11y best practices to other team members.\nWork with designers to make sure A11y is considered for new features."
+    },
+    {
+      "categories": ["performance", "backend"],
+      "summary": "Diagnose and fix performance regressions",
+      "content": "Web applications can have performance problems for multiple reasons: Increased asset size, network and server issues, memory leaks. My role is to find when a regression happens and fix it (if possible)"
+    },
+    {
+      "categories": ["java", "backend"],
+      "content": "Maintain a REST API built with Java, [Rest.li](https://linkedin.github.io/rest.li/) and [Parseq](https://github.com/linkedin/parseq)"
+    }
+  ]
+}

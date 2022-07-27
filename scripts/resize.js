@@ -12,7 +12,7 @@ files.forEach(f => {
         .resize(400)
         .blur(5)
         .webp({ lossless: false, quality: 50 })
-        .toFile(`./public/blur_${f}`, function(err) {
+        .toFile(`./public/blur_${f.replace(/(jpeg|jpg)/, 'webp')}`, function(err) {
           // output.jpg is a 300 pixels wide and 200 pixels high image
           // containing a scaled and cropped version of input.jpg
           if (err) {
@@ -23,8 +23,8 @@ files.forEach(f => {
       sharp(input)
         // .resize(Math.round(width * 0.5))
         .resize(400)
-        .jpeg({ mozjpeg: true, quality: 90 })
-        .toFile(`./public/${f}`, function(err) {
+        .webp({ lossless: false, quality: 90 })
+        .toFile(`./public/${f.replace(/(jpeg|jpg)/, 'webp')}`, function(err) {
           // output.jpg is a 300 pixels wide and 200 pixels high image
           // containing a scaled and cropped version of input.jpg
           if (err) {

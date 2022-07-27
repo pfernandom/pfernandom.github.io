@@ -144,7 +144,7 @@ function SkillsList({ roles }: { roles: Array<RoleWithSkills> }) {
 
               <ExpandableList
                 skills={roleWithSkills.skills}
-                onClick={async skill => {
+                onClick={async (skill: string) => {
                   await controls.start({ opacity: 0 });
                   context.setRoleAndSkill({ role: roleWithSkills.role, skill });
                 }}
