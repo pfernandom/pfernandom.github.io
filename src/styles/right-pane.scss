@@ -10,6 +10,13 @@
   background-color: darken($white, 5%);
 }
 
+@media only screen and (max-width: $screen-xl) {
+  .rss-feed {
+    max-width: 30em;
+    margin: 2em auto;
+  }
+}
+
 .rss-title {
   color: black;
   font-size: 1.5em;
@@ -37,6 +44,7 @@
   margin-top: 0.5em;
   border-radius: 0.3em;
   background-color: $white;
+  color: $black;
   &:hover {
     background-color: darken($white, 10%);
   }
@@ -46,6 +54,12 @@
 .rss-image {
   flex-shrink: 0;
   padding-right: 0.5em;
+}
+
+.rss-date {
+  font-size: 0.8em;
+  color: darken($grey, 10%);
+  padding-top: 3px;
 }
 
 .see-all-link {
@@ -77,8 +91,10 @@
   position: relative;
 
   @media only screen and (max-width: $screen-xl) {
-    margin-left: 0;
+    max-width: 30em;
+    margin: 2em auto;
   }
+
   @include boxShadow($color: $black);
 }
 

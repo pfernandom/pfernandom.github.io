@@ -9,7 +9,7 @@ import { ExperienceSection } from 'src/components/experience/experience-element'
 import Layout from 'src/components/layout';
 import { getAllPosts, getPostBySlug } from 'src/helpers/page-fetcher';
 import { getDataFile, getDataFiles } from 'src/helpers/data-fetchers';
-import { mapBySkillsSet, parseDates } from 'src/helpers/utils';
+import { mapBySkillsSet, parseDates, filterBySkills } from 'src/helpers/utils';
 import { Metadata, WorkExperience } from 'src/models/interfaces';
 import { PageInfo } from './_app';
 
@@ -28,7 +28,9 @@ export default function PostPage({
   data: { allWorkExperience },
 }: SlugPageInfo) {
   const skillsSet = new Set(post.frontmatter.skills);
-  const experience = parseDates(allWorkExperience).map(mapBySkillsSet(skillsSet));
+  const experience = parseDates(allWorkExperience)
+    .map(mapBySkillsSet(skillsSet))
+    .filter(filterBySkills(skillsSet));
   return (
     <Layout data={metadata}>
       <>

@@ -37,18 +37,14 @@ export default function RightPane() {
           <div className="rss-title">{data.title}</div>
           <ul className="rss-content">
             {data.items?.slice(0, 3).map(item => (
-              <li>
-                <motion.a
-                  href={item.link}
-                  key={item.link}
-                  className="rss-item"
-                  whileHover={{ x: 2 }}
-                >
+              <li key={item.link}>
+                <motion.a href={item.link} className="rss-item" whileHover={{ x: 2 }}>
                   <div className="rss-image">
                     {item.imageUrl ? (
                       <Image
                         src={item.imageUrl}
                         loader={() => item.imageUrl}
+                        unoptimized
                         alt="Post"
                         height="50px"
                         width="50px"
@@ -68,7 +64,9 @@ export default function RightPane() {
 
                   <div>
                     <div>{item.title}</div>
-                    <div>{format(new Date(item.pubDate), 'MMMM dd, yyyy')}</div>
+                    <div className="rss-date">
+                      {format(new Date(item.pubDate), 'MMMM dd, yyyy')}
+                    </div>
                   </div>
                 </motion.a>
               </li>

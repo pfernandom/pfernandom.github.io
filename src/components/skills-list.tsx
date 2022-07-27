@@ -71,7 +71,7 @@ function ExpandableList({
   onClick: Callback<string, void>;
 }) {
   const context = useLayoutService();
-  const isLg = useMediaQuery('(max-width: $screen-lg)');
+  const isLg = useMediaQuery('(max-width: 500px)');
 
   const skillButoonsVariants = {
     initial: { scale: 1, opacity: 1 },

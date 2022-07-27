@@ -1,13 +1,14 @@
 ---
 title: Java developer
 date: '2019-06-21T22:12:03.284Z'
+order: 3
 description:
   [
     'Java developer with +7 years of experience',
     'Experience with cloud-based development and large-scale service integration',
   ]
 hero_image: '/javadeveloper_hero.jpg'
-hero_image_alt: 'Hero image for the streaming html responses post'
+hero_image_alt: 'Hero image for the java developer role page'
 skills:
   [
     'java',
@@ -24,8 +25,11 @@ skills:
   ]
 ---
 
-As a Java developer, I've worked in enterprise and large, distributed applications for 5+ years.
+As a Java developer (and as a back-end developer in general), I've worked in enterprise and large, distributed applications for 5+ years. I the past few years, I have:
 
-I have experience working in cloud-based applications, deploying to AWS services using Docker containers and EC2 services.
+- Used frameworks like Spring, Maven, Gradle, and Play.
+- Integrated with databases like PosgreSQL, MongoDB and Neo4J.
+- Deployed Spring Boot and NodeJS Express based applications to Docker containers.
+- Integrated Java micro-services services with cloud-hosted services like AWS RDS.
 
-I also have experience designing and building a micro-service architecture based on Spring Boot.
+I recently wrote a book about back-end development: ["Backend Developer in 30 Days"](https://www.amazon.com/dp/9355513216/ref=cm_sw_r_apa_i_V19CYDR26B3R3ST9QMPP_0).

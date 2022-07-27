@@ -5,10 +5,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 const withPlugins = require('next-compose-plugins');
+const withImageLoader = require('next-image-loader');
 const optimizedImages = require('next-optimized-images');
 
 module.exports = withPlugins([
   optimizedImages,
+  withImageLoader,
   withBundleAnalyzer({
     experimental: {
       newNextLinkBehavior: true,

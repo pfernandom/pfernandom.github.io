@@ -8,15 +8,15 @@
 
 .scroll-list-container--scrollable {
   overflow: auto;
-  height: 8 * 3em;
+  height: fit-content;
+  max-height: 8 * 3em;
   @media only screen and (max-width: $screen-lg) {
-    height: 5 * 3em;
+    max-height: 5 * 3em;
   }
 }
 
 .skill-list-container {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -100,8 +100,8 @@
 }
 
 .skill-pane {
-  --font-color: white;
-  --link-font-color: white;
+  --font-color: $white;
+  --link-font-color: $white;
   color: var(--font-color);
   background-color: darken($charcoal-color, 10%);
   width: 100%;

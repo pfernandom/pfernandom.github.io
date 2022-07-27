@@ -19,7 +19,7 @@
     text-decoration: underline;
     color: var(--link-font-color);
     &:hover {
-      color: rgb(136, 255, 136);
+      filter: brightness(185%);
     }
   }
 

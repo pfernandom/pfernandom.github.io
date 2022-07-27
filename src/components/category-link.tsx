@@ -45,13 +45,13 @@ export function useMediaQuery(query) {
   return matches;
 }
 
-function getVariants(isLg: boolean) {
-  if (isLg) {
+function getVariants({ isMd, isLg }: { isMd: boolean; isLg: boolean }) {
+  if (isMd) {
     return {
       cardMotion: {
         rest: {
           scale: 1,
-          zIndex: 2,
+          zIndex: 1,
           transition: {
             type: 'linear',
             duration: 0.2,
@@ -64,7 +64,7 @@ function getVariants(isLg: boolean) {
         rest: {
           opacity: 1,
           y: 1,
-          width: '90%',
+          x: 0,
           borderTopRightRadius: 0,
           scale: 1,
           transition: {
@@ -72,7 +72,7 @@ function getVariants(isLg: boolean) {
             duration: 0.2,
           },
         },
-        hover: {},
+        hover: { scale: 1.1, x: 10 },
       },
       imageMotion: {
         rest: {
@@ -104,8 +104,8 @@ function getVariants(isLg: boolean) {
     rest: { flexGrow: 1, scale: 1, zIndex: 0, transition: { when: 'afterChildren' } },
     hover: {
       // flexGrow: shouldReduceMotion ? 1 : 2,
-      scale: isLg ? 1 : 1.3,
-      zIndex: 2,
+      scale: (isMd && 1) || (isLg && 1.1) || 1.5,
+      zIndex: 3,
       transition: {
         type: 'linear',
         duration: 0.2,
@@ -116,10 +116,10 @@ function getVariants(isLg: boolean) {
   };
 
   const titleMotion: Variants = {
-    rest: { y: 50, opacity: 1, borderTopRightRadius: '0.5em', width: '40%' },
+    rest: { y: 50, borderTopRightRadius: '0.5em', width: '60%' },
     hover: {
       y: 0,
-      width: '90%',
+      width: '88%',
       borderTopRightRadius: 0,
       transition: {
         type: 'linear',
@@ -160,13 +160,21 @@ export function CategoryLink({ post }: { post: PostInfo }) {
   const [isHovering, setIsHovering] = useState(false);
   const router = useRouter();
 
-  const isLg = useMediaQuery('(max-width: $screen-lg)');
+  const isLg = useMediaQuery('(max-width: 700px)');
+  const isMd = useMediaQuery('(max-width: 500px)');
 
-  const { cardMotion, titleMotion, imageMotion, descriptionMotion } = getVariants(isLg);
+  const sizes = {
+    lg: 500,
+    md: 320,
+  };
+
+  const imageSize = sizes[isMd && 'md'] ?? sizes[isLg && 'lg'] ?? 800;
+
+  const { cardMotion, titleMotion, imageMotion, descriptionMotion } = getVariants({ isMd, isLg });
 
   useEffect(() => {
     controls.start(isHovering ? 'hover' : 'rest');
-  }, [isHovering, isLg]);
+  }, [isHovering, isMd]);
 
   const debouncedSetIsHovering = debouncer(500, (params: SetStateAction<boolean>) => {
     setIsHovering(params);
@@ -188,7 +196,7 @@ export function CategoryLink({ post }: { post: PostInfo }) {
     >
       <Link href={`/${post.slug}`} style={{ position: 'relative', display: 'block' }}>
         <motion.div
-          style={{ position: 'absolute', zIndex: 3 }}
+          style={{ position: 'absolute', zIndex: 1 }}
           animate={controls}
           variants={titleMotion}
           initial="rest"
@@ -219,7 +227,7 @@ export function CategoryLink({ post }: { post: PostInfo }) {
               // Optional, similar to "width" in Gatsby GraphQL
               width={500}
               // Optional, similar to "height" in Gatsby GraphQL
-              height={isLg ? 300 : 500}
+              height={imageSize}
               objectFit="cover"
             />
           </motion.div>

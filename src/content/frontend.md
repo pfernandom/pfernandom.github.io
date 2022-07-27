@@ -1,16 +1,17 @@
 ---
 title: Front-end developer
 date: '2019-06-21T22:12:03.284Z'
+order: 2
 description:
   [
     'Front end developer with 10+ years of experience on JavaScript development',
-    'Experience building quality, performance and accessibility into large-scale web applications.',
+    'Experience building large-scale web applications with frameworks like Ember and React.',
   ]
 hero_image: '/frontend_hero.jpeg'
-hero_image_alt: 'Hero image for the streaming html responses post'
+hero_image_alt: 'Hero image for front end developer role page'
 skills:
   [
-    'js',
+    'javascript',
     'emberjs',
     'angular',
     'reactjs',
@@ -40,5 +41,6 @@ In my professional experience, I have aquired the following skills:
 
 - I'm trained in designing interfaces that are compliant with [WCAG 2](https://www.w3.org/WAI/standards-guidelines/wcag/).
 - I'm proficient with both JavaScript and TypeScript.
+- I've created D3 visualization components for data analysis.
 
 I also have some experience with Dart and Flutter to build mobile applications for personal projects.

@@ -48,6 +48,7 @@ export interface Metadata {
 export interface Post {
   title: string;
   date: string;
+  order: number;
   description: Array<string>;
   hero_image: string;
   hero_image_blur: string;

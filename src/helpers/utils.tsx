@@ -66,7 +66,7 @@ export function parseDates(allWorkExperience: Array<WorkExperience>) {
 }
 
 export function mapBySkillsSet(skillsSet: Set<string>) {
-  return exp => {
+  return (exp: WorkExperience) => {
     if (exp.tags.filter(tag => skillsSet.has(tag)).length > 0) {
       return exp;
     }
@@ -76,10 +76,15 @@ export function mapBySkillsSet(skillsSet: Set<string>) {
             No relevant work experience for this project for the selected role
             </div>`,
         categories: [],
+        description: `${exp.description.slice(0, 20)}...`,
       },
     ];
     return { ...exp, responsibilities };
   };
+}
+
+export function filterBySkills(skillsSet: Set<string>) {
+  return (exp: WorkExperience) => exp.tags.filter(tag => skillsSet.has(tag)).length > 0;
 }
 
 export function filterLatestProjects(

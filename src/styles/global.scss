@@ -9,6 +9,7 @@ $black: #1f1f1f;
 
 $screen-xl: 800px;
 $screen-lg: 700px;
+$screen-md: 500px;
 
 $page1_color: $charcoal-color;
 $page2_color: $white;
@@ -23,6 +24,7 @@ $page3_color: rgb(14 85 48);
   --base-color-translucent: hsla(var(--base-color-hs), 50%, 0.5);
   --max-screen-xl: 800px;
   --max-screen-lg: 700px;
+  --max-screen-md: 500px;
 }
 
 @import 'mixins';
