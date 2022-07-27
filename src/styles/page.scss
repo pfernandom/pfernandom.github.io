@@ -50,7 +50,6 @@ $pageColors: (
     animation-name: pageKeyframes#{$toName};
     animation-duration: 0.5s;
     overflow: auto;
-    height: 100vh;
   }
 
   @each $fromName in $pages {
@@ -71,7 +70,6 @@ $pageColors: (
       animation-name: pageKeyframes#{$fromName}#{$toName};
       animation-duration: 0.5s;
       overflow: auto;
-      height: 100vh;
     }
   }
 }

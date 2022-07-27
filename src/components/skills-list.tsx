@@ -99,7 +99,11 @@ function ExpandableList({
               custom={skill}
               variants={skillButoonsVariants}
               transition={{ duration: 0.2 }}
-              whileHover={{ scale: isLg ? 1.1 : 1.2 }}
+              whileHover={{
+                scale: isLg ? 1.1 : 1.2,
+                borderRadius: '0.2em',
+                boxShadow: '0 2px 5px grey',
+              }}
               onClick={() => {
                 onClick.call(null, skill);
               }}

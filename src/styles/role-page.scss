@@ -1,7 +1,7 @@
 $role_content_color: lighten($page2_color, 50%);
 
 .category__hero-wrapper {
-  @include boxShadow;
+  @include boxShadow($color: $black);
 }
 
 .role-page-title {

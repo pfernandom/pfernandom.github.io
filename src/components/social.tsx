@@ -7,7 +7,7 @@ export default function SocialAndContact() {
     <div
       style={{
         position: 'fixed',
-        top: '1em',
+        top: '50%',
         right: '1em',
         display: 'flex',
         flexDirection: 'column',

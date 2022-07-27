@@ -79,7 +79,7 @@ export default function RightPane() {
       )}
 
       <div className="announcement">
-        <div className="rss-title">Updates</div>
+        <div className="rss-title">A new book is out!</div>
         <div className="announcement-content">
           <div className="announcement-text">
             <p>My latest book &quot;Backend Developer in 30 Days&quot; is out!</p>

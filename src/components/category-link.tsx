@@ -46,171 +46,145 @@ export function useMediaQuery(query) {
 }
 
 function getVariants({ isMd, isLg }: { isMd: boolean; isLg: boolean }) {
-  if (isMd) {
-    return {
-      cardMotion: {
-        rest: {
-          scale: 1,
-          zIndex: 1,
-          transition: {
-            type: 'linear',
-            duration: 0.2,
-            delayChildren: 2,
-            when: 'beforChildren',
-          },
-        },
-      },
-      titleMotion: {
-        rest: {
-          opacity: 1,
-          y: 1,
-          x: 0,
-          borderTopRightRadius: 0,
-          scale: 1,
-          transition: {
-            type: 'linear',
-            duration: 0.2,
-          },
-        },
-        hover: { scale: 1.1, x: 10 },
-      },
-      imageMotion: {
-        rest: {
-          opacity: 0.2,
-          transition: {
-            type: 'linear',
-            duration: 0.5,
-          },
-        },
-        hover: {
-          opacity: 0.3,
-        },
-      },
-      descriptionMotion: {
-        rest: {
-          opacity: 1,
-          y: 0,
-          width: '100%',
-          borderTopRightRadius: 0,
-          transition: {
-            type: 'linear',
-            duration: 0.2,
-          },
+  if (!isMd) {
+    const cardMotion = {
+      rest: { flexGrow: 1, scale: 1, zIndex: 0 },
+      hover: {
+        scale: (isMd && 1) || (isLg && 1.1) || 1.5,
+        zIndex: 3,
+        transition: {
+          type: 'linear',
+          duration: 0.2,
+          delayChildren: 0,
+          when: 'beforChildren',
         },
       },
     };
+
+    const titleMotion: Variants = {
+      rest: { y: 50, borderTopRightRadius: '0.5em', width: '60%' },
+      hover: {
+        y: 0,
+        width: '88%',
+        borderTopRightRadius: 0,
+        transition: {
+          type: 'linear',
+          duration: 0.2,
+        },
+      },
+    };
+
+    const imageMotion = {
+      rest: { opacity: 1 },
+      hover: {
+        opacity: 0.3,
+        transition: {
+          type: 'linear',
+          duration: 0.2,
+        },
+      },
+    };
+
+    const descriptionMotion = {
+      rest: { opacity: 0 },
+      hover: {
+        opacity: 1,
+        transition: {
+          type: 'linear',
+          duration: 0.2,
+        },
+      },
+    };
+
+    return { cardMotion, titleMotion, imageMotion, descriptionMotion };
   }
-  const cardMotion = {
-    rest: { flexGrow: 1, scale: 1, zIndex: 0, transition: { when: 'afterChildren' } },
-    hover: {
-      // flexGrow: shouldReduceMotion ? 1 : 2,
-      scale: (isMd && 1) || (isLg && 1.1) || 1.5,
-      zIndex: 3,
-      transition: {
-        type: 'linear',
-        duration: 0.2,
-        delayChildren: 2,
-        when: 'beforChildren',
+  return {
+    cardMotion: {
+      rest: {
+        scale: 1,
+        zIndex: 1,
+      },
+    },
+    titleMotion: {
+      rest: {
+        opacity: 1,
+        y: 1,
+        x: 0,
+        borderTopRightRadius: 0,
+        scale: 1,
+        transition: {
+          type: 'linear',
+          duration: 0.2,
+        },
+      },
+      hover: { scale: 1.1, x: 10 },
+    },
+    imageMotion: {
+      rest: {
+        opacity: 1,
+        transition: {
+          type: 'linear',
+          duration: 0.5,
+        },
+      },
+      hover: {
+        opacity: 0.8,
+      },
+    },
+    descriptionMotion: {
+      rest: {
+        opacity: 0,
+        y: 0,
+        width: '100%',
+        borderTopRightRadius: 0,
+        transition: {
+          type: 'linear',
+          duration: 0.2,
+        },
+      },
+      hover: {
+        opacity: 1,
+        y: 0,
       },
     },
   };
-
-  const titleMotion: Variants = {
-    rest: { y: 50, borderTopRightRadius: '0.5em', width: '60%' },
-    hover: {
-      y: 0,
-      width: '88%',
-      borderTopRightRadius: 0,
-      transition: {
-        type: 'linear',
-        duration: 0.2,
-      },
-    },
-  };
-
-  const imageMotion = {
-    rest: { opacity: 1 },
-    hover: {
-      opacity: 0.3,
-      transition: {
-        type: 'linear',
-        duration: 0.5,
-      },
-    },
-  };
-
-  const descriptionMotion = {
-    rest: { opacity: 0, delay: 0 },
-    hover: {
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-        type: 'tween',
-        ease: 'easeIn',
-        delay: 0.2,
-      },
-    },
-  };
-
-  return { cardMotion, titleMotion, imageMotion, descriptionMotion };
 }
 
 export function CategoryLink({ post }: { post: PostInfo }) {
-  const controls = useAnimation();
-  const [isHovering, setIsHovering] = useState(false);
-  const router = useRouter();
-
+  const isXL = useMediaQuery('(min-width: 700px)');
   const isLg = useMediaQuery('(max-width: 700px)');
   const isMd = useMediaQuery('(max-width: 500px)');
 
   const sizes = {
+    xl: 800,
     lg: 500,
     md: 320,
   };
 
-  const imageSize = sizes[isMd && 'md'] ?? sizes[isLg && 'lg'] ?? 800;
+  const imageSize = sizes[isMd && 'md'] ?? sizes[isLg && 'lg'] ?? sizes[isXL && 'xl'] ?? 320;
 
   const { cardMotion, titleMotion, imageMotion, descriptionMotion } = getVariants({ isMd, isLg });
-
-  useEffect(() => {
-    controls.start(isHovering ? 'hover' : 'rest');
-  }, [isHovering, isMd]);
-
-  const debouncedSetIsHovering = debouncer(500, (params: SetStateAction<boolean>) => {
-    setIsHovering(params);
-  });
 
   return (
     <motion.div
       key="my_category_link"
       className="category__link"
       variants={cardMotion}
-      animate={controls}
-      onHoverStart={() => {
-        router.prefetch(`/${post.slug}`);
-        debouncedSetIsHovering(true);
-      }}
-      onHoverEnd={() => {
-        debouncedSetIsHovering(false);
-      }}
+      custom={post.frontmatter.order}
+      whileInView={isMd ? 'hover' : null}
+      whileHover={!isMd ? 'hover' : null}
+      initial="rest"
     >
       <Link href={`/${post.slug}`} style={{ position: 'relative', display: 'block' }}>
         <motion.div
           style={{ position: 'absolute', zIndex: 1 }}
-          animate={controls}
           variants={titleMotion}
-          initial="rest"
           className="category__title"
         >
           {post.frontmatter.title}
         </motion.div>
         <div style={{ position: 'relative' }}>
-          <motion.div
-            variants={imageMotion}
-            animate={controls}
-            initial="rest"
-            className="category__hero-wrapper"
-          >
+          <motion.div variants={imageMotion} className="category__hero-wrapper">
             <Image
               className="category__hero"
               style={{ zIndex: 0 }}
@@ -232,12 +206,7 @@ export function CategoryLink({ post }: { post: PostInfo }) {
             />
           </motion.div>
 
-          <motion.div
-            className="category__description"
-            animate={controls}
-            initial="rest"
-            variants={descriptionMotion}
-          >
+          <motion.div className="category__description" variants={descriptionMotion}>
             <ToParagraphs style={{ margin: '1em' }} posts={post.frontmatter.description} />
           </motion.div>
         </div>

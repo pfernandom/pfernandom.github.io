@@ -132,7 +132,7 @@ a {
 }
 
 main {
-  margin: 3em auto;
+  margin: 5em auto;
   min-height: calc(100vh - 10em);
   max-width: var(--max-screen-xl);
   @media only screen and (max-width: $screen-xl) {
