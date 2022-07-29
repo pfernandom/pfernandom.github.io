@@ -11,14 +11,13 @@ const fetcher = url =>
     .then(str => new DOMParser().parseFromString(str, 'text/xml'))
     .then(data => {
       const title = data.querySelector('title').textContent;
-      const link = data.querySelector('link').textContent;
       const lastBuildDate = data.querySelector('lastBuildDate').textContent;
       const items = Array.from(data.querySelectorAll('item')).map(item => ({
         title: item.querySelector('title').textContent,
         description: item.querySelector('description').textContent,
         link: item.querySelector('link').textContent,
         pubDate: item.querySelector('pubDate').textContent,
-        imageUrl: link + item.querySelector('enclosure').getAttribute('url'),
+        imageUrl: [item.querySelector('enclosure')?.getAttribute('url')].filter(el => !!el).join(),
       }));
       return { title, lastBuildDate, items };
     });
@@ -29,6 +28,7 @@ export default function RightPane() {
   });
 
   const hideRSS = !data || error;
+  data?.items.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
 
   return (
     <div className="flex-centered">
